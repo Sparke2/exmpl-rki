@@ -6,6 +6,54 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ============================
+  // 0. CATALOG OVERLAY — open/close
+  // ============================
+  const btnCatalog = document.querySelector('.btn-catalog');
+  const catalogOverlay = document.getElementById('catalog-overlay');
+  const catalogOverlayClose = document.querySelector('.catalog-overlay-close');
+
+  function closeCatalog() {
+    if (!catalogOverlay || !btnCatalog) return;
+    catalogOverlay.classList.remove('is-open');
+    btnCatalog.classList.remove('is-open');
+    btnCatalog.setAttribute('aria-expanded', 'false');
+    catalogOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function openCatalog() {
+    if (!catalogOverlay || !btnCatalog) return;
+    catalogOverlay.classList.add('is-open');
+    btnCatalog.classList.add('is-open');
+    btnCatalog.setAttribute('aria-expanded', 'true');
+    catalogOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function toggleCatalog() {
+    if (!catalogOverlay || !btnCatalog) return;
+    const isOpen = catalogOverlay.classList.toggle('is-open');
+    btnCatalog.classList.toggle('is-open', isOpen);
+    btnCatalog.setAttribute('aria-expanded', isOpen);
+    catalogOverlay.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  if (btnCatalog && catalogOverlay) {
+    btnCatalog.addEventListener('click', () => toggleCatalog());
+  }
+
+  if (catalogOverlayClose && catalogOverlay) {
+    catalogOverlayClose.addEventListener('click', () => closeCatalog());
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && catalogOverlay?.classList.contains('is-open')) {
+      closeCatalog();
+    }
+  });
+
+  // ============================
   // 1. FILTER PILLS — toggle active
   // ============================
   const filterPills = document.querySelectorAll('.filter-pill');

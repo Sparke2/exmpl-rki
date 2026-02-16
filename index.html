@@ -30,8 +30,9 @@
           <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
         </a>
   
-        <button class="btn-catalog">
+        <button class="btn-catalog" type="button" aria-expanded="false" aria-controls="catalog-overlay">
           <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
+          <span class="icon icon--close-catalog" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
           <span class="catalog-text">Каталог</span>
         </button>
   
@@ -48,6 +49,163 @@
       </div>
     </div>
   </header>
+
+  <!-- ==================== CATALOG OVERLAY ==================== -->
+  <div class="catalog-overlay" id="catalog-overlay" aria-hidden="true">
+    <div class="container">
+      <div class="catalog-overlay-inner">
+        <button type="button" class="catalog-overlay-close" aria-label="Закрыть каталог">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="catalog-overlay-columns">
+          <div class="catalog-column">
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Книги</h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Учебники и учебные пособия</a></li>
+                <li><a href="#">Русский язык для билингвов</a></li>
+                <li><a href="#">Подготовка к тестированию</a></li>
+                <li><a href="#">Язык специальности</a></li>
+                <li><a href="#">Методическая литература</a></li>
+                <li><a href="#">Словари</a></li>
+                <li><a href="#">Художественная литература</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Язык специальности</h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Инженерно-технический и технологический профиль</a></li>
+                <li><a href="#">Естественно-научный профиль</a></li>
+                <li><a href="#">Медико-биологический профиль</a></li>
+                <li><a href="#">Экономический профиль</a></li>
+                <li><a href="#">Гуманитарный профиль</a></li>
+                <li><a href="#">Музыкальное и художественное образование</a></li>
+                <li><a href="#">Военное дело</a></li>
+                <li><a href="#">Все профильные модули</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Златоуст <span class="catalog-tag">коллекции</span></h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Русский язык. Литература</a></li>
+                <li><a href="#">Литература для детей-билингвов, преподавателей и родителей</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">«Русский язык». Курсы <span class="catalog-tag">коллекции</span></h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Коллекция № 1. Русский как иностранный</a></li>
+                <li><a href="#">Коллекция № 2. Русский как иностранный</a></li>
+                <li><a href="#">УМК «Русский язык сегодня. Элементарный уровень»</a></li>
+                <li><a href="#">УМК «Русский язык сегодня. Базовый уровень»</a></li>
+                <li><a href="#">Классное чтение</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Лексический минимум</h3>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Распределительный тест</h3>
+            </div>
+          </div>
+          <div class="catalog-column">
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Рабочие листы</h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Общий курс</a></li>
+                <li><a href="#">Дополнительные рабочие листы</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Тесты</h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Тесты к рабочим листам</a></li>
+                <li><a href="#">Тесты на уровень</a></li>
+                <li><a href="#">Язык специальности</a></li>
+                <li><a href="#">Для детей</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Интерактивы</h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">К лексическому минимуму</a></li>
+                <li><a href="#">К рабочим листам</a></li>
+                <li><a href="#">Другое</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Банк материалов</h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Кроссворды</a></li>
+                <li><a href="#">Филворды</a></li>
+                <li><a href="#">Бродилки</a></li>
+                <li><a href="#">Викторины</a></li>
+                <li><a href="#">Квесты</a></li>
+                <li><a href="#">Подборки иллюстраций</a></li>
+                <li><a href="#">Презентации</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Методика</h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Лонгриды</a></li>
+                <li><a href="#">Записи вебинаров</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="catalog-column">
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Уровень владения <span class="catalog-tag">коллекции</span></h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">А1 — элементарный</a></li>
+                <li><a href="#">А2 — базовый</a></li>
+                <li><a href="#">В1 — I сертификационный</a></li>
+                <li><a href="#">В2 — II сертификационный</a></li>
+                <li><a href="#">С1 — III сертификационный</a></li>
+                <li><a href="#">С2 — IV сертификационный</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Грамматика <span class="catalog-tag">коллекции</span></h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Вид глагола (НСВ и СВ)</a></li>
+                <li><a href="#">Глаголы движения</a></li>
+                <li><a href="#">Именительный падеж</a></li>
+                <li><a href="#">Винительный падеж</a></li>
+                <li><a href="#">Предложный падеж</a></li>
+                <li><a href="#">Родительный падеж</a></li>
+                <li><a href="#" class="catalog-link-underline">Показать все</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Тематики <span class="catalog-tag">коллекции</span></h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Фонетика, графика и орфография</a></li>
+                <li><a href="#">О себе. Внешность, характер, эмоции, возраст, интеллект</a></li>
+                <li><a href="#">Мои вещи. Одежда и обувь</a></li>
+                <li><a href="#">Мой день. Распорядок, быт и действия</a></li>
+                <li><a href="#">Учёба и работа</a></li>
+                <li><a href="#">Отдых и хобби</a></li>
+                <li><a href="#" class="catalog-link-underline">Показать все</a></li>
+              </ul>
+            </div>
+            <div class="catalog-block">
+              <h3 class="catalog-block-title">Праздники и памятные дни <span class="catalog-tag">коллекции</span></h3>
+              <ul class="catalog-block-list">
+                <li><a href="#">Новый год</a></li>
+                <li><a href="#">Масленица</a></li>
+                <li><a href="#">Татьянин день</a></li>
+                <li><a href="#">Международный день студента</a></li>
+                <li><a href="#">День гжели</a></li>
+                <li><a href="#">Всероссийский день хоккея</a></li>
+                <li><a href="#" class="catalog-link-underline">Открыть все</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ==================== MAIN CONTENT ==================== -->
   <main class="main-content">
