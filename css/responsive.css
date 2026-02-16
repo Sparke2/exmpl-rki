@@ -1,0 +1,255 @@
+/* ============================================
+   Responsive — media queries for adaptive layout
+   ============================================ */
+
+/* =====================
+   LARGE DESKTOP (>=1400px)
+   ===================== */
+@media (min-width: 1400px) {
+  :root {
+    --card-width: 220px;
+  }
+
+  .material-card--book {
+    width: 190px;
+  }
+
+  .material-card--methodology {
+    width: 280px;
+  }
+}
+
+/* =====================
+   DESKTOP (992 – 1199px)
+   ===================== */
+@media (max-width: 1199.98px) {
+  :root {
+    --card-width: 190px;
+  }
+
+  .material-card--book {
+    width: 170px;
+  }
+
+  .material-card--methodology {
+    width: 240px;
+  }
+}
+
+/* =====================
+   TABLET (768 – 991px)
+   ===================== */
+@media (max-width: 991.98px) {
+  :root {
+    --card-width: 180px;
+    --card-gap: 12px;
+  }
+
+  .material-card--book {
+    width: 160px;
+  }
+
+  .material-card--methodology {
+    width: 220px;
+  }
+
+  .header-nav {
+    gap: var(--space-base);
+  }
+
+  .header-nav a span.nav-text {
+    display: none;
+  }
+
+  .search-box {
+    padding: var(--space-base);
+  }
+
+  .filter-pills {
+    gap: 6px;
+  }
+
+  .filter-pill {
+    padding: 5px 10px;
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* =====================
+   SMALL TABLET / LARGE PHONE (576 – 767px)
+   ===================== */
+@media (max-width: 767.98px) {
+  :root {
+    --card-width: 170px;
+    --card-gap: 10px;
+    --header-height: 56px;
+  }
+
+  .site-header .container {
+    gap: var(--space-sm);
+  }
+
+  .site-header {
+    border-radius: 12px;
+  }
+
+  .header-logo svg {
+    height: 20px;
+  }
+
+  .btn-catalog {
+    padding: 6px 12px;
+    font-size: var(--font-size-sm);
+    height: 40px;
+  }
+
+  .header-nav {
+    gap: var(--space-md);
+  }
+
+  .header-nav .nav-text {
+    display: none;
+  }
+
+  .search-box {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .filter-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-xs);
+    scrollbar-width: none;
+  }
+
+  .filter-pills::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .section-header {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .section-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .content-section {
+    margin-bottom: var(--space-lg);
+  }
+
+  .material-card--book {
+    width: 150px;
+  }
+
+  .material-card--methodology {
+    width: 200px;
+  }
+
+  .scroll-arrow {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* =====================
+   PHONE (<576px)
+   ===================== */
+@media (max-width: 575.98px) {
+  :root {
+    --card-width: 160px;
+    --card-gap: 10px;
+    --header-height: 52px;
+  }
+
+  body {
+    font-size: var(--font-size-sm);
+  }
+
+  .site-header .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .site-header {
+    border-radius: 10px;
+  }
+
+  .header-logo svg {
+    height: 18px;
+  }
+
+  .btn-catalog {
+    padding: 5px 10px;
+    font-size: var(--font-size-sm);
+    gap: 4px;
+    height: 36px;
+  }
+
+  .btn-catalog .catalog-text {
+    display: none;
+  }
+
+  .header-nav a {
+    font-size: var(--font-size-sm);
+  }
+
+  .breadcrumb-bar {
+    padding: var(--space-sm) 0;
+  }
+
+  .search-box {
+    margin-bottom: var(--space-base);
+    padding: var(--space-md);
+  }
+
+  .search-input-wrap input {
+    padding: 8px 12px;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-search {
+    width: 40px;
+    height: 38px;
+  }
+
+  .filter-pill {
+    padding: 4px 8px;
+    font-size: var(--font-size-xs);
+  }
+
+  .section-title {
+    font-size: var(--font-size-md);
+  }
+
+  .section-show-all {
+    font-size: var(--font-size-sm);
+  }
+
+  .material-card--book {
+    width: 140px;
+  }
+
+  .material-card {
+    width: 160px;
+  }
+
+  .material-card--methodology {
+    width: 200px;
+  }
+
+  .card-title {
+    font-size: var(--font-size-sm);
+  }
+
+  .card-description {
+    font-size: var(--font-size-xs);
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+}

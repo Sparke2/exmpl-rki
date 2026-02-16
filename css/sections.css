@@ -1,0 +1,76 @@
+/* ============================================
+   Sections — section layout, horizontal scroll
+   ============================================ */
+
+/* =====================
+   CONTENT SECTION
+   ===================== */
+.content-section {
+  margin-bottom: var(--space-xl);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-base);
+}
+
+.section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+}
+
+.section-count {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-700);
+  font-weight: var(--font-weight-normal);
+  margin-left: var(--space-xs);
+}
+
+.section-show-all {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-500);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.section-show-all:hover {
+  color: var(--color-primary);
+}
+
+/* =====================
+   SCROLL CONTAINER
+   ===================== */
+.scroll-container {
+  position: relative;
+}
+
+.scroll-row {
+  display: flex;
+  gap: var(--card-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--space-sm);
+  /* Hide scrollbar for cleaner look but keep functionality */
+}
+
+/* Optional: hide scrollbar but keep scroll */
+.scroll-row::-webkit-scrollbar {
+  height: 0;
+}
+
+.scroll-row {
+  scrollbar-width: none;
+}
+
+/* =====================
+   SEARCH RESULTS PAGE LAYOUT
+   ===================== */
+.search-results {
+  padding-top: var(--space-base);
+}
