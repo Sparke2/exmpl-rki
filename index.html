@@ -22,30 +22,30 @@
 </head>
 <body>
 
-<div class="page-wrapper">
-
   <!-- ==================== HEADER ==================== -->
   <header class="site-header">
     <div class="container">
-      <a href="#" class="header-logo" aria-label="IPR РКИ">
-        <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
-      </a>
-
-      <button class="btn-catalog">
-        <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
-        <span class="catalog-text">Каталог</span>
-      </button>
-
-      <nav class="header-nav">
-        <a href="#" class="btn-nav">
-          <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
-          <span class="nav-text">Слабовидящим</span>
+      <div>
+        <a href="#" class="header-logo" aria-label="IPR РКИ">
+          <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
         </a>
-        <a href="#" class="btn-nav">
-          <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
-          <span class="nav-text">Войти</span>
-        </a>
-      </nav>
+  
+        <button class="btn-catalog">
+          <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
+          <span class="catalog-text">Каталог</span>
+        </button>
+  
+        <nav class="header-nav">
+          <a href="#" class="btn-nav">
+            <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
+            <span class="nav-text">Слабовидящим</span>
+          </a>
+          <a href="#" class="btn-nav">
+            <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
+            <span class="nav-text">Войти</span>
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -60,8 +60,9 @@
         <a href="#" class="breadcrumb-active">Поиск</a>
       </div>
 
-      <!-- Search Box -->
-      <div class="search-box">
+     
+      <div class="content">
+         <!-- Search Box -->
         <div class="search-input-wrap">
           <input type="text" placeholder="Введите запрос">
           <button class="btn-search" aria-label="Искать">
@@ -79,733 +80,730 @@
           <button class="filter-pill" data-filter="lexicon">Лексический минимум <span class="pill-count">2 315</span></button>
           <button class="filter-pill" data-filter="methodology">Методика <span class="pill-count">2 315</span></button>
         </div>
+
+        <!-- ==================== КНИГИ ==================== -->
+        <section class="content-section fist-section" data-section="books">
+          <div class="section-header">
+            <h2 class="section-title">Книги <span class="section-count">10</span></h2>
+            <a href="#" class="section-show-all">Показать все</a>
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-row">
+
+              <!-- Book card 1 -->
+              <div class="material-card material-card--book">
+                <div class="card-image">
+                  <div class="placeholder-book placeholder-book--1">
+                    <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#d4c4a8"/><rect x="8" y="8" width="44" height="6" rx="2" fill="#b8a88c"/><rect x="8" y="20" width="32" height="4" rx="1" fill="#c8b89c"/><rect x="8" y="28" width="38" height="4" rx="1" fill="#c8b89c"/></svg>
+                  </div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <img src="img/icons/level-a2.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A2">
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
+                  <div class="card-subtitle">Издательство</div>
+                  <div class="card-footer">
+                    <span class="card-tag">Русский язык для билингвов</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Book card 2 -->
+              <div class="material-card material-card--book">
+                <div class="card-image">
+                  <div class="placeholder-book placeholder-book--2">
+                    <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#a8c8a0"/><rect x="8" y="10" width="44" height="8" rx="2" fill="#88b080"/><rect x="8" y="24" width="36" height="4" rx="1" fill="#98b890"/><rect x="8" y="32" width="28" height="4" rx="1" fill="#98b890"/></svg>
+                  </div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <img src="img/icons/level-a2.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A2">
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
+                  <div class="card-subtitle">Издательство</div>
+                  <div class="card-footer">
+                    <span class="card-tag">Русский язык для билингвов</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Book card 3 -->
+              <div class="material-card material-card--book">
+                <div class="card-image">
+                  <div class="placeholder-book placeholder-book--3">
+                    <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#e8e0c8"/><rect x="6" y="8" width="48" height="10" rx="2" fill="#d0c8a8"/><rect x="6" y="24" width="40" height="4" rx="1" fill="#d8d0b8"/></svg>
+                  </div>
+                  <img src="img/icons/level-a1.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A1">
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
+                  <div class="card-subtitle">Издательство</div>
+                  <div class="card-footer">
+                    <span class="card-tag">Русский язык для билингвов</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Book card 4 -->
+              <div class="material-card material-card--book">
+                <div class="card-image">
+                  <div class="placeholder-book placeholder-book--4">
+                    <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#b0d0e8"/><rect x="8" y="8" width="44" height="8" rx="2" fill="#90b8d0"/><rect x="8" y="22" width="32" height="4" rx="1" fill="#a0c0d8"/></svg>
+                  </div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <img src="img/icons/level-c1.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="C1">
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
+                  <div class="card-subtitle">Издательство</div>
+                  <div class="card-footer">
+                    <span class="card-tag">Русский язык для билингвов</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Book card 5 -->
+              <div class="material-card material-card--book">
+                <div class="card-image">
+                  <div class="placeholder-book placeholder-book--5">
+                    <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#d4c4a8"/><rect x="8" y="8" width="44" height="6" rx="2" fill="#b8a88c"/><rect x="8" y="20" width="32" height="4" rx="1" fill="#c8b89c"/></svg>
+                  </div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <img src="img/icons/level-a2.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A2">
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
+                  <div class="card-subtitle">Издательство</div>
+                  <div class="card-footer">
+                    <span class="card-tag">Русский язык для билингвов</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Book card 6 (partially visible) -->
+              <div class="material-card material-card--book">
+                <div class="card-image">
+                  <div class="placeholder-book placeholder-book--1">
+                    <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#d4c4a8"/><rect x="8" y="8" width="44" height="6" rx="2" fill="#b8a88c"/></svg>
+                  </div>
+                  <img src="img/icons/level-a1.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A1">
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
+                  <div class="card-subtitle">Издательство</div>
+                  <div class="card-footer">
+                    <span class="card-tag">Русский язык для билингвов</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== РАБОЧИЕ ЛИСТЫ ==================== -->
+        <section class="content-section" data-section="worksheets">
+          <div class="section-header">
+            <h2 class="section-title">Рабочие листы <span class="section-count">46</span></h2>
+            <a href="#" class="section-show-all">Показать все</a>
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-row">
+
+              <!-- Worksheet 1 -->
+              <div class="material-card material-card--worksheet">
+                <div class="card-image">
+                  <div class="placeholder-worksheet"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <span class="card-label">Рабочий лист</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Алфавит и произношение</div>
+                  <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Worksheet 2 -->
+              <div class="material-card material-card--worksheet">
+                <div class="card-image">
+                  <div class="placeholder-worksheet"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <span class="card-label">Рабочий лист</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Числа и возраст</div>
+                  <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <img src="img/icons/level-a2.svg" class="level-badge-icon" width="24" height="24" alt="A2">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Worksheet 3 -->
+              <div class="material-card material-card--worksheet">
+                <div class="card-image">
+                  <div class="placeholder-worksheet"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <span class="card-label">Рабочий лист</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Знакомство и приветствие</div>
+                  <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Worksheet 4 -->
+              <div class="material-card material-card--worksheet">
+                <div class="card-image">
+                  <div class="placeholder-worksheet"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <span class="card-label">Рабочий лист</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Семья и друзья</div>
+                  <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <img src="img/icons/level-a2.svg" class="level-badge-icon" width="24" height="24" alt="A2">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Worksheet 5 -->
+              <div class="material-card material-card--worksheet">
+                <div class="card-image">
+                  <div class="placeholder-worksheet"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                  <span class="card-label">Рабочий лист</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Еда и напитки</div>
+                  <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== ТЕСТЫ ==================== -->
+        <section class="content-section" data-section="tests">
+          <div class="section-header">
+            <h2 class="section-title">Тесты <span class="section-count">23</span></h2>
+            <a href="#" class="section-show-all">Показать все</a>
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-row">
+
+              <!-- Test 1 - pink -->
+              <div class="material-card material-card--test">
+                <div class="card-color-header card-color-header--pink">
+                  <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Опросительная форма</div>
+                  <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">К рабочему ли...</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Test 2 - green -->
+              <div class="material-card material-card--test">
+                <div class="card-color-header card-color-header--green">
+                  <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Семья и друзья</div>
+                  <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-b2.svg" class="level-badge-icon" width="24" height="24" alt="B2">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Язык специальн...</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Test 3 - yellow -->
+              <div class="material-card material-card--test">
+                <div class="card-color-header card-color-header--yellow">
+                  <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Времена глаголов</div>
+                  <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Язык специальн...</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Test 4 - orange -->
+              <div class="material-card material-card--test">
+                <div class="card-color-header card-color-header--orange">
+                  <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">В магазине</div>
+                  <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-c1.svg" class="level-badge-icon" width="24" height="24" alt="C1">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">К рабочему ли...</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Test 5 -->
+              <div class="material-card material-card--test">
+                <div class="card-color-header card-color-header--pink">
+                  <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Предлоги места</div>
+                  <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== ИНТЕРАКТИВЫ ==================== -->
+        <section class="content-section" data-section="interactives">
+          <div class="section-header">
+            <h2 class="section-title">Интерактивы <span class="section-count">10</span></h2>
+            <a href="#" class="section-show-all">Показать все</a>
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-row">
+
+              <!-- Interactive 1 -->
+              <div class="material-card material-card--interactive">
+                <div class="card-image">
+                  <div class="placeholder-interactive">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Найди пару</div>
+                  <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">К рабочему листу</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive 2 -->
+              <div class="material-card material-card--interactive">
+                <div class="card-image">
+                  <div class="placeholder-interactive">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Найди пару</div>
+                  <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">К рабочему листу</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive 3 -->
+              <div class="material-card material-card--interactive">
+                <div class="card-image">
+                  <div class="placeholder-interactive">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Найди пару</div>
+                  <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">К рабочему листу</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive 4 -->
+              <div class="material-card material-card--interactive">
+                <div class="card-image">
+                  <div class="placeholder-interactive">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Найди пару</div>
+                  <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">К рабочему листу</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive 5 -->
+              <div class="material-card material-card--interactive">
+                <div class="card-image">
+                  <div class="placeholder-interactive">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Найди пару</div>
+                  <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">К рабочему листу</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== БАНК МАТЕРИАЛОВ ==================== -->
+        <section class="content-section" data-section="materials">
+          <div class="section-header">
+            <h2 class="section-title">Банк материалов <span class="section-count">10</span></h2>
+            <a href="#" class="section-show-all">Показать все</a>
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-row">
+
+              <!-- Bank 1 -->
+              <div class="material-card material-card--bank">
+                <div class="card-image">
+                  <div class="placeholder-bank"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Разгадай филворд</div>
+                  <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Филворд</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bank 2 -->
+              <div class="material-card material-card--bank">
+                <div class="card-image">
+                  <div class="placeholder-bank"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Разгадай филворд</div>
+                  <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Филворд</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bank 3 -->
+              <div class="material-card material-card--bank">
+                <div class="card-image">
+                  <div class="placeholder-bank"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Разгадай филворд</div>
+                  <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Филворд</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bank 4 -->
+              <div class="material-card material-card--bank">
+                <div class="card-image">
+                  <div class="placeholder-bank"></div>
+                  <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Разгадай филворд</div>
+                  <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Филворд</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bank 5 -->
+              <div class="material-card material-card--bank">
+                <div class="card-image">
+                  <div class="placeholder-bank"></div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Разгадай филворд</div>
+                  <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Филворд</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== МЕТОДИКА ==================== -->
+        <section class="content-section" data-section="methodology">
+          <div class="section-header">
+            <h2 class="section-title">Методика <span class="section-count">23</span></h2>
+            <a href="#" class="section-show-all">Показать все</a>
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-row">
+
+              <!-- Methodology 1 -->
+              <div class="material-card material-card--methodology">
+                <div class="card-image" style="padding: 12px;">
+                  <div class="placeholder-methodology">
+                    <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="40" width="40" height="4" rx="1" fill="#e8e8e8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Лекция: Польза изучения языков</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Лонгрид</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Methodology 2 -->
+              <div class="material-card material-card--methodology">
+                <div class="card-image" style="padding: 12px;">
+                  <div class="placeholder-methodology">
+                    <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="40" width="40" height="4" rx="1" fill="#e8e8e8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Лекция: Польза изучения языков</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Лонгрид</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Methodology 3 -->
+              <div class="material-card material-card--methodology">
+                <div class="card-image" style="padding: 12px;">
+                  <div class="placeholder-methodology">
+                    <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="40" width="40" height="4" rx="1" fill="#e8e8e8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Лекция: Польза изучения языков</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Лонгрид</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Methodology 4 -->
+              <div class="material-card material-card--methodology">
+                <div class="card-image" style="padding: 12px;">
+                  <div class="placeholder-methodology">
+                    <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Лекция: Польза изучения языков</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                    <span class="card-link-text">Лонгрид</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== ЛЕКСИЧЕСКИЙ МИНИМУМ ==================== -->
+        <section class="content-section" data-section="lexicon">
+          <div class="section-header">
+            <h2 class="section-title">Лексический минимум <span class="section-count">54</span></h2>
+            <a href="#" class="section-show-all">Показать все</a>
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-row">
+
+              <!-- Lexicon 1 -->
+              <div class="material-card">
+                <div class="card-image">
+                  <div class="card-placeholder" style="background: #e8e0f0;">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#d0c8e0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d8d0e4"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d8d0e4"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#d8d0e4"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Базовая лексика A1</div>
+                  <div class="card-description text-truncate-2">Основные слова и выражения для начального уровня</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lexicon 2 -->
+              <div class="material-card">
+                <div class="card-image">
+                  <div class="card-placeholder" style="background: #e0f0e8;">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#c0e0c8"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d0e4d8"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d0e4d8"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#d0e4d8"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Базовая лексика A2</div>
+                  <div class="card-description text-truncate-2">Расширенный словарный запас для элементарного уровня</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-a2.svg" class="level-badge-icon" width="24" height="24" alt="A2">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lexicon 3 -->
+              <div class="material-card">
+                <div class="card-image">
+                  <div class="card-placeholder" style="background: #f0e8e0;">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#e0d0c0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#e4d8d0"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#e4d8d0"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#e4d8d0"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Базовая лексика B1</div>
+                  <div class="card-description text-truncate-2">Словарный запас для среднего уровня владения</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-b1.svg" class="level-badge-icon" width="24" height="24" alt="B1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lexicon 4 -->
+              <div class="material-card">
+                <div class="card-image">
+                  <div class="card-placeholder" style="background: #e0e8f0;">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#c0d0e0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d0d8e4"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d0d8e4"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#d0d8e4"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Базовая лексика B2</div>
+                  <div class="card-description text-truncate-2">Продвинутый словарный запас для уверенного общения</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-b2.svg" class="level-badge-icon" width="24" height="24" alt="B2">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lexicon 5 -->
+              <div class="material-card">
+                <div class="card-image">
+                  <div class="card-placeholder" style="background: #e8f0e0;">
+                    <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#c8e0c0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d4e4d0"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d4e4d0"/></svg>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Базовая лексика C1</div>
+                  <div class="card-description text-truncate-2">Специализированная лексика для высокого уровня</div>
+                  <div class="card-footer">
+                    <img src="img/icons/level-c1.svg" class="level-badge-icon" width="24" height="24" alt="C1">
+                    <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+            </button>
+          </div>
+        </section>
       </div>
-
-      <!-- ==================== КНИГИ ==================== -->
-      <section class="content-section" data-section="books">
-        <div class="section-header">
-          <h2 class="section-title">Книги <span class="section-count">10</span></h2>
-          <a href="#" class="section-show-all">Показать все</a>
-        </div>
-        <div class="scroll-container">
-          <div class="scroll-row">
-
-            <!-- Book card 1 -->
-            <div class="material-card material-card--book">
-              <div class="card-image">
-                <div class="placeholder-book placeholder-book--1">
-                  <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#d4c4a8"/><rect x="8" y="8" width="44" height="6" rx="2" fill="#b8a88c"/><rect x="8" y="20" width="32" height="4" rx="1" fill="#c8b89c"/><rect x="8" y="28" width="38" height="4" rx="1" fill="#c8b89c"/></svg>
-                </div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <img src="img/icons/level-a2.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A2">
-              </div>
-              <div class="card-body">
-                <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
-                <div class="card-subtitle">Издательство</div>
-                <div class="card-footer">
-                  <span class="card-tag">Русский язык для билингвов</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Book card 2 -->
-            <div class="material-card material-card--book">
-              <div class="card-image">
-                <div class="placeholder-book placeholder-book--2">
-                  <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#a8c8a0"/><rect x="8" y="10" width="44" height="8" rx="2" fill="#88b080"/><rect x="8" y="24" width="36" height="4" rx="1" fill="#98b890"/><rect x="8" y="32" width="28" height="4" rx="1" fill="#98b890"/></svg>
-                </div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <img src="img/icons/level-a2.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A2">
-              </div>
-              <div class="card-body">
-                <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
-                <div class="card-subtitle">Издательство</div>
-                <div class="card-footer">
-                  <span class="card-tag">Русский язык для билингвов</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Book card 3 -->
-            <div class="material-card material-card--book">
-              <div class="card-image">
-                <div class="placeholder-book placeholder-book--3">
-                  <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#e8e0c8"/><rect x="6" y="8" width="48" height="10" rx="2" fill="#d0c8a8"/><rect x="6" y="24" width="40" height="4" rx="1" fill="#d8d0b8"/></svg>
-                </div>
-                <img src="img/icons/level-a1.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A1">
-              </div>
-              <div class="card-body">
-                <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
-                <div class="card-subtitle">Издательство</div>
-                <div class="card-footer">
-                  <span class="card-tag">Русский язык для билингвов</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Book card 4 -->
-            <div class="material-card material-card--book">
-              <div class="card-image">
-                <div class="placeholder-book placeholder-book--4">
-                  <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#b0d0e8"/><rect x="8" y="8" width="44" height="8" rx="2" fill="#90b8d0"/><rect x="8" y="22" width="32" height="4" rx="1" fill="#a0c0d8"/></svg>
-                </div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <img src="img/icons/level-c1.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="C1">
-              </div>
-              <div class="card-body">
-                <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
-                <div class="card-subtitle">Издательство</div>
-                <div class="card-footer">
-                  <span class="card-tag">Русский язык для билингвов</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Book card 5 -->
-            <div class="material-card material-card--book">
-              <div class="card-image">
-                <div class="placeholder-book placeholder-book--5">
-                  <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#d4c4a8"/><rect x="8" y="8" width="44" height="6" rx="2" fill="#b8a88c"/><rect x="8" y="20" width="32" height="4" rx="1" fill="#c8b89c"/></svg>
-                </div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <img src="img/icons/level-a2.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A2">
-              </div>
-              <div class="card-body">
-                <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
-                <div class="card-subtitle">Издательство</div>
-                <div class="card-footer">
-                  <span class="card-tag">Русский язык для билингвов</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Book card 6 (partially visible) -->
-            <div class="material-card material-card--book">
-              <div class="card-image">
-                <div class="placeholder-book placeholder-book--1">
-                  <svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="4" fill="#d4c4a8"/><rect x="8" y="8" width="44" height="6" rx="2" fill="#b8a88c"/></svg>
-                </div>
-                <img src="img/icons/level-a1.svg" class="card-level-badge level-badge-icon" width="40" height="40" alt="A1">
-              </div>
-              <div class="card-body">
-                <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельн...</div>
-                <div class="card-subtitle">Издательство</div>
-                <div class="card-footer">
-                  <span class="card-tag">Русский язык для билингвов</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-            <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-          </button>
-        </div>
-      </section>
-
-      <!-- ==================== РАБОЧИЕ ЛИСТЫ ==================== -->
-      <section class="content-section" data-section="worksheets">
-        <div class="section-header">
-          <h2 class="section-title">Рабочие листы <span class="section-count">46</span></h2>
-          <a href="#" class="section-show-all">Показать все</a>
-        </div>
-        <div class="scroll-container">
-          <div class="scroll-row">
-
-            <!-- Worksheet 1 -->
-            <div class="material-card material-card--worksheet">
-              <div class="card-image">
-                <div class="placeholder-worksheet"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <span class="card-label">Рабочий лист</span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Алфавит и произношение</div>
-                <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Worksheet 2 -->
-            <div class="material-card material-card--worksheet">
-              <div class="card-image">
-                <div class="placeholder-worksheet"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <span class="card-label">Рабочий лист</span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Числа и возраст</div>
-                <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <img src="img/icons/level-a2.svg" class="level-badge-icon" width="24" height="24" alt="A2">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Worksheet 3 -->
-            <div class="material-card material-card--worksheet">
-              <div class="card-image">
-                <div class="placeholder-worksheet"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <span class="card-label">Рабочий лист</span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Знакомство и приветствие</div>
-                <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Worksheet 4 -->
-            <div class="material-card material-card--worksheet">
-              <div class="card-image">
-                <div class="placeholder-worksheet"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <span class="card-label">Рабочий лист</span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Семья и друзья</div>
-                <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <img src="img/icons/level-a2.svg" class="level-badge-icon" width="24" height="24" alt="A2">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Worksheet 5 -->
-            <div class="material-card material-card--worksheet">
-              <div class="card-image">
-                <div class="placeholder-worksheet"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-                <span class="card-label">Рабочий лист</span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Еда и напитки</div>
-                <div class="card-description text-truncate-2"><strong>Связанные материалы:</strong> тесты, интерактивы, игры, презентации</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-            <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-          </button>
-        </div>
-      </section>
-
-      <!-- ==================== ТЕСТЫ ==================== -->
-      <section class="content-section" data-section="tests">
-        <div class="section-header">
-          <h2 class="section-title">Тесты <span class="section-count">23</span></h2>
-          <a href="#" class="section-show-all">Показать все</a>
-        </div>
-        <div class="scroll-container">
-          <div class="scroll-row">
-
-            <!-- Test 1 - pink -->
-            <div class="material-card material-card--test">
-              <div class="card-color-header card-color-header--pink">
-                <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Опросительная форма</div>
-                <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">К рабочему ли...</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Test 2 - green -->
-            <div class="material-card material-card--test">
-              <div class="card-color-header card-color-header--green">
-                <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Семья и друзья</div>
-                <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-b2.svg" class="level-badge-icon" width="24" height="24" alt="B2">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Язык специальн...</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Test 3 - yellow -->
-            <div class="material-card material-card--test">
-              <div class="card-color-header card-color-header--yellow">
-                <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Времена глаголов</div>
-                <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Язык специальн...</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Test 4 - orange -->
-            <div class="material-card material-card--test">
-              <div class="card-color-header card-color-header--orange">
-                <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="26" width="40" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
-              </div>
-              <div class="card-body">
-                <div class="card-title">В магазине</div>
-                <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-c1.svg" class="level-badge-icon" width="24" height="24" alt="C1">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">К рабочему ли...</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Test 5 -->
-            <div class="material-card material-card--test">
-              <div class="card-color-header card-color-header--pink">
-                <svg width="80" height="40" viewBox="0 0 80 40" fill="none"><rect x="5" y="5" width="70" height="30" rx="4" fill="rgba(255,255,255,0.5)"/><rect x="12" y="12" width="30" height="3" rx="1" fill="rgba(0,0,0,0.15)"/><rect x="12" y="19" width="50" height="3" rx="1" fill="rgba(0,0,0,0.15)"/></svg>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Предлоги места</div>
-                <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Видео"><img src="img/icons/play.svg" class="icon" width="14" height="14" alt=""></button>
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-            <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-          </button>
-        </div>
-      </section>
-
-      <!-- ==================== ИНТЕРАКТИВЫ ==================== -->
-      <section class="content-section" data-section="interactives">
-        <div class="section-header">
-          <h2 class="section-title">Интерактивы <span class="section-count">10</span></h2>
-          <a href="#" class="section-show-all">Показать все</a>
-        </div>
-        <div class="scroll-container">
-          <div class="scroll-row">
-
-            <!-- Interactive 1 -->
-            <div class="material-card material-card--interactive">
-              <div class="card-image">
-                <div class="placeholder-interactive">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Найди пару</div>
-                <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">К рабочему листу</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Interactive 2 -->
-            <div class="material-card material-card--interactive">
-              <div class="card-image">
-                <div class="placeholder-interactive">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Найди пару</div>
-                <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">К рабочему листу</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Interactive 3 -->
-            <div class="material-card material-card--interactive">
-              <div class="card-image">
-                <div class="placeholder-interactive">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Найди пару</div>
-                <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">К рабочему листу</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Interactive 4 -->
-            <div class="material-card material-card--interactive">
-              <div class="card-image">
-                <div class="placeholder-interactive">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Найди пару</div>
-                <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">К рабочему листу</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Interactive 5 -->
-            <div class="material-card material-card--interactive">
-              <div class="card-image">
-                <div class="placeholder-interactive">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="30" height="50" rx="4" fill="#d8d0b8"/><rect x="40" y="5" width="35" height="22" rx="4" fill="#c8c0a8"/><rect x="40" y="33" width="35" height="22" rx="4" fill="#c8c0a8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Найди пару</div>
-                <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">К рабочему листу</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-            <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-          </button>
-        </div>
-      </section>
-
-      <!-- ==================== БАНК МАТЕРИАЛОВ ==================== -->
-      <section class="content-section" data-section="materials">
-        <div class="section-header">
-          <h2 class="section-title">Банк материалов <span class="section-count">10</span></h2>
-          <a href="#" class="section-show-all">Показать все</a>
-        </div>
-        <div class="scroll-container">
-          <div class="scroll-row">
-
-            <!-- Bank 1 -->
-            <div class="material-card material-card--bank">
-              <div class="card-image">
-                <div class="placeholder-bank"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Разгадай филворд</div>
-                <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Филворд</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Bank 2 -->
-            <div class="material-card material-card--bank">
-              <div class="card-image">
-                <div class="placeholder-bank"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Разгадай филворд</div>
-                <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Филворд</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Bank 3 -->
-            <div class="material-card material-card--bank">
-              <div class="card-image">
-                <div class="placeholder-bank"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Разгадай филворд</div>
-                <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Филворд</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Bank 4 -->
-            <div class="material-card material-card--bank">
-              <div class="card-image">
-                <div class="placeholder-bank"></div>
-                <span class="card-star"><img src="img/icons/star-fill.svg" class="icon" width="16" height="16" alt=""></span>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Разгадай филворд</div>
-                <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Филворд</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Bank 5 -->
-            <div class="material-card material-card--bank">
-              <div class="card-image">
-                <div class="placeholder-bank"></div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Разгадай филворд</div>
-                <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Филворд</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-            <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-          </button>
-        </div>
-      </section>
-
-      <!-- ==================== МЕТОДИКА ==================== -->
-      <section class="content-section" data-section="methodology">
-        <div class="section-header">
-          <h2 class="section-title">Методика <span class="section-count">23</span></h2>
-          <a href="#" class="section-show-all">Показать все</a>
-        </div>
-        <div class="scroll-container">
-          <div class="scroll-row">
-
-            <!-- Methodology 1 -->
-            <div class="material-card material-card--methodology">
-              <div class="card-image" style="padding: 12px;">
-                <div class="placeholder-methodology">
-                  <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="40" width="40" height="4" rx="1" fill="#e8e8e8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Лекция: Польза изучения языков</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Лонгрид</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Methodology 2 -->
-            <div class="material-card material-card--methodology">
-              <div class="card-image" style="padding: 12px;">
-                <div class="placeholder-methodology">
-                  <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="40" width="40" height="4" rx="1" fill="#e8e8e8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Лекция: Польза изучения языков</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Лонгрид</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Methodology 3 -->
-            <div class="material-card material-card--methodology">
-              <div class="card-image" style="padding: 12px;">
-                <div class="placeholder-methodology">
-                  <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="40" width="40" height="4" rx="1" fill="#e8e8e8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Лекция: Польза изучения языков</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Лонгрид</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Methodology 4 -->
-            <div class="material-card material-card--methodology">
-              <div class="card-image" style="padding: 12px;">
-                <div class="placeholder-methodology">
-                  <svg width="100" height="50" viewBox="0 0 100 50" fill="none"><rect x="10" y="8" width="80" height="6" rx="2" fill="#e0e0e0"/><rect x="10" y="20" width="60" height="4" rx="1" fill="#e8e8e8"/><rect x="10" y="30" width="70" height="4" rx="1" fill="#e8e8e8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Лекция: Польза изучения языков</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                  <span class="card-link-text">Лонгрид</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-            <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-          </button>
-        </div>
-      </section>
-
-      <!-- ==================== ЛЕКСИЧЕСКИЙ МИНИМУМ ==================== -->
-      <section class="content-section" data-section="lexicon">
-        <div class="section-header">
-          <h2 class="section-title">Лексический минимум <span class="section-count">54</span></h2>
-          <a href="#" class="section-show-all">Показать все</a>
-        </div>
-        <div class="scroll-container">
-          <div class="scroll-row">
-
-            <!-- Lexicon 1 -->
-            <div class="material-card">
-              <div class="card-image">
-                <div class="card-placeholder" style="background: #e8e0f0;">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#d0c8e0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d8d0e4"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d8d0e4"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#d8d0e4"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Базовая лексика A1</div>
-                <div class="card-description text-truncate-2">Основные слова и выражения для начального уровня</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a1.svg" class="level-badge-icon" width="24" height="24" alt="A1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Lexicon 2 -->
-            <div class="material-card">
-              <div class="card-image">
-                <div class="card-placeholder" style="background: #e0f0e8;">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#c0e0c8"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d0e4d8"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d0e4d8"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#d0e4d8"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Базовая лексика A2</div>
-                <div class="card-description text-truncate-2">Расширенный словарный запас для элементарного уровня</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-a2.svg" class="level-badge-icon" width="24" height="24" alt="A2">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Lexicon 3 -->
-            <div class="material-card">
-              <div class="card-image">
-                <div class="card-placeholder" style="background: #f0e8e0;">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#e0d0c0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#e4d8d0"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#e4d8d0"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#e4d8d0"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Базовая лексика B1</div>
-                <div class="card-description text-truncate-2">Словарный запас для среднего уровня владения</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-b1.svg" class="level-badge-icon" width="24" height="24" alt="B1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Lexicon 4 -->
-            <div class="material-card">
-              <div class="card-image">
-                <div class="card-placeholder" style="background: #e0e8f0;">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#c0d0e0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d0d8e4"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d0d8e4"/><rect x="10" y="44" width="40" height="5" rx="2" fill="#d0d8e4"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Базовая лексика B2</div>
-                <div class="card-description text-truncate-2">Продвинутый словарный запас для уверенного общения</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-b2.svg" class="level-badge-icon" width="24" height="24" alt="B2">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Lexicon 5 -->
-            <div class="material-card">
-              <div class="card-image">
-                <div class="card-placeholder" style="background: #e8f0e0;">
-                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect x="10" y="8" width="60" height="8" rx="3" fill="#c8e0c0"/><rect x="10" y="22" width="50" height="5" rx="2" fill="#d4e4d0"/><rect x="10" y="33" width="55" height="5" rx="2" fill="#d4e4d0"/></svg>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="card-title">Базовая лексика C1</div>
-                <div class="card-description text-truncate-2">Специализированная лексика для высокого уровня</div>
-                <div class="card-footer">
-                  <img src="img/icons/level-c1.svg" class="level-badge-icon" width="24" height="24" alt="C1">
-                  <button class="icon-btn" title="Группа"><img src="img/icons/people.svg" class="icon" width="14" height="14" alt=""></button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-            <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-          </button>
-        </div>
-      </section>
-
     </div>
   </main>
-
-</div>
 
 <!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

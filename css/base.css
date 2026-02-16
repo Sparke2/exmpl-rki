@@ -66,13 +66,6 @@ ul, ol {
   list-style: none;
 }
 
-/* --- Main layout wrapper --- */
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 .main-content {
   flex: 1;
   padding-bottom: var(--space-3xl);

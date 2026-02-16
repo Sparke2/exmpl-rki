@@ -18,6 +18,10 @@
 }
 
 .site-header .container {
+  height: var(--header-height);
+}
+
+.site-header .container div {
   border-radius: var(--radius-header);
   background: var(--color-white);
   display: flex;
@@ -98,6 +102,16 @@
 }
 
 /* =====================
+   CONTENT
+   ===================== */
+
+.content {
+  background: var(--color-white);
+  border-radius: var(--radius-header);
+  padding: 20px;
+}
+
+/* =====================
    BREADCRUMB
    ===================== */
 .breadcrumb-bar {
@@ -121,12 +135,6 @@
 /* =====================
    SEARCH BOX
    ===================== */
-.search-box {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  margin-bottom: var(--space-xl);
-}
 
 .search-input-wrap {
   display: flex;
@@ -170,10 +178,6 @@
   cursor: pointer;
   font-size: 1.2rem;
   transition: background var(--transition-fast);
-}
-
-.btn-search .icon {
-  /* icon color is baked into the SVG file */
 }
 
 .btn-search:hover {

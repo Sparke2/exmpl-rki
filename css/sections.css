@@ -5,6 +5,11 @@
 /* =====================
    CONTENT SECTION
    ===================== */
+
+.fist-section {
+  margin-top: 55px;
+}
+
 .content-section {
   margin-bottom: var(--space-xl);
 }
