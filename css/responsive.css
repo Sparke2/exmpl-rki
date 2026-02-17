@@ -73,6 +73,10 @@
     padding: 5px 10px;
     font-size: var(--font-size-sm);
   }
+
+  .footer-top__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* =====================
@@ -152,6 +156,24 @@
   .scroll-arrow {
     width: 30px;
     height: 30px;
+  }
+
+  .footer-top__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-col--right {
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .footer-copyright {
+    text-align: right;
   }
 }
 
@@ -251,5 +273,14 @@
 
   .scroll-arrow {
     display: none;
+  }
+
+  .footer-top {
+    padding: var(--space-xl) 0;
+  }
+
+  .footer-bottom {
+    padding: var(--space-base) 0;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   }
 }
