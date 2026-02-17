@@ -227,4 +227,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ============================
+  // Footer: раскрывающиеся Каталог / Коллекции
+  // ============================
+  document.querySelectorAll('.footer-dropdown .footer-link--toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var dropdown = toggle.closest('.footer-dropdown');
+      if (!dropdown) return;
+      var isOpen = dropdown.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  });
+
 });

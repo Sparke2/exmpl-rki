@@ -999,8 +999,22 @@
               <li><a href="#" class="footer-link">Новости и мероприятия</a></li>
               <li><a href="#" class="footer-link">Распределительный тест</a></li>
               <li><a href="#" class="footer-link">Лексический минимум</a></li>
-              <li><a href="#" class="footer-link">Каталог <svg class="footer-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-              <li><a href="#" class="footer-link">Коллекции <svg class="footer-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+              <li class="footer-dropdown">
+                <a href="#" class="footer-link footer-link--toggle" aria-expanded="false">Каталог <img src="img/icons/arrow.svg" class="footer-chevron" width="22" height="22" alt="" aria-hidden="true"></a>
+                <ul class="footer-sublinks">
+                  <li><a href="#" class="footer-link">Учебники</a></li>
+                  <li><a href="#" class="footer-link">Пособия</a></li>
+                  <li><a href="#" class="footer-link">Словари</a></li>
+                </ul>
+              </li>
+              <li class="footer-dropdown">
+                <a href="#" class="footer-link footer-link--toggle" aria-expanded="false">Коллекции <img src="img/icons/arrow.svg" class="footer-chevron" width="22" height="22" alt="" aria-hidden="true"></a>
+                <ul class="footer-sublinks">
+                  <li><a href="#" class="footer-link">Для начинающих</a></li>
+                  <li><a href="#" class="footer-link">Для преподавателей</a></li>
+                  <li><a href="#" class="footer-link">Тематические подборки</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div class="footer-col">
@@ -1009,7 +1023,7 @@
               <li class="footer-support"><a href="mailto:support@ros-edu.ru" class="footer-link">support@ros-edu.ru</a></li>
               <li class="footer-support">8 800 555-22-35<br><span class="footer-support-note">(добавочный 111)</span></li>
               <li class="footer-support">+7 (8452) 24-77-96<br><span class="footer-support-note">Для звонков из-за рубежа</span></li>
-              <li class="footer-support"><a href="#" class="footer-link">Написать в чат</a></p>
+              <li class="footer-support"><a href="#" class="footer-link" id="footer-chat-btn" role="button">Написать в чат</a></li>
               <li class="footer-support"><a href="https://t.me/ipr_support_bot" class="footer-link">Написать в телеграм</a></li>
             </ul>
           </div>
@@ -1038,6 +1052,22 @@
 
 <!-- Custom JS -->
 <script src="js/main.js"></script>
+
+<!-- Bitrix24 чат: скрипт всегда на странице -->
+<script>
+(function(w,d,u){
+  var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+  var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+})(window,document,'https://cdn-ru.bitrix24.ru/b24555134/crm/site_button/loader_9_ppyrxt.js');
+</script>
+<!-- Открытие чата по клику на «Написать в чат» -->
+<script>
+document.getElementById('footer-chat-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  var btn = document.querySelector('.b24-widget-button-inner-container');
+  if (btn) btn.click();
+});
+</script>
 
 </body>
 </html>
