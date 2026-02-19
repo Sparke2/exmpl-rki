@@ -1,0 +1,79 @@
+/* ============================================
+   Swiper Custom Styles — интеграция с дизайном
+   ============================================ */
+
+/* Карусель книг */
+.books-carousel {
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.books-carousel .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.books-carousel .swiper-slide {
+  height: auto;
+  width: auto;
+}
+
+/* Кнопки навигации Swiper */
+.books-carousel .swiper-button-prev,
+.books-carousel .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  box-shadow: var(--shadow-md);
+  color: var(--color-gray-700);
+  transition: all var(--transition-fast);
+  z-index: 5;
+}
+
+.books-carousel .swiper-button-prev::after,
+.books-carousel .swiper-button-next::after {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.books-carousel .swiper-button-prev:hover,
+.books-carousel .swiper-button-next:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.books-carousel .swiper-button-prev {
+  left: -8px;
+}
+
+.books-carousel .swiper-button-next {
+  right: -8px;
+}
+
+/* Скрытие кнопок когда не нужны */
+.books-carousel .swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .books-carousel .swiper-button-prev,
+  .books-carousel .swiper-button-next {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .books-carousel .swiper-button-prev {
+    left: -4px;
+  }
+  
+  .books-carousel .swiper-button-next {
+    right: -4px;
+  }
+}
