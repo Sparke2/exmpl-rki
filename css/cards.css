@@ -26,6 +26,10 @@
   color: var(--color-main);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-normal);
+  max-width: 134px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .material-card:hover {
