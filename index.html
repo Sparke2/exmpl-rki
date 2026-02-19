@@ -1,629 +1,729 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IPR РКИ — Поиск</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPR РКИ — Поиск</title>
 
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/responsive.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/swiper-custom.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="site-header">
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
     <div class="container">
-      <div>
-        <a href="#" class="header-logo" aria-label="IPR РКИ">
-          <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
-        </a>
-  
-        <button class="btn-catalog" type="button" aria-expanded="false" aria-controls="catalog-overlay">
-          <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
-          <span class="icon icon--close-catalog" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-          <span class="catalog-text">Каталог</span>
-        </button>
-  
-        <nav class="header-nav">
-          <a href="#" class="btn-nav">
-            <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
-            <span class="nav-text">Слабовидящим</span>
-          </a>
-          <a href="#" class="btn-nav">
-            <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
-            <span class="nav-text">Войти</span>
-          </a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==================== CATALOG OVERLAY ==================== -->
-  <div class="catalog-overlay" id="catalog-overlay" aria-hidden="true">
-    <div class="container">
-      <div class="catalog-overlay-inner">
-        <button type="button" class="catalog-overlay-close" aria-label="Закрыть каталог">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
-        <div class="catalog-overlay-columns">
-          <div class="catalog-column">
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Книги</h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Учебники и учебные пособия</a></li>
-                <li><a href="#">Русский язык для билингвов</a></li>
-                <li><a href="#">Подготовка к тестированию</a></li>
-                <li><a href="#">Язык специальности</a></li>
-                <li><a href="#">Методическая литература</a></li>
-                <li><a href="#">Словари</a></li>
-                <li><a href="#">Художественная литература</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Язык специальности</h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Инженерно-технический и технологический профиль</a></li>
-                <li><a href="#">Естественно-научный профиль</a></li>
-                <li><a href="#">Медико-биологический профиль</a></li>
-                <li><a href="#">Экономический профиль</a></li>
-                <li><a href="#">Гуманитарный профиль</a></li>
-                <li><a href="#">Музыкальное и художественное образование</a></li>
-                <li><a href="#">Военное дело</a></li>
-                <li><a href="#">Все профильные модули</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Златоуст <span class="catalog-tag">коллекции</span></h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Русский язык. Литература</a></li>
-                <li><a href="#">Литература для детей-билингвов, преподавателей и родителей</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">«Русский язык». Курсы <span class="catalog-tag">коллекции</span></h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Коллекция № 1. Русский как иностранный</a></li>
-                <li><a href="#">Коллекция № 2. Русский как иностранный</a></li>
-                <li><a href="#">УМК «Русский язык сегодня. Элементарный уровень»</a></li>
-                <li><a href="#">УМК «Русский язык сегодня. Базовый уровень»</a></li>
-                <li><a href="#">Классное чтение</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Лексический минимум</h3>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Распределительный тест</h3>
-            </div>
-          </div>
-          <div class="catalog-column">
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Рабочие листы</h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Общий курс</a></li>
-                <li><a href="#">Дополнительные рабочие листы</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Тесты</h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Тесты к рабочим листам</a></li>
-                <li><a href="#">Тесты на уровень</a></li>
-                <li><a href="#">Язык специальности</a></li>
-                <li><a href="#">Для детей</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Интерактивы</h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">К лексическому минимуму</a></li>
-                <li><a href="#">К рабочим листам</a></li>
-                <li><a href="#">Другое</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Банк материалов</h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Кроссворды</a></li>
-                <li><a href="#">Филворды</a></li>
-                <li><a href="#">Бродилки</a></li>
-                <li><a href="#">Викторины</a></li>
-                <li><a href="#">Квесты</a></li>
-                <li><a href="#">Подборки иллюстраций</a></li>
-                <li><a href="#">Презентации</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Методика</h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Лонгриды</a></li>
-                <li><a href="#">Записи вебинаров</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="catalog-column">
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Уровень владения <span class="catalog-tag">коллекции</span></h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">А1 — элементарный</a></li>
-                <li><a href="#">А2 — базовый</a></li>
-                <li><a href="#">В1 — I сертификационный</a></li>
-                <li><a href="#">В2 — II сертификационный</a></li>
-                <li><a href="#">С1 — III сертификационный</a></li>
-                <li><a href="#">С2 — IV сертификационный</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Грамматика <span class="catalog-tag">коллекции</span></h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Вид глагола (НСВ и СВ)</a></li>
-                <li><a href="#">Глаголы движения</a></li>
-                <li><a href="#">Именительный падеж</a></li>
-                <li><a href="#">Винительный падеж</a></li>
-                <li><a href="#">Предложный падеж</a></li>
-                <li><a href="#">Родительный падеж</a></li>
-                <li><a href="#" class="catalog-link-underline">Показать все</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Тематики <span class="catalog-tag">коллекции</span></h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Фонетика, графика и орфография</a></li>
-                <li><a href="#">О себе. Внешность, характер, эмоции, возраст, интеллект</a></li>
-                <li><a href="#">Мои вещи. Одежда и обувь</a></li>
-                <li><a href="#">Мой день. Распорядок, быт и действия</a></li>
-                <li><a href="#">Учёба и работа</a></li>
-                <li><a href="#">Отдых и хобби</a></li>
-                <li><a href="#" class="catalog-link-underline">Показать все</a></li>
-              </ul>
-            </div>
-            <div class="catalog-block">
-              <h3 class="catalog-block-title">Праздники и памятные дни<span class="catalog-tag">коллекции</span></h3>
-              <ul class="catalog-block-list">
-                <li><a href="#">Новый год</a></li>
-                <li><a href="#">Масленица</a></li>
-                <li><a href="#">Татьянин день</a></li>
-                <li><a href="#">Международный день студента</a></li>
-                <li><a href="#">День гжели</a></li>
-                <li><a href="#">Всероссийский день хоккея</a></li>
-                <li><a href="#" class="catalog-link-underline">Открыть все</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="main-content">
-    <div class="container">
-
-      <!-- Breadcrumb -->
-      <div class="breadcrumb-bar">
-        <a href="#"><img src="img/icons/ar_left.svg" class="icon" width="12" height="11" alt=""> Назад</a>
-        <span class="separator">|</span>
-        <a href="#" class="breadcrumb-active">Поиск</a>
-      </div>
-
-     
-      <div class="content">
-         <!-- Search Box -->
-        <div class="search-input-wrap">
-          <input type="text" placeholder="Введите запрос">
-          <button class="btn-search" aria-label="Искать">
-            <img src="img/icons/search.svg" class="icon" width="20" height="20" alt="">
-          </button>
-        </div>
-
-        <div class="filter-pills">
-          <button class="filter-pill active" data-filter="all">Все</button>
-          <button class="filter-pill" data-filter="books">Книги <span class="pill-count">76 434</span></button>
-          <button class="filter-pill" data-filter="worksheets">Рабочие листы <span class="pill-count">422</span></button>
-          <button class="filter-pill" data-filter="tests">Тесты <span class="pill-count">700</span></button>
-          <button class="filter-pill" data-filter="interactives">Интерактивы <span class="pill-count">700</span></button>
-          <button class="filter-pill" data-filter="materials">Банк материалов <span class="pill-count">2 315</span></button>
-          <button class="filter-pill" data-filter="lexicon">Лексический минимум <span class="pill-count">2 315</span></button>
-          <button class="filter-pill" data-filter="methodology">Методика <span class="pill-count">2 315</span></button>
-        </div>
-
-        <!-- ==================== КНИГИ ==================== -->
-        <section class="content-section fist-section" data-section="books">
-          <div class="section-header">
-            <h2 class="section-title">Книги <span class="section-count">10</span></h2>
-            <a href="#" class="section-show-all">Показать все</a>
-          </div>
-          <div class="scroll-container">
-            <div class="scroll-row">
-
-              <!-- Book card 1 -->
-              <div class="material-card material-card--book">
-                <div class="card-image">
-                  <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги" width="200" height="275">
-                  <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                  <div class="card-icons">
-                    <img src="img/icons/level-a2.svg" class="card-icon" width="40" height="40" alt="A2">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="Аудио" title="Аудио">
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО</div>
-                  <div class="card-subtitle">Издательство</div>
-                  <div class="card-footer">
-                    <span class="card-tag">Русский язык для билингвов</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="material-card material-card--book">
-                <div class="card-image">
-                  <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги" width="200" height="275">
-                  <img src="img/icons/star.svg" class="card-icon-start" width="40" height="40" alt="">
-                  <div class="card-icons">
-                    <img src="img/icons/level-a2.svg" class="card-icon" width="40" height="40" alt="A2">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="Аудио" title="Аудио">
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО</div>
-                  <div class="card-subtitle">Издательство</div>
-                  <div class="card-footer">
-                    <span class="card-tag">Русский язык для билингвов</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="material-card material-card--book">
-                <div class="card-image">
-                  <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги" width="200" height="275">
-                  <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                  <div class="card-icons">
-                    <img src="img/icons/level-c1.svg" class="card-icon" width="40" height="40" alt="C1">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="Аудио" title="Аудио">
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО</div>
-                  <div class="card-subtitle">Издательство</div>
-                  <div class="card-footer">
-                    <span class="card-tag">Русский язык для билингвов</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="material-card material-card--book">
-                <div class="card-image">
-                  <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги" width="200" height="275">
-                  <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                  <div class="card-icons">
-                    <img src="img/icons/level-a2.svg" class="card-icon" width="40" height="40" alt="A2">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="Аудио" title="Аудио">
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО</div>
-                  <div class="card-subtitle">Издательство</div>
-                  <div class="card-footer">
-                    <span class="card-tag">Русский язык для билингвов</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="material-card material-card--book">
-                <div class="card-image">
-                  <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги" width="200" height="275">
-                  <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                  <div class="card-icons">
-                    <img src="img/icons/level-a2.svg" class="card-icon" width="40" height="40" alt="A2">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="Аудио" title="Аудио">
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО</div>
-                  <div class="card-subtitle">Издательство</div>
-                  <div class="card-footer">
-                    <span class="card-tag">Русский язык для билингвов</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-            </button>
-          </div>
-        </section>
-
-        <!-- ==================== РАБОЧИЕ ЛИСТЫ ==================== -->
-        <section class="content-section" data-section="worksheets">
-          <div class="section-header">
-            <h2 class="section-title">Рабочие листы <span class="section-count">46</span></h2>
-            <a href="#" class="section-show-all">Показать все</a>
-          </div>
-          <div class="scroll-container">
-            <div class="scroll-row">
-
-              <!-- Worksheet 1 -->
-              <div class="material-card material-card--worksheet">
-                <div class="card-image">
-                  <img src="img/card/default-worklist.svg" alt="Алфавит и произношение">
-                  <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                </div>
-
-                <div class="card-body">
-                  <img src="img/card/worklist-additional.svg" class="additional" alt="">
-                  <div class="card-title">Алфавит и произношение</div>
-                  <div class="card-description text-truncate-2"><span>Связанные материалы:</span> тесты, интерактивы, игры, презентация</div>
-                  <div class="card-footer">
-                    <img src="img/icons/level-a1.svg" class="card-icon" width="40" height="40" alt="">
-                    <img src="img/icons/type-video.svg" class="card-icon" width="40" height="40" alt="">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-            </button>
-          </div>
-        </section>
-
-        <!-- ==================== ТЕСТЫ ==================== -->
-        <section class="content-section" data-section="tests">
-          <div class="section-header">
-            <h2 class="section-title">Тесты <span class="section-count">23</span></h2>
-            <a href="#" class="section-show-all">Показать все</a>
-          </div>
-          <div class="scroll-container">
-            <div class="scroll-row">
-
-              <!-- Test 1 - pink -->
-              <div class="material-card material-card--test">
-                <div class="card-image">
-                  <img src="img/card/default-test.svg" alt="">
-                  <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                </div>
-                <div class="card-body">
-                  <div class="card-title">Опросительная форма</div>
-                  <div class="card-description text-truncate-2">Построение вопросов, использование вопросительных слов</div>
-                  <div class="card-footer">
-                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="40" height="40" alt="A1">
-                    <img src="img/icons/type-video.svg" class="card-icon" width="40" height="40" alt="">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
-                    <span class="card-tag">Язык специальности</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-            </button>
-          </div>
-        </section>
-
-        <!-- ==================== ИНТЕРАКТИВЫ ==================== -->
-        <section class="content-section" data-section="interactives">
-          <div class="section-header">
-            <h2 class="section-title">Интерактивы <span class="section-count">10</span></h2>
-            <a href="#" class="section-show-all">Показать все</a>
-          </div>
-          <div class="scroll-container">
-            <div class="scroll-row">
-
-              <!-- Interactive 1 -->
-              <div class="material-card material-card--interactive">
-                <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                <div class="card-image">
-                  <img src="img/card/default-interactive.svg" alt="">
-                </div>
-                <div class="card-body">
-                  <div class="card-title">Найди пару</div>
-                  <div class="card-description text-truncate-2">Сопоставление слов и изображений простые вещи</div>
-                  <div class="card-footer">
-                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="40" height="40" alt="A1">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
-                    <span class="card-tag">К рабочему листу</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-            </button>
-          </div>
-        </section>
-
-        <!-- ==================== БАНК МАТЕРИАЛОВ ==================== -->
-        <section class="content-section" data-section="materials">
-          <div class="section-header">
-            <h2 class="section-title">Банк материалов <span class="section-count">10</span></h2>
-            <a href="#" class="section-show-all">Показать все</a>
-          </div>
-          <div class="scroll-container">
-            <div class="scroll-row">
-
-              <!-- Bank 1 -->
-              <div class="material-card material-card--bank">
-                <div class="card-image">
-                  <img src="img/card/default-bank.svg" alt="">
-                  <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
-                </div>
-                <div class="card-body">
-                  <div class="card-title">Разгадай филворд</div>
-                  <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по лестнице эволюци...</div>
-                  <div class="card-footer">
-                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="40" height="40" alt="A1">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
-                    <span class="card-tag">Филворд</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-            </button>
-          </div>
-        </section>
-
-        <!-- ==================== МЕТОДИКА ==================== -->
-        <section class="content-section" data-section="methodology">
-          <div class="section-header">
-            <h2 class="section-title">Методика <span class="section-count">23</span></h2>
-            <a href="#" class="section-show-all">Показать все</a>
-          </div>
-          <div class="scroll-container">
-            <div class="scroll-row">
-
-              <!-- Methodology 1 -->
-              <div class="material-card material-card--methodology">
-                <img src="img/card/default-methodic.svg" alt="">
-                <div class="card-body">
-                  <div class="card-title">Лекция: Польза изучения языков</div>
-                  <div class="card-footer">
-                    <img src="img/icons/level-a1.svg" class="card-icon" width="40" height="40" alt="A1">
-                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
-                    <span class="card-tag">Лонгрид</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
-              <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
-            </button>
-          </div>
-        </section>
-
-        <!-- ==================== ЛЕКСИЧЕСКИЙ МИНИМУМ ==================== -->
-        <section class="content-section" data-section="lexicon">
-          <div class="section-header">
-            <h2 class="section-title">Лексический минимум <span class="section-count">54</span></h2>
-            <a href="#" class="section-show-all">Показать все</a>
-          </div>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="container">
-    <div class="site-footer">
-      <div class="footer-top">
-        <div class="footer-top__grid">
-          <div class="footer-col footer-col--company">
-            <a href="#" class="footer-logo" aria-label="IPR РКИ">
-              <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
+        <div>
+            <a href="#" class="header-logo" aria-label="IPR РКИ">
+                <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
             </a>
-            <p class="footer-legal">Юридический адрес: 143405, Московская область, г.о. Красногорск, г. Красногорск, ш. Ильинское, д. 1А, помещ. 17.17</p>
-            <p class="footer-legal">Тел./факс: +7 (8452) 24 77 96</p>
-            <p class="footer-legal">ИНН: 6454085119</p>
-            <p class="footer-legal">ОКВЭД: 62.09</p>
-            <div class="footer-social">
-              <a href="https://vkvideo.ru/@iprmedia/all" class="footer-social-link" aria-label="ВК видео"><img src="img/icons/social/vkvideo.svg" width="40" height="40" alt=""></a>
-              <a href="https://rutube.ru/channel/25508571/" class="footer-social-link" aria-label="Rutube"><img src="img/icons/social/rutube.svg" width="40" height="40" alt=""></a>
-              <a href="https://vk.com/iprmedia" class="footer-social-link" aria-label="ВКонтакте"><img src="img/icons/social/vk.svg" width="40" height="40" alt=""></a>
-              <a href="https://t.me/ipr_edu_iprmedia" class="footer-social-link" aria-label="Telegram"><img src="img/icons/social/tg.svg" width="40" height="40" alt=""></a>
-            </div>
-            <p class="footer-app-label">Наше приложение для <a href="https://apps.apple.com/ru/app/ros-edu-mobile/id6478668128" class="footer-link">IOS</a> и <a href="https://play.google.com/store/apps/details?id=ru.iprbooks.iprbooksmobilerki" class="footer-link">Android</a></p>
-          </div>
-          <div class="footer-col">
-            <h3 class="footer-heading">Пользователям</h3>
-            <ul class="footer-links">
-              <li><a href="#" class="footer-link">Тестовый доступ</a></li>
-              <li><a href="#" class="footer-link">Авторам</a></li>
-              <li><a href="#" class="footer-link">Контакты</a></li>
-              <li><a href="#" class="footer-link">Правовые документы</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h3 class="footer-heading">О продукте</h3>
-            <ul class="footer-links">
-              <li><a href="#" class="footer-link">Новости и мероприятия</a></li>
-              <li><a href="#" class="footer-link">Распределительный тест</a></li>
-              <li><a href="#" class="footer-link">Лексический минимум</a></li>
-              <li class="footer-dropdown">
-                <a href="#" class="footer-link footer-link--toggle" aria-expanded="false">Каталог <img src="img/icons/arrow.svg" class="footer-chevron" width="22" height="22" alt="" aria-hidden="true"></a>
-                <ul class="footer-sublinks">
-                  <li><a href="#" class="footer-link">Учебники</a></li>
-                  <li><a href="#" class="footer-link">Пособия</a></li>
-                  <li><a href="#" class="footer-link">Словари</a></li>
-                </ul>
-              </li>
-              <li class="footer-dropdown">
-                <a href="#" class="footer-link footer-link--toggle" aria-expanded="false">Коллекции <img src="img/icons/arrow.svg" class="footer-chevron" width="22" height="22" alt="" aria-hidden="true"></a>
-                <ul class="footer-sublinks">
-                  <li><a href="#" class="footer-link">Для начинающих</a></li>
-                  <li><a href="#" class="footer-link">Для преподавателей</a></li>
-                  <li><a href="#" class="footer-link">Тематические подборки</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h3 class="footer-heading">Поддержка</h3>
-            <ul class="footer-supports">
-              <li class="footer-support"><a href="mailto:support@ros-edu.ru" class="footer-link">support@ros-edu.ru</a></li>
-              <li class="footer-support">8 800 555-22-35<br><span class="footer-support-note">(добавочный 111)</span></li>
-              <li class="footer-support">+7 (8452) 24-77-96<br><span class="footer-support-note">Для звонков из-за рубежа</span></li>
-              <li class="footer-support"><a href="#" class="footer-link" id="footer-chat-btn" role="button">Написать в чат</a></li>
-              <li class="footer-support"><a href="https://t.me/ipr_support_bot" class="footer-link">Написать в телеграм</a></li>
-            </ul>
-          </div>
+
+            <button class="btn-catalog" type="button" aria-expanded="false" aria-controls="catalog-overlay">
+                <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
+                <span class="icon icon--close-catalog" aria-hidden="true"><svg width="16" height="16"
+                                                                               viewBox="0 0 16 16" fill="none"
+                                                                               xmlns="http://www.w3.org/2000/svg"><path
+                        d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round"/></svg></span>
+                <span class="catalog-text">Каталог</span>
+            </button>
+
+            <nav class="header-nav">
+                <a href="#" class="btn-nav">
+                    <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
+                    <span class="nav-text">Слабовидящим</span>
+                </a>
+                <a href="#" class="btn-nav">
+                    <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
+                    <span class="nav-text">Войти</span>
+                </a>
+            </nav>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="footer-bottom__flex">
-            <div class="footer-bottom-col">
-              <p class="footer-bottom-text">Программа для ЭВМ зарегистрирована в Едином реестре российских программ для электронно-вычислительных машин и баз данных <a href="https://reestr.digital.gov.ru" target="_blank" rel="noopener noreferrer" class="footer-link">https://reestr.digital.gov.ru</a>. Регистрация осуществляется в соответствии с приказом Минцифры России.</p>
-              <p class="footer-bottom-text">ООО Компания «Ай Пи Ар Медиа» включено в Реестр аккредитованных IT компаний <a href="https://www.gosuslugi.ru/it" target="_blank" rel="noopener noreferrer" class="footer-link">https://www.gosuslugi.ru/it</a>.</p>
-            </div>
-            <div class="vr"></div>
-            <div class="footer-bottom-col">
-              <p class="footer-bottom-text">Используем cookies для корректной работы сайта, персонализации пользователей и других целей, предусмотренных <a href="#" class="footer-link">пользовательским соглашением</a>, <a href="#" class="footer-link">политикой конфиденциальности</a>, <a href="#" class="footer-link">положением о защите персональных данных</a>.</p>
-              <p class="footer-copyright">© 2010-2026 ООО Компания «Ай Пи Ар Медиа»</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </footer>
+</header>
+
+<!-- ==================== CATALOG OVERLAY ==================== -->
+<div class="catalog-overlay" id="catalog-overlay" aria-hidden="true">
+    <div class="container">
+        <div class="catalog-overlay-inner">
+            <button type="button" class="catalog-overlay-close" aria-label="Закрыть каталог">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="catalog-overlay-columns">
+                <div class="catalog-column">
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Книги</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Учебники и учебные пособия</a></li>
+                            <li><a href="#">Русский язык для билингвов</a></li>
+                            <li><a href="#">Подготовка к тестированию</a></li>
+                            <li><a href="#">Язык специальности</a></li>
+                            <li><a href="#">Методическая литература</a></li>
+                            <li><a href="#">Словари</a></li>
+                            <li><a href="#">Художественная литература</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Язык специальности</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Инженерно-технический и технологический профиль</a></li>
+                            <li><a href="#">Естественно-научный профиль</a></li>
+                            <li><a href="#">Медико-биологический профиль</a></li>
+                            <li><a href="#">Экономический профиль</a></li>
+                            <li><a href="#">Гуманитарный профиль</a></li>
+                            <li><a href="#">Музыкальное и художественное образование</a></li>
+                            <li><a href="#">Военное дело</a></li>
+                            <li><a href="#">Все профильные модули</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Златоуст <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Русский язык. Литература</a></li>
+                            <li><a href="#">Литература для детей-билингвов, преподавателей и родителей</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">«Русский язык». Курсы <span class="catalog-tag">коллекции</span>
+                        </h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Коллекция № 1. Русский как иностранный</a></li>
+                            <li><a href="#">Коллекция № 2. Русский как иностранный</a></li>
+                            <li><a href="#">УМК «Русский язык сегодня. Элементарный уровень»</a></li>
+                            <li><a href="#">УМК «Русский язык сегодня. Базовый уровень»</a></li>
+                            <li><a href="#">Классное чтение</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Лексический минимум</h3>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Распределительный тест</h3>
+                    </div>
+                </div>
+                <div class="catalog-column">
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Рабочие листы</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Общий курс</a></li>
+                            <li><a href="#">Дополнительные рабочие листы</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Тесты</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Тесты к рабочим листам</a></li>
+                            <li><a href="#">Тесты на уровень</a></li>
+                            <li><a href="#">Язык специальности</a></li>
+                            <li><a href="#">Для детей</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Интерактивы</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">К лексическому минимуму</a></li>
+                            <li><a href="#">К рабочим листам</a></li>
+                            <li><a href="#">Другое</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Банк материалов</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Кроссворды</a></li>
+                            <li><a href="#">Филворды</a></li>
+                            <li><a href="#">Бродилки</a></li>
+                            <li><a href="#">Викторины</a></li>
+                            <li><a href="#">Квесты</a></li>
+                            <li><a href="#">Подборки иллюстраций</a></li>
+                            <li><a href="#">Презентации</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Методика</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Лонгриды</a></li>
+                            <li><a href="#">Записи вебинаров</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="catalog-column">
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Уровень владения <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">А1 — элементарный</a></li>
+                            <li><a href="#">А2 — базовый</a></li>
+                            <li><a href="#">В1 — I сертификационный</a></li>
+                            <li><a href="#">В2 — II сертификационный</a></li>
+                            <li><a href="#">С1 — III сертификационный</a></li>
+                            <li><a href="#">С2 — IV сертификационный</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Грамматика <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Вид глагола (НСВ и СВ)</a></li>
+                            <li><a href="#">Глаголы движения</a></li>
+                            <li><a href="#">Именительный падеж</a></li>
+                            <li><a href="#">Винительный падеж</a></li>
+                            <li><a href="#">Предложный падеж</a></li>
+                            <li><a href="#">Родительный падеж</a></li>
+                            <li><a href="#" class="catalog-link-underline">Показать все</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Тематики <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Фонетика, графика и орфография</a></li>
+                            <li><a href="#">О себе. Внешность, характер, эмоции, возраст, интеллект</a></li>
+                            <li><a href="#">Мои вещи. Одежда и обувь</a></li>
+                            <li><a href="#">Мой день. Распорядок, быт и действия</a></li>
+                            <li><a href="#">Учёба и работа</a></li>
+                            <li><a href="#">Отдых и хобби</a></li>
+                            <li><a href="#" class="catalog-link-underline">Показать все</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Праздники и памятные дни<span
+                                class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Новый год</a></li>
+                            <li><a href="#">Масленица</a></li>
+                            <li><a href="#">Татьянин день</a></li>
+                            <li><a href="#">Международный день студента</a></li>
+                            <li><a href="#">День гжели</a></li>
+                            <li><a href="#">Всероссийский день хоккея</a></li>
+                            <li><a href="#" class="catalog-link-underline">Открыть все</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main-content">
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-bar">
+            <a href="#"><img src="img/icons/ar_left.svg" class="icon" width="12" height="11" alt=""> Назад</a>
+            <span class="separator">|</span>
+            <a href="#" class="breadcrumb-active">Поиск</a>
+        </div>
+
+
+        <div class="content">
+            <!-- Search Box -->
+            <div class="search-input-wrap">
+                <input type="text" placeholder="Введите запрос">
+                <button class="btn-search" aria-label="Искать">
+                    <img src="img/icons/search.svg" class="icon" width="20" height="20" alt="">
+                </button>
+            </div>
+
+            <div class="filter-pills">
+                <button class="filter-pill active" data-filter="all">Все</button>
+                <button class="filter-pill" data-filter="books">Книги <span class="pill-count">76 434</span></button>
+                <button class="filter-pill" data-filter="worksheets">Рабочие листы <span class="pill-count">422</span>
+                </button>
+                <button class="filter-pill" data-filter="tests">Тесты <span class="pill-count">700</span></button>
+                <button class="filter-pill" data-filter="interactives">Интерактивы <span class="pill-count">700</span>
+                </button>
+                <button class="filter-pill" data-filter="materials">Банк материалов <span
+                        class="pill-count">2 315</span></button>
+                <button class="filter-pill" data-filter="lexicon">Лексический минимум <span
+                        class="pill-count">2 315</span></button>
+                <button class="filter-pill" data-filter="methodology">Методика <span class="pill-count">2 315</span>
+                </button>
+            </div>
+
+            <!-- ==================== КНИГИ ==================== -->
+            <section class="content-section fist-section" data-section="books">
+                <div class="section-header">
+                    <h2 class="section-title">Книги <span class="section-count">10</span></h2>
+                    <a href="#" class="section-show-all">Показать все</a>
+                </div>
+                <div class="swiper books-carousel">
+                    <div class="swiper-wrapper">
+                        <!-- Book card 1 -->
+                        <div class="swiper-slide">
+                            <div class="material-card material-card--book">
+                                <div class="card-image">
+                                    <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги"
+                                         width="200" height="275">
+                                    <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40"
+                                         alt="">
+                                    <div class="card-icons">
+                                        <img src="img/icons/level-a2.svg" class="card-icon" width="40" height="40"
+                                             alt="A2">
+                                        <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40"
+                                             alt="Аудио" title="Аудио">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность
+                                        жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО
+                                    </div>
+                                    <div class="card-subtitle">Издательство</div>
+                                    <div class="card-footer">
+                                        <span class="card-tag">Русский язык для билингвов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book card 2 -->
+                        <div class="swiper-slide">
+                            <div class="material-card material-card--book">
+                                <div class="card-image">
+                                    <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги"
+                                         width="200" height="275">
+                                    <img src="img/icons/star.svg" class="card-icon-start" width="40" height="40" alt="">
+                                    <div class="card-icons">
+                                        <img src="img/icons/level-a2.svg" class="card-icon" width="40" height="40"
+                                             alt="A2">
+                                        <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40"
+                                             alt="Аудио" title="Аудио">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность
+                                        жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО
+                                    </div>
+                                    <div class="card-subtitle">Издательство</div>
+                                    <div class="card-footer">
+                                        <span class="card-tag">Русский язык для билингвов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book card 3 -->
+                        <div class="swiper-slide">
+                            <div class="material-card material-card--book">
+                                <div class="card-image">
+                                    <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги"
+                                         width="200" height="275">
+                                    <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40"
+                                         alt="">
+                                    <div class="card-icons">
+                                        <img src="img/icons/level-c1.svg" class="card-icon" width="40" height="40"
+                                             alt="C1">
+                                        <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40"
+                                             alt="Аудио" title="Аудио">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность
+                                        жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО
+                                    </div>
+                                    <div class="card-subtitle">Издательство</div>
+                                    <div class="card-footer">
+                                        <span class="card-tag">Русский язык для билингвов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book card 3 -->
+                        <div class="swiper-slide">
+                            <div class="material-card material-card--book">
+                                <div class="card-image">
+                                    <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги"
+                                         width="200" height="275">
+                                    <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40"
+                                         alt="">
+                                    <div class="card-icons">
+                                        <img src="img/icons/level-c1.svg" class="card-icon" width="40" height="40"
+                                             alt="C1">
+                                        <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40"
+                                             alt="Аудио" title="Аудио">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность
+                                        жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО
+                                    </div>
+                                    <div class="card-subtitle">Издательство</div>
+                                    <div class="card-footer">
+                                        <span class="card-tag">Русский язык для билингвов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book card 3 -->
+                        <div class="swiper-slide">
+                            <div class="material-card material-card--book">
+                                <div class="card-image">
+                                    <img src="img/card/book-cover.png" class="card-cover-img" alt="Обложка книги"
+                                         width="200" height="275">
+                                    <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40"
+                                         alt="">
+                                    <div class="card-icons">
+                                        <img src="img/icons/level-c1.svg" class="card-icon" width="40" height="40"
+                                             alt="C1">
+                                        <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40"
+                                             alt="Аудио" title="Аудио">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title text-truncate-2">Техносферная безопасность. Безопасность
+                                        жизнедеятельности. Техносферная безопасность. Учебное пособие для ТиПО
+                                    </div>
+                                    <div class="card-subtitle">Издательство</div>
+                                    <div class="card-footer">
+                                        <span class="card-tag">Русский язык для билингвов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+
+            <!-- ==================== РАБОЧИЕ ЛИСТЫ ==================== -->
+            <section class="content-section" data-section="worksheets">
+                <div class="section-header">
+                    <h2 class="section-title">Рабочие листы <span class="section-count">46</span></h2>
+                    <a href="#" class="section-show-all">Показать все</a>
+                </div>
+                <div class="scroll-container">
+                    <div class="scroll-row">
+
+                        <!-- Worksheet 1 -->
+                        <div class="material-card material-card--worksheet">
+                            <div class="card-image">
+                                <img src="img/card/default-worklist.svg" alt="Алфавит и произношение">
+                                <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
+                            </div>
+
+                            <div class="card-body">
+                                <img src="img/card/worklist-additional.svg" class="additional" alt="">
+                                <div class="card-title">Алфавит и произношение</div>
+                                <div class="card-description text-truncate-2"><span>Связанные материалы:</span> тесты,
+                                    интерактивы, игры, презентация
+                                </div>
+                                <div class="card-footer">
+                                    <img src="img/icons/level-a1.svg" class="card-icon" width="40" height="40" alt="">
+                                    <img src="img/icons/type-video.svg" class="card-icon" width="40" height="40" alt="">
+                                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+                        <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+                    </button>
+                </div>
+            </section>
+
+            <!-- ==================== ТЕСТЫ ==================== -->
+            <section class="content-section" data-section="tests">
+                <div class="section-header">
+                    <h2 class="section-title">Тесты <span class="section-count">23</span></h2>
+                    <a href="#" class="section-show-all">Показать все</a>
+                </div>
+                <div class="scroll-container">
+                    <div class="scroll-row">
+
+                        <!-- Test 1 - pink -->
+                        <div class="material-card material-card--test">
+                            <div class="card-image">
+                                <img src="img/card/default-test.svg" alt="">
+                                <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Опросительная форма</div>
+                                <div class="card-description text-truncate-2">Построение вопросов, использование
+                                    вопросительных слов
+                                </div>
+                                <div class="card-footer">
+                                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="40" height="40"
+                                         alt="A1">
+                                    <img src="img/icons/type-video.svg" class="card-icon" width="40" height="40" alt="">
+                                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
+                                    <span class="card-tag">Язык специальности</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+                        <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+                    </button>
+                </div>
+            </section>
+
+            <!-- ==================== ИНТЕРАКТИВЫ ==================== -->
+            <section class="content-section" data-section="interactives">
+                <div class="section-header">
+                    <h2 class="section-title">Интерактивы <span class="section-count">10</span></h2>
+                    <a href="#" class="section-show-all">Показать все</a>
+                </div>
+                <div class="scroll-container">
+                    <div class="scroll-row">
+
+                        <!-- Interactive 1 -->
+                        <div class="material-card material-card--interactive">
+                            <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
+                            <div class="card-image">
+                                <img src="img/card/default-interactive.svg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Найди пару</div>
+                                <div class="card-description text-truncate-2">Сопоставление слов и изображений простые
+                                    вещи
+                                </div>
+                                <div class="card-footer">
+                                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="40" height="40"
+                                         alt="A1">
+                                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
+                                    <span class="card-tag">К рабочему листу</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+                        <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+                    </button>
+                </div>
+            </section>
+
+            <!-- ==================== БАНК МАТЕРИАЛОВ ==================== -->
+            <section class="content-section" data-section="materials">
+                <div class="section-header">
+                    <h2 class="section-title">Банк материалов <span class="section-count">10</span></h2>
+                    <a href="#" class="section-show-all">Показать все</a>
+                </div>
+                <div class="scroll-container">
+                    <div class="scroll-row">
+
+                        <!-- Bank 1 -->
+                        <div class="material-card material-card--bank">
+                            <div class="card-image">
+                                <img src="img/card/default-bank.svg" alt="">
+                                <img src="img/icons/crown.svg" class="card-icon-start" width="40" height="40" alt="">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Разгадай филворд</div>
+                                <div class="card-description text-truncate-2">С каждым новым этапом вы продвигаетесь по
+                                    лестнице эволюци...
+                                </div>
+                                <div class="card-footer">
+                                    <img src="img/icons/level-a1.svg" class="level-badge-icon" width="40" height="40"
+                                         alt="A1">
+                                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
+                                    <span class="card-tag">Филворд</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+                        <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+                    </button>
+                </div>
+            </section>
+
+            <!-- ==================== МЕТОДИКА ==================== -->
+            <section class="content-section" data-section="methodology">
+                <div class="section-header">
+                    <h2 class="section-title">Методика <span class="section-count">23</span></h2>
+                    <a href="#" class="section-show-all">Показать все</a>
+                </div>
+                <div class="scroll-container">
+                    <div class="scroll-row">
+
+                        <!-- Methodology 1 -->
+                        <div class="material-card material-card--methodology">
+                            <img src="img/card/default-methodic.svg" alt="">
+                            <div class="card-body">
+                                <div class="card-title">Лекция: Польза изучения языков</div>
+                                <div class="card-footer">
+                                    <img src="img/icons/level-a1.svg" class="card-icon" width="40" height="40" alt="A1">
+                                    <img src="img/icons/type-audio.svg" class="card-icon" width="40" height="40" alt="">
+                                    <span class="card-tag">Лонгрид</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="scroll-arrow scroll-arrow--right" aria-label="Прокрутить вправо">
+                        <img src="img/icons/chevron-right.svg" class="icon" width="14" height="14" alt="">
+                    </button>
+                </div>
+            </section>
+
+            <!-- ==================== ЛЕКСИЧЕСКИЙ МИНИМУМ ==================== -->
+            <section class="content-section" data-section="lexicon">
+                <div class="section-header">
+                    <h2 class="section-title">Лексический минимум <span class="section-count">54</span></h2>
+                    <a href="#" class="section-show-all">Показать все</a>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="container">
+    <div class="site-footer">
+        <div class="footer-top">
+            <div class="footer-top__grid">
+                <div class="footer-col footer-col--company">
+                    <a href="#" class="footer-logo" aria-label="IPR РКИ">
+                        <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
+                    </a>
+                    <p class="footer-legal">Юридический адрес: 143405, Московская область, г.о. Красногорск, г.
+                        Красногорск, ш. Ильинское, д. 1А, помещ. 17.17</p>
+                    <p class="footer-legal">Тел./факс: +7 (8452) 24 77 96</p>
+                    <p class="footer-legal">ИНН: 6454085119</p>
+                    <p class="footer-legal">ОКВЭД: 62.09</p>
+                    <div class="footer-social">
+                        <a href="https://vkvideo.ru/@iprmedia/all" class="footer-social-link" aria-label="ВК видео"><img
+                                src="img/icons/social/vkvideo.svg" width="40" height="40" alt=""></a>
+                        <a href="https://rutube.ru/channel/25508571/" class="footer-social-link"
+                           aria-label="Rutube"><img src="img/icons/social/rutube.svg" width="40" height="40" alt=""></a>
+                        <a href="https://vk.com/iprmedia" class="footer-social-link" aria-label="ВКонтакте"><img
+                                src="img/icons/social/vk.svg" width="40" height="40" alt=""></a>
+                        <a href="https://t.me/ipr_edu_iprmedia" class="footer-social-link" aria-label="Telegram"><img
+                                src="img/icons/social/tg.svg" width="40" height="40" alt=""></a>
+                    </div>
+                    <p class="footer-app-label">Наше приложение для <a
+                            href="https://apps.apple.com/ru/app/ros-edu-mobile/id6478668128" class="footer-link">IOS</a>
+                        и <a href="https://play.google.com/store/apps/details?id=ru.iprbooks.iprbooksmobilerki"
+                             class="footer-link">Android</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Пользователям</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Тестовый доступ</a></li>
+                        <li><a href="#" class="footer-link">Авторам</a></li>
+                        <li><a href="#" class="footer-link">Контакты</a></li>
+                        <li><a href="#" class="footer-link">Правовые документы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">О продукте</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Новости и мероприятия</a></li>
+                        <li><a href="#" class="footer-link">Распределительный тест</a></li>
+                        <li><a href="#" class="footer-link">Лексический минимум</a></li>
+                        <li class="footer-dropdown">
+                            <a href="#" class="footer-link footer-link--toggle" aria-expanded="false">Каталог <img
+                                    src="img/icons/arrow.svg" class="footer-chevron" width="22" height="22" alt=""
+                                    aria-hidden="true"></a>
+                            <ul class="footer-sublinks">
+                                <li><a href="#" class="footer-link">Учебники</a></li>
+                                <li><a href="#" class="footer-link">Пособия</a></li>
+                                <li><a href="#" class="footer-link">Словари</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-dropdown">
+                            <a href="#" class="footer-link footer-link--toggle" aria-expanded="false">Коллекции <img
+                                    src="img/icons/arrow.svg" class="footer-chevron" width="22" height="22" alt=""
+                                    aria-hidden="true"></a>
+                            <ul class="footer-sublinks">
+                                <li><a href="#" class="footer-link">Для начинающих</a></li>
+                                <li><a href="#" class="footer-link">Для преподавателей</a></li>
+                                <li><a href="#" class="footer-link">Тематические подборки</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Поддержка</h3>
+                    <ul class="footer-supports">
+                        <li class="footer-support"><a href="mailto:support@ros-edu.ru" class="footer-link">support@ros-edu.ru</a>
+                        </li>
+                        <li class="footer-support">8 800 555-22-35<br><span
+                                class="footer-support-note">(добавочный 111)</span></li>
+                        <li class="footer-support">+7 (8452) 24-77-96<br><span class="footer-support-note">Для звонков из-за рубежа</span>
+                        </li>
+                        <li class="footer-support"><a href="#" class="footer-link" id="footer-chat-btn" role="button">Написать
+                            в чат</a></li>
+                        <li class="footer-support"><a href="https://t.me/ipr_support_bot" class="footer-link">Написать в
+                            телеграм</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom__flex">
+                    <div class="footer-bottom-col">
+                        <p class="footer-bottom-text">Программа для ЭВМ зарегистрирована в Едином реестре российских
+                            программ для электронно-вычислительных машин и баз данных <a
+                                    href="https://reestr.digital.gov.ru" target="_blank" rel="noopener noreferrer"
+                                    class="footer-link">https://reestr.digital.gov.ru</a>. Регистрация осуществляется в
+                            соответствии с приказом Минцифры России.</p>
+                        <p class="footer-bottom-text">ООО Компания «Ай Пи Ар Медиа» включено в Реестр аккредитованных IT
+                            компаний <a href="https://www.gosuslugi.ru/it" target="_blank" rel="noopener noreferrer"
+                                        class="footer-link">https://www.gosuslugi.ru/it</a>.</p>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="footer-bottom-col">
+                        <p class="footer-bottom-text">Используем cookies для корректной работы сайта, персонализации
+                            пользователей и других целей, предусмотренных <a href="#" class="footer-link">пользовательским
+                                соглашением</a>, <a href="#" class="footer-link">политикой конфиденциальности</a>, <a
+                                    href="#" class="footer-link">положением о защите персональных данных</a>.</p>
+                        <p class="footer-copyright">© 2010-2026 ООО Компания «Ай Пи Ар Медиа»</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Custom JS -->
 <script src="js/main.js"></script>
 
 <!-- Bitrix24 чат: скрипт всегда на странице -->
 <script>
-(function(w,d,u){
-  var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-  var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-})(window,document,'https://cdn-ru.bitrix24.ru/b24555134/crm/site_button/loader_9_ppyrxt.js');
+    (function (w, d, u) {
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = u + '?' + (Date.now() / 60000 | 0);
+        var h = d.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s, h);
+    })(window, document, 'https://cdn-ru.bitrix24.ru/b24555134/crm/site_button/loader_9_ppyrxt.js');
 </script>
 <!-- Открытие чата по клику на «Написать в чат» -->
 <script>
-document.getElementById('footer-chat-btn').addEventListener('click', function(e) {
-  e.preventDefault();
-  var btn = document.querySelector('.b24-widget-button-inner-container');
-  if (btn) btn.click();
-});
+    document.getElementById('footer-chat-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        var btn = document.querySelector('.b24-widget-button-inner-container');
+        if (btn) btn.click();
+    });
 </script>
 
 </body>

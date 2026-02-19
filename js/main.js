@@ -84,4 +84,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ============================
+  // SWIPER CAROUSEL — карусель для книг
+  // ============================
+  const booksCarousel = new Swiper('.books-carousel', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
 });

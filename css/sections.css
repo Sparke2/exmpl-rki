@@ -59,6 +59,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   padding-bottom: var(--space-sm);
   /* Hide scrollbar for cleaner look but keep functionality */
