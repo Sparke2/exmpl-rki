@@ -9,10 +9,6 @@
   :root {
     --card-width: 220px;
   }
-
-  .material-card--methodology {
-    width: 280px;
-  }
 }
 
 /* =====================
