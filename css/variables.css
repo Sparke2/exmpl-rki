@@ -83,4 +83,7 @@
   --card-width: 200px;
   --card-gap: 16px;
   --container-max: 1200px;
+
+  --border-card: 1px solid #E0E0E0;
+  --border-card-hover: 1px solid var(--color-blue);
 }
