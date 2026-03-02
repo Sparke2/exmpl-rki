@@ -22,6 +22,7 @@
   --color-gray-700: #ADADAD;
   --color-gray-800: #414141;
   --color-gray-900: #212121;
+  --color-gray-hover: #EBEBEB;
   --color-footer: #7B7B7B;
   --color-main: #1B1B1C;
 
@@ -82,7 +83,7 @@
   --header-height: 90px;
   --card-width: 200px;
   --card-gap: 16px;
-  --container-max: 1200px;
+  --container-max: 1440px;
 
   --border-card: 1px solid #E0E0E0;
   --border-card-hover: 1px solid var(--color-blue);
