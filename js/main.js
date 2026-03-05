@@ -45,27 +45,59 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================
-  // 1. FILTER PILLS — toggle active
+  // 1. FILTER PILLS — toggle active + tab panels
   // ============================
   const filterPills = document.querySelectorAll('.filter-pill');
+  const tabPanels = document.querySelectorAll('.new-tab-panel');
+  const newCarouselInstances = {};
+
+  function initNewCarousel(panel) {
+    const swiperEl = panel.querySelector('.new-carousel');
+    if (!swiperEl || swiperEl.swiper) return;
+    const key = panel.dataset.tab;
+
+    const isMethodology = key === 'methodology';
+    newCarouselInstances[key] = new Swiper(swiperEl, {
+      slidesPerView: isMethodology ? 3 : 'auto',
+      spaceBetween: 20,
+      navigation: {
+        nextEl: swiperEl.querySelector('.new-carousel-next'),
+        prevEl: swiperEl.querySelector('.new-carousel-prev'),
+      },
+      breakpoints: isMethodology
+        ? {
+            320:  { slidesPerView: 1, spaceBetween: 16 },
+            640:  { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+          }
+        : {
+            320:  { slidesPerView: 1, spaceBetween: 16 },
+            640:  { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+            1280: { slidesPerView: 4, spaceBetween: 20 },
+          },
+    });
+  }
+
+  const activePanel = document.querySelector('.new-tab-panel.active');
+  if (activePanel) initNewCarousel(activePanel);
 
   filterPills.forEach(pill => {
     pill.addEventListener('click', () => {
-      // Remove active from all
       filterPills.forEach(p => p.classList.remove('active'));
-      // Set clicked as active
       pill.classList.add('active');
 
-      // Get filter value
       const filter = pill.dataset.filter;
 
-      // Show/hide sections based on filter
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(section => {
-        if (filter === 'all') {
-          section.style.display = '';
+      tabPanels.forEach(panel => {
+        if (panel.dataset.tab === filter) {
+          panel.classList.add('active');
+          initNewCarousel(panel);
+          if (newCarouselInstances[filter]) {
+            newCarouselInstances[filter].update();
+          }
         } else {
-          section.style.display = section.dataset.section === filter ? '' : 'none';
+          panel.classList.remove('active');
         }
       });
     });
@@ -91,8 +123,38 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 20,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.books-carousel .swiper-button-next',
+      prevEl: '.books-carousel .swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  // ============================
+  // SWIPER CAROUSEL — карусель новостей
+  // ============================
+  const eventsCarousel = new Swiper('.events-carousel', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.events-carousel-next',
+      prevEl: '.events-carousel-prev',
     },
     breakpoints: {
       320: {

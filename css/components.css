@@ -21,7 +21,7 @@
   height: var(--header-height);
 }
 
-.site-header .container div {
+.site-header .container .header-inner {
   border-radius: var(--radius-header);
   background: var(--color-white);
   display: flex;
@@ -31,6 +31,11 @@
   padding-left: 32px;
   padding-right: 32px;
   margin-top: 10px;
+}
+
+.site-header .container .header-inner .search-input-wrap {
+  margin-bottom: 0;
+  width: 100%;
 }
 
 /* Logo as inline SVG */
@@ -629,4 +634,80 @@
 .vr {
   background-color: #E0E0E0;
   opacity: 1;
+}
+
+/* =====================
+   PRIMARY BUTTON
+   ===================== */
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.primary-btn:hover {
+  background: var(--color-catalog-icon);
+}
+
+.primary-btn:active {
+  background: var(--color-primary);
+}
+
+.primary-btn:disabled,
+.primary-btn.disabled {
+  background: var(--color-gray-hover);
+  color: var(--color-gray-500);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =====================
+   SECONDARY BUTTON
+   ===================== */
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  background: var(--color-gray-300);
+  color: var(--color-main);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-gray-300);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.secondary-btn:hover {
+  background: var(--color-gray-hover);
+  border-color: var(--color-gray-hover);
+}
+
+.secondary-btn:active {
+  background: var(--color-gray-hover);
+}
+
+.secondary-btn:disabled,
+.secondary-btn.disabled {
+  background: var(--color-gray-hover);
+  color: var(--color-gray-500);
+  border-color: var(--color-gray-hover);
+  cursor: not-allowed;
+  box-shadow: none;
 }
