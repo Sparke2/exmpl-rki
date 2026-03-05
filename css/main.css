@@ -1,3 +1,7 @@
+.content-section {
+    margin-bottom: 100px !important;
+}
+
 .pill-block {
     display: flex;
     align-items: end;
@@ -113,13 +117,13 @@
     display: flex;
 }
 
-.bg-1 .block, .bg-2 .block{
+.bg-1 .block, .bg-2 .block, .bg-3 .block {
     display: flex;
     flex-direction: column;
     padding: 60px 0 0 60px;
 }
 
-.bg-1 img, .bg-2 img {
+.bg-1 img, .bg-2 img, .bg-3 img {
     border-radius: 0 var(--radius-bg) var(--radius-bg) 0;
 }
 
@@ -229,4 +233,104 @@
 
 .level-card__stat img {
     flex-shrink: 0;
+}
+
+.bg-3 {
+    background-color: var(--color-white);
+    border-radius: var(--radius-bg);
+    display: flex;
+}
+
+.bg-3 .block .title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+
+.bg-3 .block .description {
+    font-size: var(--font-size-lg);
+    margin-bottom: 40px;
+}
+
+/* =====================
+   ICON HOVER STATE
+   ===================== */
+.bg-3 .block .icon:hover path:not(:first-child) {
+    fill: var(--color-primary);
+}
+
+/* =============================
+   SPECIALTY CAROUSEL CONTROLS
+   ============================= */
+.specialty-carousel {
+    position: relative;
+    padding-bottom: var(--space-sm);
+}
+
+.specialty-carousel .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.specialty-carousel .swiper-slide {
+    height: auto;
+    width: auto;
+}
+
+.specialty-carousel .swiper-button-prev,
+.specialty-carousel .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    box-shadow: var(--shadow-md);
+    color: var(--color-gray-700);
+    transition: all var(--transition-fast);
+    z-index: 5;
+}
+
+.specialty-carousel .swiper-button-prev::after,
+.specialty-carousel .swiper-button-next::after {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.specialty-carousel .swiper-button-prev:hover,
+.specialty-carousel .swiper-button-next:hover {
+    background: var(--color-gray-50);
+    border-color: var(--color-gray-400);
+}
+
+.specialty-carousel .swiper-button-prev {
+    left: -8px;
+}
+
+.specialty-carousel .swiper-button-next {
+    right: -8px;
+}
+
+.specialty-carousel .swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .specialty-carousel .swiper-button-prev,
+    .specialty-carousel .swiper-button-next {
+        width: 32px;
+        height: 32px;
+    }
+
+    .specialty-carousel .swiper-button-prev {
+        left: -4px;
+    }
+
+    .specialty-carousel .swiper-button-next {
+        right: -4px;
+    }
 }

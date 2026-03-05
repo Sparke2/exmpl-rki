@@ -386,17 +386,33 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  z-index: 2;
-  padding: 8px 16px;
+  padding: 10px 12px;
   border-radius: var(--radius-pill);
-  background: #7BA4C20D;
-  border: 1px solid #E9E9E926;
+  background: rgba(123, 164, 194, 0.12);
+  z-index: 1;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  color: var(--color-white);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-normal);
-  color: var(--color-white);
   line-height: 1;
+}
+
+.material-card--news .card-badge:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(16deg,
+  rgba(233, 233, 233, 0.1) 0%,
+  rgba(233, 233, 233, 1) 30%,
+  rgba(233, 233, 233, 0.1) 129%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
 }
 
 .material-card--news .card-body {
@@ -444,3 +460,173 @@
   margin-top: 4px;
 }
 
+/* ============================================
+   COLLECTION CARD modifier
+   ============================================ */
+.material-card--collection {
+  width: 324px;
+  border-radius: var(--radius-header);
+  background: var(--color-white);
+  overflow: hidden;
+  position: relative;
+}
+
+.material-card--collection .card-image {
+  position: relative;
+  width: 100%;
+  background: var(--color-gray-200);
+}
+
+.card-collection-img {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-collection-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 10px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(123, 164, 194, 0.12);
+  z-index: 1;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+}
+
+.card-collection-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(16deg,
+    rgba(233, 233, 233, 0.1) 0%,
+    rgba(233, 233, 233, 1) 30%,
+    rgba(233, 233, 233, 0.1) 129%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.material-card--collection .card-body {
+  padding: 16px 20px 20px;
+}
+
+.material-card--collection .card-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.material-card--collection .card-description {
+  font-size: var(--font-size-md);
+  color: var(--color-gray-700);
+  line-height: 1.4;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: var(--font-weight-normal);
+}
+
+.material-card--collection .card-body {
+    padding: 16px 20px 20px;
+}
+
+.material-card--collection .card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============================================
+   SPECIALTY CARD modifier
+   ============================================ */
+.material-card--specialty {
+  width: 348px;
+  border-radius: var(--radius-header);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.material-card--specialty .card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  text-decoration: none;
+  color: inherit;
+}
+
+.material-card--specialty .card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-main);
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.material-card--specialty .card-meta {
+  font-size: var(--font-size-md);
+  color: var(--color-gray-500);
+  margin-bottom: 16px;
+  margin-top: auto;
+}
+
+.specialty-progress {
+    background: var(--color-blue-pale);
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    height: 16px;
+    width: 100%;
+    left: 0;
+}
+
+.specialty-progress__filled {
+  height: 100%;
+  background: var(--color-primary-pale);
+  border-radius: inherit;
+  width: 70%;
+}
+
+.specialty-carousel .swiper-slide:nth-child(2n) .specialty-progress__filled {
+    background: var(--color-blue-pale2);
+}
+
+.material-card--specialty:hover .specialty-progress__filled {
+    background: var(--color-primary-light);
+}
+.material-card--specialty:hover .specialty-progress {
+    background: var(--color-blue-pale2);
+}
+
+.specialty-carousel .swiper-slide:nth-child(2n) .material-card--specialty:hover .specialty-progress__filled {
+    background: #A3CAF7;
+}

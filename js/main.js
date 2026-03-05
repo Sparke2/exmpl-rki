@@ -175,4 +175,124 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
+  // ============================
+  // SWIPER CAROUSEL — карусель грамматики
+  // ============================
+  const grammarCarousel = new Swiper('.grammar-carousel', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.grammar-carousel-next',
+      prevEl: '.grammar-carousel-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  // ============================
+  // SWIPER CAROUSEL — карусель языка специальности
+  // ============================
+  const specialtyCarousel = new Swiper('.specialty-carousel', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.specialty-carousel-next',
+      prevEl: '.specialty-carousel-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  // ============================
+  // SWIPER CAROUSEL — карусель тематики
+  // ============================
+  const themCarousel = new Swiper('.them-carousel', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.them-carousel-next',
+      prevEl: '.them-carousel-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  // ============================
+  // SWIPER CAROUSEL — карусель праздничных дат
+  // ============================
+  const dateCarousel = new Swiper('.date-carousel', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.date-carousel-next',
+      prevEl: '.date-carousel-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
 });

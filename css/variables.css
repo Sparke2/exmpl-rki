@@ -5,6 +5,7 @@
 :root {
   /* ---- Brand Colors ---- */
   --color-primary: #B41E23;
+  --color-primary-pale: #E0A3A5;
   --color-primary-dark: #B41E23;
   --color-primary-hover: #F9E2E2;
   --color-primary-light: #D27679;
@@ -28,6 +29,7 @@
 
   --color-blue: #2373CE;
   --color-blue-pale: #E6F2FF;
+  --color-blue-pale2: #D7E6F7;
 
   --color-green-pale: #E5F8DD;
 

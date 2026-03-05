@@ -148,3 +148,73 @@
     right: -4px;
   }
 }
+
+/* =============================
+   GRAMMAR CAROUSEL CONTROLS
+   ============================= */
+.grammar-carousel .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.grammar-carousel .swiper-slide {
+  height: auto;
+  width: auto;
+}
+
+.grammar-carousel .swiper-button-prev,
+.grammar-carousel .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  box-shadow: var(--shadow-md);
+  color: var(--color-gray-700);
+  transition: all var(--transition-fast);
+  z-index: 5;
+}
+
+.grammar-carousel .swiper-button-prev::after,
+.grammar-carousel .swiper-button-next::after {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.grammar-carousel .swiper-button-prev:hover,
+.grammar-carousel .swiper-button-next:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.grammar-carousel .swiper-button-prev {
+  left: -8px;
+}
+
+.grammar-carousel .swiper-button-next {
+  right: -8px;
+}
+
+.grammar-carousel .swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .grammar-carousel .swiper-button-prev,
+  .grammar-carousel .swiper-button-next {
+    width: 32px;
+    height: 32px;
+  }
+
+  .grammar-carousel .swiper-button-prev {
+    left: -4px;
+  }
+
+  .grammar-carousel .swiper-button-next {
+    right: -4px;
+  }
+}
