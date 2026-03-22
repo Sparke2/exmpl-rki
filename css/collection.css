@@ -750,7 +750,121 @@
 }
 
 .thematic-grid .level-card--tall-img {
-    height: 100%;
+  height: 100%;
 }
 
+/* ============================================
+   Grammar Grid — Именительный падеж
+   Hero banner + 4 cards row
+   ============================================ */
+
+.grammar-grid {
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.grammar-hero {
+  position: relative;
+  background-color: var(--color-blue-pale, #E6F2FF);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.grammar-hero-lines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  z-index: 0;
+  background-image: url('../img/collection/grammar-lines.png');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.grammar-hero-title,
+.grammar-hero-desc,
+.grammar-hero-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.grammar-hero-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-main);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.grammar-hero-desc {
+  font-size: 1rem;
+  color: var(--color-gray-800, #414141);
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.grammar-hero-btn {
+  display: inline-flex;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary, #B41E23);
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.grammar-hero-btn:hover {
+  background-color: #9A1A1F;
+  color: #FFFFFF;
+}
+
+.grammar-stats-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.grammar-stat-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.grammar-stat-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grammar-stat-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-main);
+}
+
+.grammar-stat-text span {
+    font-size: 20px;
+}
+
+.grammar-stat-card--text-only .grammar-stat-text {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grammar-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
