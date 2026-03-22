@@ -45,6 +45,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================
+  // Collection tags: скрыть «Показать все», если меньше 2 строк
+  // ============================
+  const tagsWrap = document.querySelector('.collection-tags-wrap');
+  const tagsContainer = document.querySelector('.collection-tags');
+  const tagsToggle = document.querySelector('.collection-tags-toggle');
+
+  function updateTagsToggleVisibility() {
+    if (!tagsWrap || !tagsContainer || !tagsToggle) return;
+    var clone = tagsContainer.cloneNode(true);
+    var containerWidth = tagsContainer.offsetWidth;
+    clone.style.cssText = 'position:absolute;left:-9999px;top:0;max-height:none;visibility:hidden;width:' + containerWidth + 'px;';
+    clone.id = '';
+    document.body.appendChild(clone);
+    var naturalHeight = clone.offsetHeight;
+    document.body.removeChild(clone);
+    var twoRowsPx = 112;
+    if (naturalHeight <= twoRowsPx) {
+      tagsToggle.style.display = 'none';
+    } else {
+      tagsToggle.style.display = '';
+    }
+  }
+
+  if (tagsWrap && tagsToggle) {
+    requestAnimationFrame(function () {
+      updateTagsToggleVisibility();
+    });
+    window.addEventListener('resize', updateTagsToggleVisibility);
+  }
+
+  // ============================
   // 1. FILTER PILLS — toggle active + tab panels
   // ============================
   const filterPills = document.querySelectorAll('.filter-pill');
