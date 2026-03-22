@@ -45,6 +45,107 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================
+  // Collection Date Picker — календарь в фильтр-баре
+  // ============================
+  (function() {
+    var btn = document.getElementById('collection-date-picker-btn');
+    var dropdown = document.getElementById('collection-date-picker-dropdown');
+    var textEl = document.querySelector('.collection-date-picker-text');
+    if (!btn || !dropdown || !textEl) return;
+
+    var MONTHS_RU = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+    var MONTHS_RU_SHORT = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+    var today = new Date();
+    var state = { year: today.getFullYear(), month: today.getMonth() };
+
+    function formatDate(d) {
+      return d.getDate() + ' ' + MONTHS_RU_SHORT[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function renderCalendar() {
+      var first = new Date(state.year, state.month, 1);
+      var last = new Date(state.year, state.month + 1, 0);
+      var start = (first.getDay() + 6) % 7;
+      var prevLast = new Date(state.year, state.month, 0).getDate();
+
+      var html = '<div class="collection-date-picker-calendar">';
+      html += '<div class="calendar-header">';
+      html += '<button type="button" class="calendar-nav date-picker-prev" aria-label="Предыдущий месяц"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/></svg></button>';
+      html += '<span class="calendar-month-year">' + MONTHS_RU[state.month] + ' ' + state.year + ' г.</span>';
+      html += '<button type="button" class="calendar-nav date-picker-next" aria-label="Следующий месяц"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/></svg></button>';
+      html += '</div>';
+      html += '<div class="calendar-weekdays"><span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span></div>';
+      html += '<div class="calendar-days" data-year="' + state.year + '" data-month="' + state.month + '">';
+
+      for (var i = 0; i < start; i++) {
+        html += '<span class="calendar-day calendar-day--other">' + (prevLast - start + i + 1) + '</span>';
+      }
+      for (var d = 1; d <= last.getDate(); d++) {
+        html += '<span class="calendar-day calendar-day--selectable" data-day="' + d + '">' + d + '</span>';
+      }
+      var total = start + last.getDate();
+      var nextCount = total % 7 ? 7 - (total % 7) : 0;
+      for (var j = 1; j <= nextCount; j++) {
+        html += '<span class="calendar-day calendar-day--other">' + j + '</span>';
+      }
+      html += '</div></div>';
+      dropdown.innerHTML = html;
+
+      dropdown.querySelector('.date-picker-prev').addEventListener('click', function(e) {
+        e.stopPropagation();
+        state.month--;
+        if (state.month < 0) { state.month = 11; state.year--; }
+        renderCalendar();
+      });
+      dropdown.querySelector('.date-picker-next').addEventListener('click', function(e) {
+        e.stopPropagation();
+        state.month++;
+        if (state.month > 11) { state.month = 0; state.year++; }
+        renderCalendar();
+      });
+      dropdown.querySelectorAll('.calendar-day--selectable').forEach(function(dayEl) {
+        dayEl.addEventListener('click', function() {
+          var d = parseInt(dayEl.dataset.day, 10);
+          var sel = new Date(state.year, state.month, d);
+          textEl.textContent = formatDate(sel);
+          btn.classList.add('has-value');
+          closeDropdown();
+        });
+      });
+    }
+
+    function openDropdown() {
+      if (!dropdown.querySelector('.collection-date-picker-calendar')) renderCalendar();
+      dropdown.classList.add('is-open');
+      dropdown.setAttribute('aria-hidden', 'false');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+      dropdown.classList.remove('is-open');
+      dropdown.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleDropdown() {
+      if (dropdown.classList.contains('is-open')) closeDropdown();
+      else openDropdown();
+    }
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleDropdown();
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target) && !btn.contains(e.target)) closeDropdown();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && dropdown.classList.contains('is-open')) closeDropdown();
+    });
+  })();
+
+  // ============================
   // Collection tags: скрыть «Показать все», если меньше 2 строк
   // ============================
   const tagsWrap = document.querySelector('.collection-tags-wrap');

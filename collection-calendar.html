@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPR РКИ — Праздники и памятные даты</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/collection.css">
+</head>
+<body class="collection-page calendar-page">
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="#" class="header-logo" aria-label="IPR РКИ">
+                <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
+            </a>
+
+            <button class="btn-catalog" type="button" aria-expanded="false" aria-controls="catalog-overlay">
+                <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
+                <span class="icon icon--close-catalog" aria-hidden="true"><svg width="16" height="16"
+                                                                               viewBox="0 0 16 16" fill="none"
+                                                                               xmlns="http://www.w3.org/2000/svg"><path
+                        d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round"/></svg></span>
+                <span class="catalog-text">Каталог</span>
+            </button>
+            <div class="search-input-wrap">
+                <input type="text" placeholder="Введите запрос">
+                <button class="btn-search" aria-label="Искать">
+                    <img src="img/icons/search.svg" class="icon" width="20" height="20" alt="">
+                </button>
+            </div>
+            <nav class="header-nav">
+                <a href="#" class="btn-nav">
+                    <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
+                    <span class="nav-text">Слабовидящим</span>
+                </a>
+                <a href="#" class="btn-nav">
+                    <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
+                    <span class="nav-text">Войти</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== CATALOG OVERLAY ==================== -->
+<div class="catalog-overlay" id="catalog-overlay" aria-hidden="true">
+    <div class="container">
+        <div class="catalog-overlay-inner">
+            <button type="button" class="catalog-overlay-close" aria-label="Закрыть каталог">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="catalog-overlay-columns">
+                <div class="catalog-column">
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Книги</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Учебники и учебные пособия</a></li>
+                            <li><a href="#">Русский язык для билингвов</a></li>
+                            <li><a href="#">Подготовка к тестированию</a></li>
+                            <li><a href="#">Язык специальности</a></li>
+                            <li><a href="#">Методическая литература</a></li>
+                            <li><a href="#">Словари</a></li>
+                            <li><a href="#">Художественная литература</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Язык специальности</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Инженерно-технический и технологический профиль</a></li>
+                            <li><a href="#">Естественно-научный профиль</a></li>
+                            <li><a href="#">Медико-биологический профиль</a></li>
+                            <li><a href="#">Экономический профиль</a></li>
+                            <li><a href="#">Гуманитарный профиль</a></li>
+                            <li><a href="#">Музыкальное и художественное образование</a></li>
+                            <li><a href="#">Военное дело</a></li>
+                            <li><a href="#">Все профильные модули</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Златоуст <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Русский язык. Литература</a></li>
+                            <li><a href="#">Литература для детей-билингвов, преподавателей и родителей</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">«Русский язык». Курсы <span class="catalog-tag">коллекции</span>
+                        </h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Коллекция № 1. Русский как иностранный</a></li>
+                            <li><a href="#">Коллекция № 2. Русский как иностранный</a></li>
+                            <li><a href="#">УМК «Русский язык сегодня. Элементарный уровень»</a></li>
+                            <li><a href="#">УМК «Русский язык сегодня. Базовый уровень»</a></li>
+                            <li><a href="#">Классное чтение</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Лексический минимум</h3>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Распределительный тест</h3>
+                    </div>
+                </div>
+                <div class="catalog-column">
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Рабочие листы</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Общий курс</a></li>
+                            <li><a href="#">Дополнительные рабочие листы</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Тесты</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Тесты к рабочим листам</a></li>
+                            <li><a href="#">Тесты на уровень</a></li>
+                            <li><a href="#">Язык специальности</a></li>
+                            <li><a href="#">Для детей</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Интерактивы</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">К лексическому минимуму</a></li>
+                            <li><a href="#">К рабочим листам</a></li>
+                            <li><a href="#">Другое</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Банк материалов</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Кроссворды</a></li>
+                            <li><a href="#">Филворды</a></li>
+                            <li><a href="#">Бродилки</a></li>
+                            <li><a href="#">Викторины</a></li>
+                            <li><a href="#">Квесты</a></li>
+                            <li><a href="#">Подборки иллюстраций</a></li>
+                            <li><a href="#">Презентации</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Методика</h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Лонгриды</a></li>
+                            <li><a href="#">Записи вебинаров</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="catalog-column">
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Уровень владения <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">А1 — элементарный</a></li>
+                            <li><a href="#">А2 — базовый</a></li>
+                            <li><a href="#">В1 — I сертификационный</a></li>
+                            <li><a href="#">В2 — II сертификационный</a></li>
+                            <li><a href="#">С1 — III сертификационный</a></li>
+                            <li><a href="#">С2 — IV сертификационный</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Грамматика <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Вид глагола (НСВ и СВ)</a></li>
+                            <li><a href="#">Глаголы движения</a></li>
+                            <li><a href="#">Именительный падеж</a></li>
+                            <li><a href="#">Винительный падеж</a></li>
+                            <li><a href="#">Предложный падеж</a></li>
+                            <li><a href="#">Родительный падеж</a></li>
+                            <li><a href="#" class="catalog-link-underline">Показать все</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Тематики <span class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Фонетика, графика и орфография</a></li>
+                            <li><a href="#">О себе. Внешность, характер, эмоции, возраст, интеллект</a></li>
+                            <li><a href="#">Мои вещи. Одежда и обувь</a></li>
+                            <li><a href="#">Мой день. Распорядок, быт и действия</a></li>
+                            <li><a href="#">Учёба и работа</a></li>
+                            <li><a href="#">Отдых и хобби</a></li>
+                            <li><a href="#" class="catalog-link-underline">Показать все</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-block">
+                        <h3 class="catalog-block-title">Праздники и памятные дни<span
+                                class="catalog-tag">коллекции</span></h3>
+                        <ul class="catalog-block-list">
+                            <li><a href="#">Новый год</a></li>
+                            <li><a href="#">Масленица</a></li>
+                            <li><a href="#">Татьянин день</a></li>
+                            <li><a href="#">Международный день студента</a></li>
+                            <li><a href="#">День гжели</a></li>
+                            <li><a href="#">Всероссийский день хоккея</a></li>
+                            <li><a href="#" class="catalog-link-underline">Открыть все</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="collection-main">
+    <div class="container">
+        <!-- Breadcrumb & Title -->
+        <div class="breadcrumb-bar">
+            <a href="main.html"><img src="img/icons/ar_left.svg" class="icon" width="12" height="11" alt=""> Назад</a>
+            <span class="separator">|</span>
+            <a href="#" class="breadcrumb-active">Праздники</a>
+        </div>
+
+        <!-- Calendar Grid: hero card + calendar widget -->
+        <div class="calendar-grid">
+            <article class="calendar-hero">
+                <div class="calendar-hero-lines" aria-hidden="true"></div>
+                <span class="calendar-hero-badge">Коллекция</span>
+                <h2 class="calendar-hero-title">Праздники и памятные даты</h2>
+                <p class="calendar-hero-desc">Материалы для знакомства с культурными и национальными праздниками и памятными датами. Помогают расширить словарный запас и понять культурный контекст языка.</p>
+                <a href="#" class="primary-btn calendar-hero-btn">Кнопка действия</a>
+            </article>
+            <aside class="calendar-widget">
+                <h3 class="calendar-widget-title">Выберите дату</h3>
+                <div class="calendar-box" id="calendar-box">
+                    <div class="calendar-header">
+                        <button type="button" class="calendar-nav calendar-prev" aria-label="Предыдущий месяц">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                        <span class="calendar-month-year" id="calendar-month-year">Май 2025 г.</span>
+                        <button type="button" class="calendar-nav calendar-next" aria-label="Следующий месяц">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span>
+                    </div>
+                    <div class="calendar-days" id="calendar-days"></div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Bottom Filter Bar -->
+        <div class="collection-filter-bar">
+            <div class="collection-date-picker-wrap">
+                <button type="button" class="collection-date-picker-btn" id="collection-date-picker-btn" aria-expanded="false" aria-haspopup="true">
+                    <img src="img/icons/calendar-icon.svg" alt="" class="collection-date-picker-icon" width="19" height="18">
+                    <span class="collection-date-picker-text">Введите или выберите праздник</span>
+                    <img src="img/icons/select-arrow.svg" alt="" class="collection-date-picker-arrow" width="14" height="8">
+                </button>
+                <div class="collection-date-picker-dropdown" id="collection-date-picker-dropdown" aria-hidden="true"></div>
+            </div>
+            <label class="collection-toggle">
+                <input type="checkbox" checked>
+                <span class="collection-toggle-box"></span>
+                <span class="collection-toggle-text">Показать доступный контент</span>
+            </label>
+        </div>
+
+        <div class="event-box-calendar">
+            <h1>День труда</h1>
+            <p>Первое ма́я — праздник, связанный с темой труда, отмечаемый под различными названиями во многих государствах и регионах 1 мая или в первый понедельник мая.</p>
+        </div>
+    </div>
+</main>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+<script>
+(function () {
+  var tagsWrap = document.getElementById('collection-tags-wrap');
+  var toggleBtn = document.getElementById('collection-tags-toggle');
+  if (tagsWrap && toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      var isExpanded = tagsWrap.classList.toggle('is-expanded');
+      toggleBtn.textContent = isExpanded ? 'Свернуть' : 'Показать все';
+    });
+  }
+})();
+
+// Calendar
+(function () {
+  var MONTHS_RU = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+  var holidays = { 5: [1, 9] };
+  var state = { year: 2025, month: 4 };
+
+  function render() {
+    var daysEl = document.getElementById('calendar-days');
+    var titleEl = document.getElementById('calendar-month-year');
+    if (!daysEl || !titleEl) return;
+
+    titleEl.textContent = MONTHS_RU[state.month] + ' ' + state.year + ' г.';
+    var first = new Date(state.year, state.month, 1);
+    var last = new Date(state.year, state.month + 1, 0);
+    var start = (first.getDay() + 6) % 7;
+    var prevLast = new Date(state.year, state.month, 0).getDate();
+    var monthHolidays = holidays[state.month + 1] || [];
+
+    var html = '';
+    for (var i = 0; i < start; i++) {
+      html += '<span class="calendar-day calendar-day--other">' + (prevLast - start + i + 1) + '</span>';
+    }
+    for (var d = 1; d <= last.getDate(); d++) {
+      var cls = 'calendar-day';
+      if (monthHolidays.indexOf(d) >= 0) cls += ' calendar-day--holiday';
+      html += '<span class="' + cls + '">' + d + '</span>';
+    }
+    var total = start + last.getDate();
+    var nextCount = total % 7 ? 7 - (total % 7) : 0;
+    for (var j = 1; j <= nextCount; j++) {
+      html += '<span class="calendar-day calendar-day--other">' + j + '</span>';
+    }
+    daysEl.innerHTML = html;
+  }
+
+  document.querySelector('.calendar-prev')?.addEventListener('click', function () {
+    state.month--;
+    if (state.month < 0) { state.month = 11; state.year--; }
+    render();
+  });
+  document.querySelector('.calendar-next')?.addEventListener('click', function () {
+    state.month++;
+    if (state.month > 11) { state.month = 0; state.year++; }
+    render();
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
