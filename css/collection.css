@@ -691,3 +691,66 @@
   min-width: 0;
 }
 
+/* ============================================
+   Thematic Grid — Фонетика, графика и орфография
+   ============================================ */
+
+/* Thematic feature card with diagonal lines */
+.level-card--thematic {
+  background-color: var(--color-blue-pale, #E6F2FF);
+  padding: 1.5rem;
+  min-height: 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.level-card-thematic-lines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 0;
+  background-image: url('../img/collection/thematic-lines.png');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.level-card--thematic .level-card-badge,
+.level-card--thematic .level-card-title,
+.level-card--thematic .level-card-desc,
+.level-card--thematic .level-card-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.level-card--thematic .level-card-desc {
+    width: 70%;
+}
+
+.level-card--thematic .level-card-title {
+    font-size: 24px;
+    width: 70%;
+}
+
+/* Stats: text-only card (260 других материалов) */
+.level-stat-card--text-only {
+  justify-content: center;
+}
+
+.level-stat-card--text-only .level-stat-text {
+  text-align: center;
+}
+
+/* Tall image card — Вы сможете (woman reading, ~70% image) */
+.thematic-grid .level-card--tall-img .level-card-image {
+  aspect-ratio: 13 / 10;
+}
+
+.thematic-grid .level-card--tall-img {
+    height: 100%;
+}
+
+
