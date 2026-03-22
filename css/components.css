@@ -270,7 +270,7 @@
 }
 
 .breadcrumb-bar .breadcrumb-active {
-  color: var(--color-blue);
+  color: var(--color-main);
 }
 
 .breadcrumb-bar .separator {

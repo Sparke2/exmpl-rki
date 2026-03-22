@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPR РКИ — Русский учебник</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/book-detail.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="IPR РКИ">
+                <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
+            </a>
+            <button class="btn-catalog" type="button">
+                <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
+                <span class="catalog-text">Каталог</span>
+            </button>
+            <div class="search-input-wrap">
+                <input type="text" placeholder="Введите запрос">
+                <button class="btn-search" aria-label="Искать">
+                    <img src="img/icons/search.svg" class="icon" width="20" height="20" alt="">
+                </button>
+            </div>
+            <nav class="header-nav">
+                <a href="#" class="btn-nav">
+                    <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
+                    <span class="nav-text">Слабовидящим</span>
+                </a>
+                <a href="#" class="btn-nav">
+                    <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
+                    <span class="nav-text">Войти</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="main-content book-detail-page">
+    <div class="container">
+        <div class="breadcrumb-bar">
+            <a href="main.html"><img src="img/icons/ar_left.svg" class="icon" width="12" height="11" alt=""> Назад</a>
+            <span class="separator">|</span>
+            <a href="#" class="breadcrumb-active">Русский учебник</a>
+        </div>
+
+        <section class="row g-4">
+           <div class="col-lg-3">
+               <div class="content">
+                   <img class="book-cover" src="img/exmpl/russian-uchebnik-cover.png" alt="Русский учебник">
+               </div>
+           </div>
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="book-head">
+                        <div>
+                            <h1 class="book-title">Русский учебник</h1>
+                            <p class="book-author">Кучерский А.М.</p>
+                        </div>
+                        <div class="book-actions">
+                            <button class="book-icon-btn book-icon-btn--heart" aria-label="В избранное">
+                                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M19.7144 5.2865C16.088 5.2865 14.3005 8.8615 14.3005 8.8615C14.3005 8.8615 12.513 5.2865 8.88663 5.2865C5.93949 5.2865 3.60569 7.75213 3.57552 10.6942C3.51408 16.8014 8.42021 21.1444 13.7978 24.7943C13.946 24.8951 14.1212 24.9491 14.3005 24.9491C14.4798 24.9491 14.655 24.8951 14.8033 24.7943C20.1803 21.1444 25.0864 16.8014 25.0255 10.6942C24.9954 7.75213 22.6616 5.2865 19.7144 5.2865Z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="book-icon-btn" id="share-btn" aria-label="Поделиться">
+                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M19.8001 17.688C18.9641 17.688 18.2161 18.018 17.6441 18.535L9.80105 13.97C9.85605 13.717 9.90005 13.464 9.90005 13.2C9.90005 12.936 9.85605 12.683 9.80105 12.43L17.5561 7.90895C18.1501 8.45895 18.9311 8.79995 19.8001 8.79995C21.6261 8.79995 23.1001 7.32595 23.1001 5.49995C23.1001 3.67395 21.6261 2.19995 19.8001 2.19995C17.9741 2.19995 16.5001 3.67395 16.5001 5.49995C16.5001 5.76395 16.5441 6.01695 16.5991 6.26995L8.84405 10.791C8.25005 10.241 7.46905 9.89995 6.60005 9.89995C4.77405 9.89995 3.30005 11.374 3.30005 13.2C3.30005 15.026 4.77405 16.5 6.60005 16.5C7.46905 16.5 8.25005 16.159 8.84405 15.609L16.6761 20.185C16.6211 20.416 16.5881 20.658 16.5881 20.9C16.5881 22.671 18.0291 24.112 19.8001 24.112C21.5711 24.112 23.0121 22.671 23.0121 20.9C23.0121 19.129 21.5711 17.688 19.8001 17.688Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="book-cta-row">
+                        <div class="book-mode-toggle" role="group" aria-label="Режим: читать или слушать">
+                            <button type="button" class="book-mode-toggle__btn is-active" data-book-mode="read" aria-pressed="true">
+                                Читать
+                            </button>
+                            <button type="button" class="book-mode-toggle__btn" data-book-mode="listen" aria-pressed="false">
+                                <svg class="book-mode-toggle__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M9.96152 2.5C14.1373 2.5 17.5373 5.89935 17.5373 10.0751V14.6285C17.5372 16.2112 16.2479 17.5 14.6652 17.5H14.5673C12.9845 17.4999 11.6959 16.2112 11.6958 14.6285V13.2108C11.6959 11.6281 12.9845 10.3394 14.5673 10.3393H14.6652C15.3192 10.3393 15.9232 10.5597 16.4067 10.9297V10.0751C16.4066 6.52497 13.5192 3.63063 9.96152 3.63063C8.22048 3.63071 6.60723 4.30137 5.40883 5.52238C4.20289 6.75097 3.56278 8.3868 3.5929 10.1355V10.9289C4.07626 10.5592 4.67996 10.3394 5.33375 10.3393H5.43165C7.01443 10.3393 8.30369 11.6281 8.30386 13.2108V14.6285C8.30369 16.2112 7.01443 17.5 5.43165 17.5H5.33375C3.75106 17.4999 2.46245 16.2112 2.46227 14.6285V10.1509C2.42459 8.10823 3.18576 6.1783 4.60281 4.73109C6.01979 3.29155 7.91903 2.50008 9.96152 2.5Z"/>
+                                </svg>
+                                Слушать
+                            </button>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div>
+                        <h2 class="meta-title">Характеристики</h2>
+                        <div class="book-meta-grid">
+                            <div class="meta-item"><span class="meta-label">Категория:</span><span class="meta-value"><a>Русский для билингвов</a></span></div>
+                            <div class="meta-item"><span class="meta-label">Тип издания:</span><span class="meta-value">Учебник</span></div>
+                            <div class="meta-item"><span class="meta-label">Уровень владения:</span><span class="meta-value"><a>A1-A2</a></span></div>
+                            <div class="meta-item"><span class="meta-label">Место издания:</span><span class="meta-value">Санкт-Петербург</span></div>
+                            <div class="meta-item"><span class="meta-label">Издательство:</span><span class="meta-value">Златоуст</span></div>
+                            <div class="meta-item"><span class="meta-label">Год издания:</span><span class="meta-value">2019</span></div>
+                            <div class="meta-item"><span class="meta-label">Грамматика:</span><span class="meta-value"><a>Родительный падеж</a></span></div>
+                            <div class="meta-item"><span class="meta-label">Кол-во страниц:</span><span class="meta-value">160</span></div>
+                            <div class="meta-item"><span class="meta-label">Тематика:</span><span class="meta-value"><a>О себе</a></span></div>
+                            <div class="meta-item"><span class="meta-label">ISBN:</span><span class="meta-value">5-86547-314-X</span></div>
+                            <div class="meta-item"><span class="meta-label">Праздник:</span><span class="meta-value"><a>Новый год</a></span></div>
+                            <div class="meta-item">
+                                <span class="meta-label">DOI:</span>
+                                <span class="meta-value meta-value--doi">
+                                    <button type="button" class="doi-copy-btn" data-doi="10.23682/145288" aria-label="Скопировать DOI в буфер обмена" title="Скопировать">
+                                        <img src="img/icons/copy.svg" width="22" height="22" alt="">
+                                    </button>
+                                    <a href="https://doi.org/10.23682/145288" target="_blank" rel="noopener noreferrer">10.23682/145288</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="book-description">
+                        <h3>Описание</h3>
+                        <div class="book-description__body">
+                            <p class="book-description__text is-collapsed" id="book-description-text">Учебное пособие содержит обязательный минимум учебного материала по разделу «Государственная система обеспечения безопасности населения» дисциплины «Основы безопасности и защиты Родины». Рассмотрены современные средства поражения и их поражающие факторы, мероприятия по защите населения. Показаны особенности оповещения и информирования населения об опасностях, возникающих в чрезвычайных ситуациях военного и мирного времени. Издание соответствует требованиям Федерального государственного образовательного стандарта среднего профессионального образования. Предназначено студентам всех профессий и специальностей, изучающим дисциплину «Основы безопасности и защиты Родины». Рабочие листы подходят для работы на уроке, индивидуальной практики, домашних заданий, краткосрочных курсов и модульных программ. Материал рассчитан на взрослых учащихся и может использоваться как в групповых, так и в индивидуальных занятиях.</p>
+                            <button type="button" class="book-description__toggle" id="book-description-toggle" aria-expanded="false" aria-controls="book-description-text" hidden>Читать полностью</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-tabs" role="tablist">
+                    <button type="button" id="tab-biblio" class="book-tab active" role="tab" aria-selected="true" aria-controls="panel-biblio" data-tab="biblio">Библиографическая запись</button>
+                    <button type="button" id="tab-related" class="book-tab" role="tab" aria-selected="false" aria-controls="panel-related" data-tab="related">Связанные материалы</button>
+                    <button type="button" id="tab-collections" class="book-tab" role="tab" aria-selected="false" aria-controls="panel-collections" data-tab="collections">Коллекции</button>
+                    <button type="button" id="tab-audio" class="book-tab" role="tab" aria-selected="false" aria-controls="panel-audio" data-tab="audio">Аудиоматериалы</button>
+                </div>
+                <div class="book-tab-panels">
+                    <div class="book-tab-panel is-active" id="panel-biblio" role="tabpanel" aria-labelledby="tab-biblio" data-tab="biblio">
+                        <div class="book-biblio">
+                            <div class="book-cite" id="biblio-record-text">
+                                Основы безопасности и защиты Родины. Государственная система обеспечения безопасности населения : учебное пособие для СПО / А. Н. Приешкина, М. А. Огородников, Е. Ю. Голубь, А. В. Седымов. — 2-е изд. — Саратов : Профобразование, 2025. — 76 c. — ISBN 978-5-4488-1969-8. — Текст : электронный // Цифровой образовательный ресурс IPR SMART : [сайт]. — URL: https://www.iprbookshop.ru/138323.html (дата обращения: 28.04.2025). — Режим доступа: для авторизир. пользователей
+                                <div class="book-biblio-actions">
+                                    <button type="button" class="book-biblio-btn" id="biblio-copy-btn" aria-label="Скопировать библиографическую запись">
+                                        <img class="book-biblio-btn__icon" src="img/icons/copy-biblio.svg" width="22" height="22" alt="" aria-hidden="true">
+                                        Скопировать
+                                    </button>
+                                    <span class="license-tooltip-wrap">
+                                        <a href="#" class="book-biblio-btn">Лицензия</a>
+                                        <span class="license-tooltip" role="tooltip">
+                                            <span class="license-tooltip__title">Информация о лицензии</span>
+                                            <span class="license-tooltip__text">Лицензия: весь срок охраны авторского права</span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-tab-panel" id="panel-related" role="tabpanel" aria-labelledby="tab-related" data-tab="related" hidden>
+                        <div class="book-biblio book-cite">
+                            <ul class="book-related-list">
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-book.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Название книги</span>
+                                            <span class="book-related-sub">Книга  Русский для билингвов</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-worksheet.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Название рабочего листа</span>
+                                            <span class="book-related-sub">Рабочий лист  Общий курс</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-test.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Название теста</span>
+                                            <span class="book-related-sub">Тест  На уровень</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-interactive.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Название интерактива</span>
+                                            <span class="book-related-sub">Интерактив  К лексическому минимуму</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-game.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Название игры</span>
+                                            <span class="book-related-sub">Банк материалов  Филворд</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-presentation.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Название презентации</span>
+                                            <span class="book-related-sub">Банк материалов  Презентация</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-illustrations.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Подборка иллюстраций</span>
+                                            <span class="book-related-sub">Банк материалов  Подборка иллюстраций</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="book-related-item">
+                                    <a href="#" class="book-related-link">
+                                        <span class="book-related-icon"><img src="img/icons/related/icon-longread.svg" width="48" height="48" alt=""></span>
+                                        <span class="book-related-content">
+                                            <span class="book-related-title">Название лонгрида</span>
+                                            <span class="book-related-sub">Методика  Лонгрид</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="book-tab-panel" id="panel-collections" role="tabpanel" aria-labelledby="tab-collections" data-tab="collections" hidden>
+                        <div class="book-biblio book-cite d-flex gap-3">
+                            <article class="material-card material-card--collection">
+                                <a href="#" class="card-link" aria-label="Прилагательные и степени сравнения"></a>
+                                <div class="card-image">
+                                    <img src="img/exmpl/da70e1f982aec32669a0f7e9e65754e30d13af75.jpg"
+                                         alt="Прилагательные и степени сравнения"
+                                         class="card-collection-img">
+                                    <span class="card-collection-badge">Коллекция</span>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Прилагательные и степени сравнения</h3>
+                                    <p class="card-description">
+                                        Больше, красивее, самый интересный: систематизация форм прилагательных.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="material-card material-card--collection">
+                                <a href="#" class="card-link" aria-label="Прилагательные и степени сравнения"></a>
+                                <div class="card-image">
+                                    <img src="img/exmpl/da70e1f982aec32669a0f7e9e65754e30d13af75.jpg"
+                                         alt="Прилагательные и степени сравнения"
+                                         class="card-collection-img">
+                                    <span class="card-collection-badge">Коллекция</span>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Прилагательные и степени сравнения</h3>
+                                    <p class="card-description">
+                                        Больше, красивее, самый интересный: систематизация форм прилагательных.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="material-card material-card--collection">
+                                <a href="#" class="card-link" aria-label="Прилагательные и степени сравнения"></a>
+                                <div class="card-image">
+                                    <img src="img/exmpl/da70e1f982aec32669a0f7e9e65754e30d13af75.jpg"
+                                         alt="Прилагательные и степени сравнения"
+                                         class="card-collection-img">
+                                    <span class="card-collection-badge">Коллекция</span>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Прилагательные и степени сравнения</h3>
+                                    <p class="card-description">
+                                        Больше, красивее, самый интересный: систематизация форм прилагательных.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="book-tab-panel" id="panel-audio" role="tabpanel" aria-labelledby="tab-audio" data-tab="audio" hidden>
+                        <div class="book-biblio book-cite">
+                            <div class="audio-accordion">
+                                <div class="audio-lesson">
+                                    <button type="button" class="audio-lesson__header" aria-expanded="false" aria-controls="lesson-1-body" data-accordion-toggle>
+                                        <span class="audio-lesson__title">Урок №1</span>
+                                        <span class="audio-lesson__count">Количество аудио: <span>5</span></span>
+                                        <span class="audio-lesson__chevron" aria-hidden="true">
+                                            <img class="audio-lesson__chevron-icon" src="img/icons/arrow.svg" width="22" height="22" alt="">
+                                        </span>
+                                    </button>
+                                    <div class="audio-lesson__body" id="lesson-1-body" hidden>
+                                        <div class="audio-track" data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+                                            <span class="audio-track__label">Задание 1</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести" title="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                        <div class="audio-track" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                                            <span class="audio-track__label">Задание 2</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                        <div class="audio-track" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                                            <span class="audio-track__label">Задание 3</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                        <div class="audio-track" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+                                            <span class="audio-track__label">Задание 4</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                        <div class="audio-track" data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+                                            <span class="audio-track__label">Задание 5</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="audio-lesson">
+                                    <button type="button" class="audio-lesson__header" aria-expanded="false" aria-controls="lesson-2-body" data-accordion-toggle>
+                                        <span class="audio-lesson__title">Урок №2</span>
+                                        <span class="audio-lesson__count">Количество аудио: <span>18</span></span>
+                                        <span class="audio-lesson__chevron" aria-hidden="true">
+                                            <img class="audio-lesson__chevron-icon" src="img/icons/arrow.svg" width="22" height="22" alt="">
+                                        </span>
+                                    </button>
+                                    <div class="audio-lesson__body" id="lesson-2-body" hidden>
+                                        <div class="audio-track" data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+                                            <span class="audio-track__label">Задание 1</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                        <div class="audio-track" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                                            <span class="audio-track__label">Задание 2</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                        <div class="audio-track" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                                            <span class="audio-track__label">Задание 3</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="audio-lesson">
+                                    <button type="button" class="audio-lesson__header" aria-expanded="false" aria-controls="lesson-3-body" data-accordion-toggle>
+                                        <span class="audio-lesson__title">Урок №3</span>
+                                        <span class="audio-lesson__count">Количество аудио: <span>12</span></span>
+                                        <span class="audio-lesson__chevron" aria-hidden="true">
+                                            <img class="audio-lesson__chevron-icon" src="img/icons/arrow.svg" width="22" height="22" alt="">
+                                        </span>
+                                    </button>
+                                    <div class="audio-lesson__body" id="lesson-3-body" hidden>
+                                        <div class="audio-track" data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+                                            <span class="audio-track__label">Задание 1</span>
+                                            <button type="button" class="audio-track__play" aria-label="Воспроизвести">
+                                                <span class="audio-track__play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                                                <span class="audio-track__pause-icon" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
+                                            </button>
+                                            <span class="audio-track__time">0:00 / 0:00</span>
+                                            <div class="audio-track__progress"><div class="audio-track__progress-fill"></div></div>
+                                            <button type="button" class="audio-track__speed" aria-label="Скорость воспроизведения" title="Скорость">1x</button>
+                                            <span class="audio-track__volume">
+                                                <input type="range" class="audio-track__volume-input" min="0" max="100" value="100" aria-label="Громкость" title="Громкость">
+                                                <span class="audio-track__volume-icon"><img src="img/icons/volume.svg" width="20" height="20" alt="" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommend">
+            <h2>Рекомендуем</h2>
+        </section>
+    </div>
+</main>
+
+<div class="share-modal" id="share-modal" aria-hidden="true" role="dialog" aria-labelledby="share-modal-title" aria-modal="true">
+    <div class="share-modal__backdrop"></div>
+    <div class="share-modal__box">
+        <div class="share-modal__header">
+            <h2 class="share-modal__title" id="share-modal-title">Поделиться</h2>
+            <button type="button" class="share-modal__close" aria-label="Закрыть">
+                <img src="img/icons/cross.svg" width="28" height="28" alt="" aria-hidden="true">
+            </button>
+        </div>
+        <div class="share-modal__body">
+            <a href="#" class="share-modal__item share-modal__item--copy" id="share-copy" aria-label="Копировать ссылку">
+                <span class="share-modal__icon share-modal__icon--copy">
+                    <img src="img/icons/copy-biblio.svg" width="24" height="24" alt="">
+                </span>
+                <span class="share-modal__label">Копировать<br>ссылку</span>
+            </a>
+            <a href="#" class="share-modal__item" id="share-vk" target="_blank" rel="noopener noreferrer" aria-label="Поделиться во Вконтакте">
+                <span class="share-modal__icon share-modal__icon--social"><img src="img/icons/social/vk2.svg" width="48" height="48" alt=""></span>
+                <span class="share-modal__label">Вконтакте</span>
+            </a>
+            <a href="#" class="share-modal__item" id="share-ok" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Одноклассниках">
+                <span class="share-modal__icon share-modal__icon--social"><img src="img/icons/social/ok.svg" width="48" height="48" alt=""></span>
+                <span class="share-modal__label">Одноклассники</span>
+            </a>
+            <a href="#" class="share-modal__item" id="share-tg" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Telegram">
+                <span class="share-modal__icon share-modal__icon--social"><img src="img/icons/social/tg2.svg" width="48" height="48" alt=""></span>
+                <span class="share-modal__label">Telegram</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="auth-modal" id="auth-modal" aria-hidden="true" role="dialog" aria-labelledby="auth-modal-title" aria-modal="true">
+    <div class="auth-modal__backdrop"></div>
+    <div class="auth-modal__box">
+        <button type="button" class="auth-modal__close" aria-label="Закрыть">
+            <img src="img/icons/cross.svg" width="28" height="28" alt="" aria-hidden="true">
+        </button>
+        <p class="auth-modal__text" id="auth-modal-title">Войдите в аккаунт,<br>чтобы получить доступ</p>
+        <div class="auth-modal__actions">
+            <a href="#" class="auth-modal__btn auth-modal__btn--primary">Войти</a>
+            <button type="button" class="auth-modal__btn auth-modal__btn--cancel">Отменить</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/book-description-toggle.js"></script>
+<script src="js/book-copy-doi.js"></script>
+<script src="js/book-biblio-copy.js"></script>
+<script src="js/book-tabs.js"></script>
+<script src="js/book-audio.js"></script>
+<script src="js/book-share-modal.js"></script>
+<script src="js/book-auth-modal.js"></script>
+<script>
+(function () {
+    var group = document.querySelector('.book-mode-toggle');
+    if (!group) return;
+    var buttons = group.querySelectorAll('.book-mode-toggle__btn');
+    function activate(btn) {
+        buttons.forEach(function (b) {
+            var on = b === btn;
+            b.classList.toggle('is-active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        if (btn.getAttribute('data-book-mode') === 'listen') {
+            var audioTab = document.querySelector('.book-tab[data-tab="audio"]');
+            if (audioTab) audioTab.click();
+        }
+    }
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            if (!btn.classList.contains('is-active')) activate(btn);
+            if (btn.getAttribute('data-book-mode') === 'read') {
+                var authModal = document.getElementById('auth-modal');
+                if (authModal) {
+                    authModal.classList.add('is-open');
+                    authModal.setAttribute('aria-hidden', 'false');
+                }
+            }
+        });
+    });
+})();
+</script>
+</body>
+</html>
