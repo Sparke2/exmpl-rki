@@ -1,0 +1,469 @@
+/* ============================================
+   Collection Page — Издательства партнёры
+   Light theme, grid layout
+   ============================================ */
+
+/* ---- Page Overrides ---- */
+.collection-page {
+  background-color: #F5F5F5;
+  color: var(--color-main);
+}
+
+.collection-page body {
+  background-color: #F5F5F5;
+}
+
+/* ---- Main Content Area ---- */
+.collection-main {
+  padding: 2rem 0 3rem;
+  min-height: calc(100vh - 80px);
+}
+
+/* ---- Header Section ---- */
+.collection-header {
+  margin-bottom: 1.5rem;
+}
+
+.collection-breadcrumb {
+  font-size: 0.875rem;
+  color: #757575;
+  margin-bottom: 0.5rem;
+}
+
+.collection-breadcrumb a {
+  color: #757575;
+  text-decoration: none;
+}
+
+.collection-breadcrumb a:hover {
+  color: var(--color-main);
+}
+
+.collection-breadcrumb-sep {
+  margin: 0 0.5rem;
+  opacity: 0.6;
+}
+
+.collection-breadcrumb-current {
+  color: #757575;
+}
+
+.collection-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-main);
+  margin-bottom: 24px;
+}
+
+/* ---- Category Tags ---- */
+.collection-tags-wrap {
+  margin-bottom: 2rem;
+}
+
+.collection-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  max-height: 7rem;
+  transition: max-height 0.3s ease;
+}
+
+.collection-tags-wrap.is-expanded .collection-tags {
+  max-height: none;
+}
+
+.collection-tag {
+  flex-shrink: 0;
+  padding: 0.813rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--color-gray-hover);
+  color: var(--color-main);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.collection-tag:hover {
+  background-color: #E5E5E5;
+}
+
+.collection-tag--active {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary);
+}
+
+.collection-tag--active:hover {
+  background-color: var(--color-primary-pale);
+}
+
+.collection-tags-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s ease;
+  margin-top: 2px;
+}
+
+.collection-tags-toggle:hover {
+  color: var(--color-main);
+}
+
+/* ---- Main Grid ---- */
+.collection-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 0.8fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ---- Cards ---- */
+.collection-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.collection-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 360px;
+}
+
+/* Feature Card (Large) */
+.collection-card--feature {
+  color: var(--color-main);
+}
+
+.collection-card--feature .collection-card-inner {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+/* Image — full card background, lowest z-index */
+.collection-card--feature .collection-card-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.collection-card--feature .collection-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Badge and content — above image */
+.collection-card--feature .collection-card-badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-main);
+  width: fit-content;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: auto;
+}
+
+.collection-card--feature .collection-card-badge-icon {
+  flex-shrink: 0;
+}
+
+.collection-card--feature .collection-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.collection-card--feature .collection-card-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-main);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.collection-card--feature .collection-card-desc {
+  font-size: 16px;
+  color: var(--color-gray-800);
+  margin: 0 0 24px;
+  line-height: 30px;
+  max-width: 360px;
+}
+
+.collection-card--feature .collection-card-btn {
+  width: fit-content;
+  font-weight: 400;
+}
+
+/* Middle Column */
+.collection-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.collection-card--info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Вы найдёте — меньшая высота */
+.collection-card--blue {
+  background-color: var(--color-blue-pale);
+  color: var(--color-main);
+  flex: 0 0 auto;
+  min-height: 130px;
+}
+
+/* Вы сможете — большая высота, с линиями сверху */
+.collection-card--white {
+  background-color: #FFFFFF;
+  color: var(--color-main);
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 220px;
+}
+
+.collection-card--smojete .collection-card-graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url('../img/collection/card-lines.png');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.collection-card--smojete .collection-card-heading,
+.collection-card--smojete .collection-card-text {
+  position: relative;
+  z-index: 1;
+}
+
+.collection-card-heading {
+  font-size: 20px;
+  color: var(--color-main);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.collection-card-text {
+  font-size: 16px;
+  color: var(--color-gray-800);
+  margin: 0;
+  line-height: 24px;
+}
+
+/* Tall Card (Right) — изображение внутри карточки */
+.collection-card--tall {
+  background-color: #FFFFFF;
+  color: var(--color-main);
+}
+
+.collection-card--tall .collection-card-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.collection-card--tall .collection-card-image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 20px;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+
+.collection-card--tall .collection-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.collection-card--tall .collection-card-body {
+  padding: 0;
+}
+
+.collection-card--tall .collection-card-heading {
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Bottom Filter Bar ---- */
+.collection-filter-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #E0E0E0;
+}
+
+.collection-filter-label {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.collection-levels {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.collection-level-btn {
+  padding: 0.813rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--color-gray-hover);
+  color: var(--color-main);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.collection-level-btn:hover {
+  background-color: #E0E0E0;
+}
+
+.collection-level-btn:focus {
+  outline: 2px solid var(--color-primary, #B41E23);
+  outline-offset: 2px;
+}
+
+.collection-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--color-gray-hover);
+  padding: 13px 12px;
+  border-radius: 10px;
+}
+
+.collection-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.collection-toggle-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.collection-toggle input:checked + .collection-toggle-box {
+  background-color: #B41E23;
+}
+
+.collection-toggle input:checked + .collection-toggle-box::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -4px;
+  margin-top: -7px;
+  width: 6px;
+  height: 12px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.collection-toggle-text {
+  white-space: nowrap;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1200px) {
+  .collection-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .collection-card--feature {
+    grid-column: 1 / -1;
+  }
+
+  .collection-card--feature .collection-card-inner {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collection-main {
+    padding: 1rem 0 2rem;
+  }
+
+  .collection-title {
+    font-size: 1.5rem;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .collection-card--feature .collection-card-inner {
+    min-height: 300px;
+  }
+
+  .collection-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .collection-toggle {
+    margin-left: 0;
+  }
+}
