@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/share-modal.css">
     <link rel="stylesheet" href="css/book-detail.css">
 </head>
 <body>
@@ -74,7 +75,7 @@
                                     <path d="M19.7144 5.2865C16.088 5.2865 14.3005 8.8615 14.3005 8.8615C14.3005 8.8615 12.513 5.2865 8.88663 5.2865C5.93949 5.2865 3.60569 7.75213 3.57552 10.6942C3.51408 16.8014 8.42021 21.1444 13.7978 24.7943C13.946 24.8951 14.1212 24.9491 14.3005 24.9491C14.4798 24.9491 14.655 24.8951 14.8033 24.7943C20.1803 21.1444 25.0864 16.8014 25.0255 10.6942C24.9954 7.75213 22.6616 5.2865 19.7144 5.2865Z"/>
                                 </svg>
                             </button>
-                            <button type="button" class="book-icon-btn" id="share-btn" aria-label="Поделиться">
+                            <button type="button" class="book-icon-btn" data-share-btn aria-label="Поделиться">
                                 <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M19.8001 17.688C18.9641 17.688 18.2161 18.018 17.6441 18.535L9.80105 13.97C9.85605 13.717 9.90005 13.464 9.90005 13.2C9.90005 12.936 9.85605 12.683 9.80105 12.43L17.5561 7.90895C18.1501 8.45895 18.9311 8.79995 19.8001 8.79995C21.6261 8.79995 23.1001 7.32595 23.1001 5.49995C23.1001 3.67395 21.6261 2.19995 19.8001 2.19995C17.9741 2.19995 16.5001 3.67395 16.5001 5.49995C16.5001 5.76395 16.5441 6.01695 16.5991 6.26995L8.84405 10.791C8.25005 10.241 7.46905 9.89995 6.60005 9.89995C4.77405 9.89995 3.30005 11.374 3.30005 13.2C3.30005 15.026 4.77405 16.5 6.60005 16.5C7.46905 16.5 8.25005 16.159 8.84405 15.609L16.6761 20.185C16.6211 20.416 16.5881 20.658 16.5881 20.9C16.5881 22.671 18.0291 24.112 19.8001 24.112C21.5711 24.112 23.0121 22.671 23.0121 20.9C23.0121 19.129 21.5711 17.688 19.8001 17.688Z"/>
                                 </svg>
@@ -461,38 +462,6 @@
     </div>
 </main>
 
-<div class="share-modal" id="share-modal" aria-hidden="true" role="dialog" aria-labelledby="share-modal-title" aria-modal="true">
-    <div class="share-modal__backdrop"></div>
-    <div class="share-modal__box">
-        <div class="share-modal__header">
-            <h2 class="share-modal__title" id="share-modal-title">Поделиться</h2>
-            <button type="button" class="share-modal__close" aria-label="Закрыть">
-                <img src="img/icons/cross.svg" width="28" height="28" alt="" aria-hidden="true">
-            </button>
-        </div>
-        <div class="share-modal__body">
-            <a href="#" class="share-modal__item share-modal__item--copy" id="share-copy" aria-label="Копировать ссылку">
-                <span class="share-modal__icon share-modal__icon--copy">
-                    <img src="img/icons/copy-biblio.svg" width="24" height="24" alt="">
-                </span>
-                <span class="share-modal__label">Копировать<br>ссылку</span>
-            </a>
-            <a href="#" class="share-modal__item" id="share-vk" target="_blank" rel="noopener noreferrer" aria-label="Поделиться во Вконтакте">
-                <span class="share-modal__icon share-modal__icon--social"><img src="img/icons/social/vk2.svg" width="48" height="48" alt=""></span>
-                <span class="share-modal__label">Вконтакте</span>
-            </a>
-            <a href="#" class="share-modal__item" id="share-ok" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Одноклассниках">
-                <span class="share-modal__icon share-modal__icon--social"><img src="img/icons/social/ok.svg" width="48" height="48" alt=""></span>
-                <span class="share-modal__label">Одноклассники</span>
-            </a>
-            <a href="#" class="share-modal__item" id="share-tg" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Telegram">
-                <span class="share-modal__icon share-modal__icon--social"><img src="img/icons/social/tg2.svg" width="48" height="48" alt=""></span>
-                <span class="share-modal__label">Telegram</span>
-            </a>
-        </div>
-    </div>
-</div>
-
 <div class="auth-modal" id="auth-modal" aria-hidden="true" role="dialog" aria-labelledby="auth-modal-title" aria-modal="true">
     <div class="auth-modal__backdrop"></div>
     <div class="auth-modal__box">
@@ -513,7 +482,7 @@
 <script src="js/book-biblio-copy.js"></script>
 <script src="js/book-tabs.js"></script>
 <script src="js/book-audio.js"></script>
-<script src="js/book-share-modal.js"></script>
+<script src="js/share-modal.js"></script>
 <script src="js/book-auth-modal.js"></script>
 <script>
 (function () {
