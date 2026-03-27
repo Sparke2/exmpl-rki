@@ -519,4 +519,122 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
+  // ============================
+  // LEXICON WORD CARDS — play audio
+  // ============================
+  var lexiconWordCards = document.querySelectorAll('.lexicon-word-card[data-audio-src]');
+  if (lexiconWordCards && lexiconWordCards.length) {
+    var audioEl = new Audio();
+    audioEl.preload = 'metadata';
+    audioEl.volume = 1;
+    var currentCard = null;
+
+    function formatDuration(sec) {
+      if (!isFinite(sec) || sec < 0) return '0:00';
+      var totalSeconds = Math.floor(sec);
+      var minutes = Math.floor(totalSeconds / 60);
+      var seconds = totalSeconds % 60;
+      var padded = seconds < 10 ? '0' + seconds : String(seconds);
+      return minutes + ':' + padded;
+    }
+
+    function setCardDuration(card) {
+      if (!card) return;
+      var durationEl = card.querySelector('.lexicon-word-card__duration');
+      if (!durationEl) return;
+      durationEl.textContent = formatDuration(audioEl.duration);
+    }
+
+    function setPlayingUI(card, playing) {
+      if (!card) return;
+      var playIcon = card.querySelector('.lexicon-word-card__play-icon');
+      var pauseIcon = card.querySelector('.lexicon-word-card__pause-icon');
+      if (playIcon) playIcon.hidden = !!playing;
+      if (pauseIcon) pauseIcon.hidden = !playing;
+
+      card.classList.toggle('is-playing', playing);
+
+      // Accessibility: update button label to match state.
+      var btn = card.querySelector('.lexicon-word-card__play');
+      if (btn) {
+        btn.setAttribute('aria-label', playing ? 'Пауза' : 'Воспроизвести');
+        btn.setAttribute('title', playing ? 'Пауза' : 'Воспроизвести');
+      }
+    }
+
+    audioEl.addEventListener('loadedmetadata', function () {
+      if (!currentCard) return;
+      setCardDuration(currentCard);
+    });
+
+    audioEl.addEventListener('play', function () {
+      if (!currentCard) return;
+      setPlayingUI(currentCard, true);
+    });
+
+    audioEl.addEventListener('pause', function () {
+      if (!currentCard) return;
+      setPlayingUI(currentCard, false);
+    });
+
+    audioEl.addEventListener('ended', function () {
+      if (currentCard) setPlayingUI(currentCard, false);
+      currentCard = null;
+    });
+
+    lexiconWordCards.forEach(function (card) {
+      var playBtn = card.querySelector('.lexicon-word-card__play');
+      if (!playBtn) return;
+
+      playBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        var src = card.getAttribute('data-audio-src');
+        if (!src) return;
+
+        // If another card was playing — stop previous + reset.
+        if (currentCard && currentCard !== card) {
+          audioEl.pause();
+          audioEl.currentTime = 0;
+          setPlayingUI(currentCard, false);
+        }
+
+        currentCard = card;
+
+        var currentSrc = audioEl.currentSrc || audioEl.src;
+
+        // Same card: toggle play/pause.
+        if (currentSrc === src) {
+          if (audioEl.paused) {
+            audioEl.play().catch(function () {});
+          } else {
+            audioEl.pause();
+          }
+          return;
+        }
+
+        // New src: load + play from start.
+        audioEl.pause();
+        audioEl.currentTime = 0;
+        audioEl.src = src;
+        audioEl.load();
+        audioEl.play().catch(function () {});
+      });
+
+      // Toggle full translation
+      var toggleBtn = card.querySelector('.lexicon-word-card__toggle');
+      var toggleLabel = toggleBtn ? toggleBtn.querySelector('.lexicon-word-card__toggle-label') : null;
+
+      if (toggleBtn && toggleLabel) {
+        toggleBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          var expanded = !card.classList.contains('is-expanded');
+          card.classList.toggle('is-expanded', expanded);
+          toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          toggleLabel.textContent = expanded ? 'Скрыть' : 'Еще';
+        });
+      }
+    });
+  }
 });

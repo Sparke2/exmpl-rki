@@ -713,6 +713,154 @@
 }
 
 /* =====================
+   LEXICON WORD CARD
+   ===================== */
+.lexicon-words {
+  margin-top: 16px;
+}
+
+.lexicon-word-card {
+  background: var(--color-white);
+  border-radius: var(--radius-header);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.lexicon-word-card__media {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.lexicon-word-card__play {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.lexicon-word-card__play svg {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.lexicon-word-card__play-icon svg,
+.lexicon-word-card__pause-icon svg {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.lexicon-word-card__pause-icon[hidden] {
+  display: none;
+}
+
+.lexicon-word-card__play-icon[hidden] {
+  display: none;
+}
+
+.lexicon-word-card__duration {
+  font-size: 13px;
+  color: #999;
+  line-height: 1;
+}
+
+.lexicon-word-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.lexicon-word-card__title {
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-main);
+  margin-bottom: 8px;
+}
+
+.lexicon-word-card__extra {
+  font-size: var(--font-size-md);
+  color: var(--color-gray-500);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.lexicon-word-card__translation {
+  font-size: var(--font-size-md);
+  color: var(--color-gray-700);
+  line-height: 1.35;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.lexicon-word-card__translation-prefix {
+  color: var(--color-gray-500);
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.lexicon-word-card__translation-text {
+  min-width: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-gray-500);
+  font-size: 16px;
+}
+
+.lexicon-word-card.is-expanded .lexicon-word-card__translation-text {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.lexicon-word-card.is-expanded .lexicon-word-card__translation {
+  align-items: flex-start;
+}
+
+.lexicon-word-card__toggle {
+  margin-top: 0;
+  font-size: 13px;
+  color: #999;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-self: flex-end;
+  margin-left: 10px;
+}
+
+.lexicon-word-card__toggle:hover {
+  color: var(--color-primary);
+}
+
+.lexicon-word-card__toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.lexicon-word-card__toggle-label {
+    color: var(--color-gray-500);
+    font-size: 16px;
+}
+
+.lexicon-word-card__toggle-label:hover {
+    color: var(--color-main);
+}
+
+/* =====================
    TAB PILLS
    ===================== */
 
