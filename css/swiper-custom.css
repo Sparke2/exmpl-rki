@@ -8,6 +8,11 @@
   padding-bottom: var(--space-sm);
 }
 
+.books-carousel-shell {
+  position: relative;
+  overflow: visible;
+}
+
 .books-carousel .swiper-wrapper {
   display: flex;
   align-items: stretch;
@@ -19,8 +24,8 @@
 }
 
 /* Кнопки навигации Swiper */
-.books-carousel .swiper-button-prev,
-.books-carousel .swiper-button-next {
+.books-carousel-shell .swiper-button-prev,
+.books-carousel-shell .swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -35,28 +40,28 @@
   z-index: 5;
 }
 
-.books-carousel .swiper-button-prev::after,
-.books-carousel .swiper-button-next::after {
+.books-carousel-shell .swiper-button-prev::after,
+.books-carousel-shell .swiper-button-next::after {
   font-size: 14px;
   font-weight: bold;
 }
 
-.books-carousel .swiper-button-prev:hover,
-.books-carousel .swiper-button-next:hover {
+.books-carousel-shell .swiper-button-prev:hover,
+.books-carousel-shell .swiper-button-next:hover {
   background: var(--color-gray-50);
   border-color: var(--color-gray-400);
 }
 
-.books-carousel .swiper-button-prev {
+.books-carousel-shell .swiper-button-prev {
   left: -8px;
 }
 
-.books-carousel .swiper-button-next {
+.books-carousel-shell .swiper-button-next {
   right: -8px;
 }
 
 /* Скрытие кнопок когда не нужны */
-.books-carousel .swiper-button-disabled {
+.books-carousel-shell .swiper-button-disabled {
   opacity: 0;
   pointer-events: none;
 }
@@ -65,6 +70,11 @@
 .events-carousel {
   position: relative;
   padding-bottom: var(--space-sm);
+}
+
+.events-carousel-shell {
+  position: relative;
+  overflow: visible;
 }
 
 .events-carousel .swiper-wrapper {
@@ -77,8 +87,8 @@
   width: auto;
 }
 
-.events-carousel .swiper-button-prev,
-.events-carousel .swiper-button-next {
+.events-carousel-shell .swiper-button-prev,
+.events-carousel-shell .swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -93,58 +103,197 @@
   z-index: 5;
 }
 
-.events-carousel .swiper-button-prev::after,
-.events-carousel .swiper-button-next::after {
+.events-carousel-shell .swiper-button-prev::after,
+.events-carousel-shell .swiper-button-next::after {
   font-size: 14px;
   font-weight: bold;
 }
 
-.events-carousel .swiper-button-prev:hover,
-.events-carousel .swiper-button-next:hover {
+.events-carousel-shell .swiper-button-prev:hover,
+.events-carousel-shell .swiper-button-next:hover {
   background: var(--color-gray-50);
   border-color: var(--color-gray-400);
 }
 
-.events-carousel .swiper-button-prev {
+.events-carousel-shell .swiper-button-prev {
   left: -8px;
 }
 
-.events-carousel .swiper-button-next {
+.events-carousel-shell .swiper-button-next {
   right: -8px;
 }
 
-.events-carousel .swiper-button-disabled {
+.events-carousel-shell .swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Карусель тематики */
+.them-carousel-shell {
+  position: relative;
+  overflow: visible;
+}
+
+.them-carousel-shell .swiper-button-prev,
+.them-carousel-shell .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  box-shadow: var(--shadow-md);
+  color: var(--color-gray-700);
+  transition: all var(--transition-fast);
+  z-index: 5;
+}
+
+.them-carousel-shell .swiper-button-prev::after,
+.them-carousel-shell .swiper-button-next::after {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.them-carousel-shell .swiper-button-prev:hover,
+.them-carousel-shell .swiper-button-next:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.them-carousel-shell .swiper-button-prev {
+  left: -8px;
+}
+
+.them-carousel-shell .swiper-button-next {
+  right: -8px;
+}
+
+.them-carousel-prev,
+.them-carousel-next {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  box-shadow: var(--shadow-md);
+  color: var(--color-gray-700);
+}
+
+.them-carousel-prev:hover,
+.them-carousel-next:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.them-carousel-shell .swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Карусель праздничных дат */
+.date-carousel-shell {
+  position: relative;
+  overflow: visible;
+}
+
+.date-carousel-shell .swiper-button-prev,
+.date-carousel-shell .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  box-shadow: var(--shadow-md);
+  color: var(--color-gray-700);
+  transition: all var(--transition-fast);
+  z-index: 5;
+}
+
+.date-carousel-shell .swiper-button-prev::after,
+.date-carousel-shell .swiper-button-next::after {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date-carousel-shell .swiper-button-prev:hover,
+.date-carousel-shell .swiper-button-next:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.date-carousel-shell .swiper-button-prev {
+  left: -8px;
+}
+
+.date-carousel-shell .swiper-button-next {
+  right: -8px;
+}
+
+.date-carousel-shell .swiper-button-disabled {
   opacity: 0;
   pointer-events: none;
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  .books-carousel .swiper-button-prev,
-  .books-carousel .swiper-button-next {
+  .books-carousel-shell .swiper-button-prev,
+  .books-carousel-shell .swiper-button-next {
     width: 32px;
     height: 32px;
   }
   
-  .books-carousel .swiper-button-prev {
+  .books-carousel-shell .swiper-button-prev {
     left: -4px;
   }
   
-  .books-carousel .swiper-button-next {
+  .books-carousel-shell .swiper-button-next {
     right: -4px;
   }
 
-  .events-carousel .swiper-button-prev,
-  .events-carousel .swiper-button-next {
+  .events-carousel-shell .swiper-button-prev,
+  .events-carousel-shell .swiper-button-next {
     width: 32px;
     height: 32px;
   }
 
-  .events-carousel .swiper-button-prev {
+  .events-carousel-shell .swiper-button-prev {
     left: -4px;
   }
 
-  .events-carousel .swiper-button-next {
+  .events-carousel-shell .swiper-button-next {
+    right: -4px;
+  }
+
+  .them-carousel-shell .swiper-button-prev,
+  .them-carousel-shell .swiper-button-next {
+    width: 32px;
+    height: 32px;
+  }
+
+  .them-carousel-shell .swiper-button-prev {
+    left: -4px;
+  }
+
+  .them-carousel-shell .swiper-button-next {
+    right: -4px;
+  }
+
+  .date-carousel-shell .swiper-button-prev,
+  .date-carousel-shell .swiper-button-next {
+    width: 32px;
+    height: 32px;
+  }
+
+  .date-carousel-shell .swiper-button-prev {
+    left: -4px;
+  }
+
+  .date-carousel-shell .swiper-button-next {
     right: -4px;
   }
 }
@@ -152,6 +301,7 @@
 /* =============================
    GRAMMAR CAROUSEL CONTROLS
    ============================= */
+
 .grammar-carousel .swiper-wrapper {
   display: flex;
   align-items: stretch;
@@ -162,8 +312,13 @@
   width: auto;
 }
 
-.grammar-carousel .swiper-button-prev,
-.grammar-carousel .swiper-button-next {
+.grammar-carousel-shell {
+  position: relative;
+  overflow: visible;
+}
+
+.grammar-carousel-shell .swiper-button-prev,
+.grammar-carousel-shell .swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -178,43 +333,43 @@
   z-index: 5;
 }
 
-.grammar-carousel .swiper-button-prev::after,
-.grammar-carousel .swiper-button-next::after {
+.grammar-carousel-shell .swiper-button-prev::after,
+.grammar-carousel-shell .swiper-button-next::after {
   font-size: 14px;
   font-weight: bold;
 }
 
-.grammar-carousel .swiper-button-prev:hover,
-.grammar-carousel .swiper-button-next:hover {
+.grammar-carousel-shell .swiper-button-prev:hover,
+.grammar-carousel-shell .swiper-button-next:hover {
   background: var(--color-gray-50);
   border-color: var(--color-gray-400);
 }
 
-.grammar-carousel .swiper-button-prev {
+.grammar-carousel-shell .swiper-button-prev {
   left: -8px;
 }
 
-.grammar-carousel .swiper-button-next {
+.grammar-carousel-shell .swiper-button-next {
   right: -8px;
 }
 
-.grammar-carousel .swiper-button-disabled {
+.grammar-carousel-shell .swiper-button-disabled {
   opacity: 0;
   pointer-events: none;
 }
 
 @media (max-width: 768px) {
-  .grammar-carousel .swiper-button-prev,
-  .grammar-carousel .swiper-button-next {
+  .grammar-carousel-shell .swiper-button-prev,
+  .grammar-carousel-shell .swiper-button-next {
     width: 32px;
     height: 32px;
   }
 
-  .grammar-carousel .swiper-button-prev {
+  .grammar-carousel-shell .swiper-button-prev {
     left: -4px;
   }
 
-  .grammar-carousel .swiper-button-next {
+  .grammar-carousel-shell .swiper-button-next {
     right: -4px;
   }
 }

@@ -276,8 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const newCarouselInstances = {};
 
   function initNewCarousel(panel) {
-    const swiperEl = panel.querySelector('.new-carousel');
-    if (!swiperEl || swiperEl.swiper) return;
+    const shellEl = panel.querySelector('.new-carousel-shell');
+    const swiperEl = shellEl ? shellEl.querySelector('.new-carousel') : null;
+    if (!shellEl || !swiperEl || swiperEl.swiper) return;
     const key = panel.dataset.tab;
 
     const isMethodology = key === 'methodology';
@@ -285,8 +286,8 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: isMethodology ? 3 : 'auto',
       spaceBetween: 20,
       navigation: {
-        nextEl: swiperEl.querySelector('.new-carousel-next'),
-        prevEl: swiperEl.querySelector('.new-carousel-prev'),
+        nextEl: shellEl.querySelector('.new-carousel-next'),
+        prevEl: shellEl.querySelector('.new-carousel-prev'),
       },
       breakpoints: isMethodology
         ? {
@@ -347,8 +348,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 20,
     navigation: {
-      nextEl: '.books-carousel .swiper-button-next',
-      prevEl: '.books-carousel .swiper-button-prev',
+      nextEl: '.books-carousel-next',
+      prevEl: '.books-carousel-prev',
     },
     breakpoints: {
       320: {
