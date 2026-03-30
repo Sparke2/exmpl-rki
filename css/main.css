@@ -145,6 +145,10 @@
     padding: 60px 0 0 60px;
 }
 
+.bg-3 .block {
+    min-width: 530px;
+}
+
 .bg-1 img, .bg-2 img, .bg-3 img {
     border-radius: 0 var(--radius-bg) var(--radius-bg) 0;
 }
