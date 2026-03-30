@@ -17,10 +17,6 @@
   z-index: 100;
 }
 
-.site-header .container {
-  height: var(--header-height);
-}
-
 .site-header .container .header-inner {
   border-radius: var(--radius-header);
   background: var(--color-white);
@@ -34,6 +30,25 @@
 }
 
 .site-header .container .header-inner .search-input-wrap {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.site-header--with-submenu {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header__primary .container {
+  height: var(--header-height);
+}
+
+.site-header__primary .container .header-inner {
+  border-radius: var(--radius-header) var(--radius-header) 0 0 ;
+}
+
+.site-header__primary .container .header-inner .search-input-wrap {
   margin-bottom: 0;
   width: 100%;
 }
@@ -245,6 +260,67 @@
 
 .header-nav .btn-nav:hover {
   color: var(--color-gray-600);
+}
+
+/* =====================
+   HEADER — второе меню и баннер (main)
+   ===================== */
+.site-header__menu-bar {
+  background: var(--color-white);
+  border-top: 1px solid #E8E8E8;
+  min-height: var(--header-menu-bar-height);
+  display: flex;
+  align-items: center;
+  padding: 18px 32px;
+  gap: 20px;
+}
+
+.header-secondary-nav__trigger {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  color: var(--color-gray-700);
+  transition: color var(--transition-fast);
+}
+
+.header-secondary-nav__trigger:hover span {
+  color: var(--color-primary) !important;
+}
+
+.site-header__promo {
+  background-color: #EFCFD0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  min-height: var(--header-promo-height);
+}
+
+.site-header__promo-text {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-main);
+}
+
+.site-header__promo .img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.site-header__promo .img2 {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* =====================

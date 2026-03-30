@@ -29,38 +29,59 @@
 <body>
 
 <!-- ==================== HEADER ==================== -->
-<header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            <a href="#" class="header-logo" aria-label="IPR РКИ">
-                <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
-            </a>
+<header class="site-header site-header--with-submenu">
+    <div class="site-header__primary">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="header-logo" aria-label="IPR РКИ">
+                    <img src="img/icons/logo.svg" alt="IPR РКИ" height="26">
+                </a>
 
-            <button class="btn-catalog" type="button" aria-expanded="false" aria-controls="catalog-overlay">
-                <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
-                <span class="icon icon--close-catalog" aria-hidden="true"><svg width="16" height="16"
-                                                                               viewBox="0 0 16 16" fill="none"
-                                                                               xmlns="http://www.w3.org/2000/svg"><path
-                        d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round"/></svg></span>
-                <span class="catalog-text">Каталог</span>
-            </button>
-            <div class="search-input-wrap">
-                <input type="text" placeholder="Введите запрос">
-                <button class="btn-search" aria-label="Искать">
-                    <img src="img/icons/search.svg" class="icon" width="20" height="20" alt="">
+                <button class="btn-catalog" type="button" aria-expanded="false" aria-controls="catalog-overlay">
+                    <img src="img/icons/catalog.svg" class="icon icon--catalog" width="16" height="16" alt="">
+                    <span class="icon icon--close-catalog" aria-hidden="true"><svg width="16" height="16"
+                                                                                   viewBox="0 0 16 16" fill="none"
+                                                                                   xmlns="http://www.w3.org/2000/svg"><path
+                            d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round"/></svg></span>
+                    <span class="catalog-text">Каталог</span>
                 </button>
+                <div class="search-input-wrap">
+                    <input type="text" placeholder="Введите запрос">
+                    <button class="btn-search" aria-label="Искать">
+                        <img src="img/icons/search.svg" class="icon" width="20" height="20" alt="">
+                    </button>
+                </div>
+                <nav class="header-nav">
+                    <a href="#" class="btn-nav">
+                        <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
+                        <span class="nav-text">Слабовидящим</span>
+                    </a>
+                    <a href="#" class="btn-nav">
+                        <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
+                        <span class="nav-text">Войти</span>
+                    </a>
+                </nav>
             </div>
-            <nav class="header-nav">
-                <a href="#" class="btn-nav">
-                    <img src="img/icons/eye.svg" class="icon icon--eye" width="24" height="20" alt="">
-                    <span class="nav-text">Слабовидящим</span>
-                </a>
-                <a href="#" class="btn-nav">
-                    <img src="img/icons/user.svg" class="icon icon--person" width="20" height="20" alt="">
-                    <span class="nav-text">Войти</span>
-                </a>
-            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="site-header__menu-bar">
+            <a href="https://www.ros-edu.ru/authors" class="header-secondary-nav__trigger">
+                <img src="img/icons/menu-icon-08.svg" width="22" height="22" alt="" aria-hidden="true">
+                <span class="header-secondary-nav__label">Авторам</span>
+            </a>
+            <a href="https://www.ros-edu.ru/rfl-at-universities" class="header-secondary-nav__trigger">
+                <img src="img/icons/menu-icon-09.svg" width="22" height="22" alt="" aria-hidden="true">
+                <span class="header-secondary-nav__label">Вузам и частным школам</span>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="site-header__promo" role="region" aria-label="Быстрый старт">
+            <img src="img/main/menu_promo_2.png" alt="" class="img1">
+            <p class="site-header__promo-text">Быстрый старт на платформе! Узнайте, где искать материалы и как эффективно использовать их в работе</p>
+            <img src="img/main/menu_promo_1.png" alt="" class="img2">
         </div>
     </div>
 </header>

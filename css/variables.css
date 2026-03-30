@@ -90,6 +90,8 @@
 
   /* ---- Layout ---- */
   --header-height: 90px;
+  --header-menu-bar-height: 62px;
+  --header-promo-height: 62px;
   --card-width: 200px;
   --card-gap: 16px;
   --container-max: 1440px;
