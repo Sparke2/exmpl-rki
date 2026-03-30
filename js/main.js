@@ -54,12 +54,44 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!btn || !dropdown || !textEl) return;
 
     var MONTHS_RU = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-    var MONTHS_RU_SHORT = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
     var today = new Date();
     var state = { year: today.getFullYear(), month: today.getMonth() };
+    var selected = { start: null, end: null };
 
-    function formatDate(d) {
-      return d.getDate() + ' ' + MONTHS_RU_SHORT[d.getMonth()] + ' ' + d.getFullYear();
+    function pad2(n) {
+      return n < 10 ? '0' + n : String(n);
+    }
+
+    function normalizeDate(d) {
+      return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    }
+
+    function formatDateForButton(d) {
+      return pad2(d.getDate()) + '.' + pad2(d.getMonth() + 1) + '.' + d.getFullYear() + ' г.';
+    }
+
+    function updateButtonText() {
+      if (!selected.start && !selected.end) return;
+
+      btn.classList.add('has-value');
+      if (selected.start && selected.end) {
+        textEl.textContent = formatDateForButton(selected.start) + ' — ' + formatDateForButton(selected.end);
+      } else if (selected.start && !selected.end) {
+        textEl.textContent = formatDateForButton(selected.start) + ' — …';
+      }
+    }
+
+    function isSameDay(a, b) {
+      if (!a || !b) return false;
+      return a.getFullYear() === b.getFullYear()
+        && a.getMonth() === b.getMonth()
+        && a.getDate() === b.getDate();
+    }
+
+    function inRange(d) {
+      if (!selected.start || !selected.end) return false;
+      var t = d.getTime();
+      return t >= selected.start.getTime() && t <= selected.end.getTime();
     }
 
     function renderCalendar() {
@@ -81,7 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
         html += '<span class="calendar-day calendar-day--other">' + (prevLast - start + i + 1) + '</span>';
       }
       for (var d = 1; d <= last.getDate(); d++) {
-        html += '<span class="calendar-day calendar-day--selectable" data-day="' + d + '">' + d + '</span>';
+        var dateObj = new Date(state.year, state.month, d);
+        var cls = 'calendar-day calendar-day--selectable';
+
+        if (inRange(dateObj)) cls += ' calendar-day--in-range';
+        if (isSameDay(dateObj, selected.start)) cls += ' calendar-day--range-start';
+        if (isSameDay(dateObj, selected.end)) cls += ' calendar-day--range-end';
+
+        html += '<span class="' + cls + '" data-day="' + d + '" data-date="' + dateObj.toISOString() + '">' + d + '</span>';
       }
       var total = start + last.getDate();
       var nextCount = total % 7 ? 7 - (total % 7) : 0;
@@ -104,12 +143,35 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCalendar();
       });
       dropdown.querySelectorAll('.calendar-day--selectable').forEach(function(dayEl) {
-        dayEl.addEventListener('click', function() {
+        dayEl.addEventListener('click', function(e) {
+          e.stopPropagation();
           var d = parseInt(dayEl.dataset.day, 10);
-          var sel = new Date(state.year, state.month, d);
-          textEl.textContent = formatDate(sel);
-          btn.classList.add('has-value');
+          var sel = normalizeDate(new Date(state.year, state.month, d));
+
+          if (!selected.start || (selected.start && selected.end)) {
+            selected.start = sel;
+            selected.end = null;
+            updateButtonText();
+            renderCalendar();
+            return;
+          }
+
+          selected.end = sel;
+          if (selected.end.getTime() < selected.start.getTime()) {
+            var tmp = selected.start;
+            selected.start = selected.end;
+            selected.end = tmp;
+          }
+
+          updateButtonText();
+          renderCalendar();
           closeDropdown();
+
+          console.log('[calendar] selected range:', {
+            start: selected.start,
+            end: selected.end,
+            text: formatDateForButton(selected.start) + ' — ' + formatDateForButton(selected.end)
+          });
         });
       });
     }
@@ -143,6 +205,36 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && dropdown.classList.contains('is-open')) closeDropdown();
     });
+  })();
+
+  // ============================
+  // News & Events tabs — переключение на странице news.html
+  // ============================
+  (function () {
+    var pills = document.querySelectorAll('.tab-pill');
+    var items = document.querySelectorAll('.news-item[data-news-type]');
+    if (!pills.length || !items.length) return;
+
+    function applyFilter(filter) {
+      items.forEach(function (el) {
+        var type = el.getAttribute('data-news-type');
+        var show = filter === 'all' || type === filter;
+        el.style.display = show ? '' : 'none';
+      });
+      console.log('[tabs] active tab:', filter);
+    }
+
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        pills.forEach(function (p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+        var filter = pill.getAttribute('data-filter');
+        applyFilter(filter);
+      });
+    });
+
+    var initiallyActive = document.querySelector('.tab-pill.active')?.getAttribute('data-filter') || 'all';
+    applyFilter(initiallyActive);
   })();
 
   // ============================
