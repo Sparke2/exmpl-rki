@@ -261,7 +261,11 @@
 }
 
 .material-card--test .card-description,
-.material-card--bank .card-description {
+.material-card--bank .card-description,
+.material-card--test .card-description p,
+.material-card--bank .card-description p,
+.material-card--test .card-description span,
+.material-card--bank .card-description span {
   font-size: var(--font-size-md);
   color: var(--color-gray-700);
   margin-bottom: 8px;
