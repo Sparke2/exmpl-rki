@@ -114,6 +114,10 @@
   background: var(--color-white);
 }
 
+.material-card--book .card-tag {
+    max-width: 100%;
+}
+
 .material-card--book .card-image {
   position: relative;
 }
