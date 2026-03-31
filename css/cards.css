@@ -112,6 +112,7 @@
   border: var(--border-card);
   position: relative;
   background: var(--color-white);
+  height: 100%;
 }
 
 .material-card--book .card-tag {
