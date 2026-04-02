@@ -98,19 +98,65 @@
                             </button>
                         </div>
                     </div>
-                    <div class="book-cta-row">
-                        <div class="book-mode-toggle" role="group" aria-label="Режим: читать или слушать">
-                            <button type="button" class="book-mode-toggle__btn is-active" data-book-mode="read" aria-pressed="true">
-                                Читать
-                            </button>
-                            <button type="button" class="book-mode-toggle__btn" data-book-mode="listen" aria-pressed="false">
-                                <svg class="book-mode-toggle__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M9.96152 2.5C14.1373 2.5 17.5373 5.89935 17.5373 10.0751V14.6285C17.5372 16.2112 16.2479 17.5 14.6652 17.5H14.5673C12.9845 17.4999 11.6959 16.2112 11.6958 14.6285V13.2108C11.6959 11.6281 12.9845 10.3394 14.5673 10.3393H14.6652C15.3192 10.3393 15.9232 10.5597 16.4067 10.9297V10.0751C16.4066 6.52497 13.5192 3.63063 9.96152 3.63063C8.22048 3.63071 6.60723 4.30137 5.40883 5.52238C4.20289 6.75097 3.56278 8.3868 3.5929 10.1355V10.9289C4.07626 10.5592 4.67996 10.3394 5.33375 10.3393H5.43165C7.01443 10.3393 8.30369 11.6281 8.30386 13.2108V14.6285C8.30369 16.2112 7.01443 17.5 5.43165 17.5H5.33375C3.75106 17.4999 2.46245 16.2112 2.46227 14.6285V10.1509C2.42459 8.10823 3.18576 6.1783 4.60281 4.73109C6.01979 3.29155 7.91903 2.50008 9.96152 2.5Z"/>
-                                </svg>
-                                Слушать
-                            </button>
-                        </div>
-                    </div>
+                    <div class="info-content" id="content-unavailable-trigger" role="button" tabindex="0" aria-label="Контент недоступен"><img src="img/icons/info.svg" alt=""/> Контент недоступен</div>
+                    <span
+                        class="content-unavailable-button-wrapper"
+                        id="content-unavailable-button-wrapper"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Нет доступа"
+                    >
+                        <button
+                            type="button"
+                            class="primary-btn disabled"
+                            id="content-unavailable-button"
+                            disabled
+                            aria-disabled="true"
+                        >
+                            Нет доступа
+                        </button>
+                    </span>
+
+                    <button
+                            type="button"
+                            class="primary-btn"
+                            id="expand-subscription-trigger"
+                    >
+                        Дополнительные коллекции
+                    </button>
+
+                    <button
+                            type="button"
+                            class="primary-btn"
+                            id="expand-subscription-trigger-premium"
+                    >
+                        Расширить подписку
+                    </button>
+
+                    <button
+                            type="button"
+                            class="primary-btn"
+                    >
+                        Читать
+                    </button>
+
+<!--                    <button class="primary-btn" id="content-unavailable-request-btn" disabled>-->
+<!--                        Заявка оставлена-->
+<!--                    </button>-->
+
+<!--                    <div class="book-cta-row">-->
+<!--                        <div class="book-mode-toggle" role="group" aria-label="Режим: читать или слушать">-->
+<!--                            <button type="button" class="book-mode-toggle__btn is-active" data-book-mode="read" aria-pressed="true">-->
+<!--                                Читать-->
+<!--                            </button>-->
+<!--                            <button type="button" class="book-mode-toggle__btn" data-book-mode="listen" aria-pressed="false">-->
+<!--                                <svg class="book-mode-toggle__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">-->
+<!--                                    <path d="M9.96152 2.5C14.1373 2.5 17.5373 5.89935 17.5373 10.0751V14.6285C17.5372 16.2112 16.2479 17.5 14.6652 17.5H14.5673C12.9845 17.4999 11.6959 16.2112 11.6958 14.6285V13.2108C11.6959 11.6281 12.9845 10.3394 14.5673 10.3393H14.6652C15.3192 10.3393 15.9232 10.5597 16.4067 10.9297V10.0751C16.4066 6.52497 13.5192 3.63063 9.96152 3.63063C8.22048 3.63071 6.60723 4.30137 5.40883 5.52238C4.20289 6.75097 3.56278 8.3868 3.5929 10.1355V10.9289C4.07626 10.5592 4.67996 10.3394 5.33375 10.3393H5.43165C7.01443 10.3393 8.30369 11.6281 8.30386 13.2108V14.6285C8.30369 16.2112 7.01443 17.5 5.43165 17.5H5.33375C3.75106 17.4999 2.46245 16.2112 2.46227 14.6285V10.1509C2.42459 8.10823 3.18576 6.1783 4.60281 4.73109C6.01979 3.29155 7.91903 2.50008 9.96152 2.5Z"/>-->
+<!--                                </svg>-->
+<!--                                Слушать-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <hr/>
                     <div>
                         <h2 class="meta-title">Характеристики</h2>
@@ -491,6 +537,133 @@
     </div>
 </div>
 
+<div class="auth-modal" id="content-unavailable-modal" aria-hidden="true" role="dialog" aria-labelledby="content-unavailable-title" aria-modal="true">
+    <div class="auth-modal__backdrop"></div>
+    <div class="auth-modal__box">
+        <button type="button" class="auth-modal__close" aria-label="Закрыть">
+            <img src="img/icons/cross.svg" width="28" height="28" alt="" aria-hidden="true">
+        </button>
+        <p class="auth-modal__text" id="content-unavailable-title">Контент недоступен</p>
+        <p class="content-unavailable-modal__description">
+            Библиотека вашей организации пока не приобрела данный контент. Подайте заявку, чтобы её рассмотрели при обновлении подписки.
+        </p>
+        <div class="auth-modal__actions">
+            <button type="button" class="auth-modal__btn auth-modal__btn--primary" data-content-unavailable-submit>
+                Оставить заявку
+            </button>
+            <button type="button" class="auth-modal__btn auth-modal__btn--cancel" data-content-unavailable-cancel>
+                Отменить
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="auth-modal" id="content-unavailable-modal2" aria-hidden="true" role="dialog" aria-labelledby="content-unavailable-title" aria-modal="true">
+    <div class="auth-modal__backdrop"></div>
+    <div class="auth-modal__box">
+        <button type="button" class="auth-modal__close" aria-label="Закрыть">
+            <img src="img/icons/cross.svg" width="28" height="28" alt="" aria-hidden="true">
+        </button>
+        <p class="auth-modal__text" id="content-unavailable-title2">Контент недоступен</p>
+        <p class="content-unavailable-modal__description">
+            У вашей организации нет доступа <br/> к этому контенту.
+        </p>
+    </div>
+</div>
+
+<div class="auth-modal subscription-modal" id="expand-subscription-modal" aria-hidden="true" role="dialog" aria-labelledby="expand-subscription-title" aria-modal="true">
+    <div class="auth-modal__backdrop"></div>
+    <div class="auth-modal__box subscription-modal__box">
+        <button type="button" class="auth-modal__close" aria-label="Закрыть">
+            <img src="img/icons/cross.svg" width="28" height="28" alt="" aria-hidden="true">
+        </button>
+        <h3 class="subscription-modal__title" id="expand-subscription-title">Расширение подписки</h3>
+
+        <div class="subscription-modal__card">
+            <div class="subscription-modal__card-left">
+                <div class="subscription-modal__card-title">Дополнительные издательские коллекции</div>
+                <div class="subscription-modal__card-sub">Доступ к материалам издательств «Златоуст» и «Русский язык. Курсы»</div>
+            </div>
+            <button type="button" class="subscription-modal__pick" aria-label="Выбрано: 1">
+                <span class="subscription-modal__pick-badge">Выбрано 1</span>
+                <span class="subscription-modal__pick-chevron" aria-hidden="true">
+                    <img src="img/icons/arrow.svg" width="22" height="22" alt="" aria-hidden="true">
+                </span>
+            </button>
+        </div>
+
+        <div class="subscription-modal__section">
+            <div class="subscription-modal__section-title">Оставьте заявку на подключение</div>
+            <div class="subscription-modal__section-sub">
+                Заполните форму, и мы свяжемся с вами для уточнения условий подключения и расчёта стоимости.
+            </div>
+
+            <form class="subscription-modal__form" action="#" method="post">
+                <div class="subscription-modal__grid">
+                    <input class="subscription-modal__input" type="text" name="fio" placeholder="ФИО*" required>
+                    <input class="subscription-modal__input" type="email" name="email" placeholder="Почта">
+                    <input class="subscription-modal__input" type="tel" name="phone" placeholder="Телефон">
+                    <input class="subscription-modal__input" type="text" name="position" placeholder="Должность">
+                </div>
+
+                <label class="subscription-modal__consent ">
+                    <input type="checkbox" class="subscription-modal__checkbox" name="consent" required>
+                    <span class="subscription-modal__label">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных и принимаете условия политики конфиденциальности.</span>
+                </label>
+
+                <button type="submit" class="subscription-modal__submit">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="auth-modal subscription-modal subscription-modal--premium" id="expand-subscription-modal2" aria-hidden="true" role="dialog" aria-labelledby="expand-subscription-title2" aria-modal="true">
+    <div class="auth-modal__backdrop"></div>
+    <div class="auth-modal__box subscription-modal__box">
+        <button type="button" class="auth-modal__close" aria-label="Закрыть">
+            <img src="img/icons/cross.svg" width="28" height="28" alt="" aria-hidden="true">
+        </button>
+        <h3 class="subscription-modal__title" id="expand-subscription-title2">Расширение подписки</h3>
+
+        <div class="subscription-modal__card subscription-modal__card--premium">
+            <div class="subscription-modal__card-left">
+                <div class="subscription-modal__card-title subscription-modal__card-title--with-icon">
+                    Премиум подписка
+                    <img class="subscription-modal__crown" src="img/icons/crown-fill.svg" width="24" height="24" alt="" aria-hidden="true">
+                </div>
+                <p class="subscription-modal__card-sub">Доступ к рабочим листам, тестам, играм и другим эксклюзивным материалам платформы РКИ</p>
+            </div>
+            <label class="subscription-modal__card-check">
+                <span class="visually-hidden">Включить премиум подписку в заявку</span>
+                <input type="checkbox" class="subscription-modal__checkbox subscription-modal__checkbox--card" name="premium_selected" form="expand-subscription-form-premium" checked>
+            </label>
+        </div>
+
+        <div class="subscription-modal__section">
+            <div class="subscription-modal__section-title">Оставьте заявку на подключение</div>
+            <p class="subscription-modal__section-sub">
+                Заполните форму, и мы свяжемся с вами для уточнения условий подключения и расчёта стоимости.
+            </p>
+
+            <form id="expand-subscription-form-premium" class="subscription-modal__form" action="#" method="post">
+                <div class="subscription-modal__grid">
+                    <input class="subscription-modal__input" type="text" name="fio" placeholder="ФИО*" required autocomplete="name">
+                    <input class="subscription-modal__input" type="email" name="email" placeholder="Почта" autocomplete="email">
+                    <input class="subscription-modal__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel">
+                    <input class="subscription-modal__input" type="text" name="position" placeholder="Должность" autocomplete="organization-title">
+                </div>
+
+                <label class="subscription-modal__consent">
+                    <input type="checkbox" class="subscription-modal__checkbox subscription-modal__checkbox--consent" name="consent" required>
+                    <span class="subscription-modal__label">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных и принимаете условия политики конфиденциальности.</span>
+                </label>
+
+                <button type="submit" class="subscription-modal__submit">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/book-description-toggle.js"></script>
 <script src="js/book-copy-doi.js"></script>
@@ -526,6 +699,145 @@
                 }
             }
         });
+    });
+})();
+
+(function () {
+    var trigger = document.getElementById('content-unavailable-trigger');
+    var modal = document.getElementById('content-unavailable-modal');
+    var modal2 = document.getElementById('content-unavailable-modal2');
+    var buttonWrapper = document.getElementById('content-unavailable-button-wrapper');
+    if (!trigger && !buttonWrapper) return;
+    if (!modal) return;
+
+    function openModal() {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (trigger) {
+        trigger.addEventListener('click', openModal);
+        trigger.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') openModal();
+        });
+    }
+
+    if (buttonWrapper) {
+        buttonWrapper.addEventListener('click', function () {
+            if (!modal2) return;
+            modal2.classList.add('is-open');
+            modal2.setAttribute('aria-hidden', 'false');
+        });
+        buttonWrapper.addEventListener('keydown', function (e) {
+            if ((e.key === 'Enter' || e.key === ' ') && modal2) {
+                modal2.classList.add('is-open');
+                modal2.setAttribute('aria-hidden', 'false');
+            }
+        });
+    }
+
+    var closeBtn = modal.querySelector('.auth-modal__close');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    var cancelBtn = modal.querySelector('[data-content-unavailable-cancel]');
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+    var submitBtn = modal.querySelector('[data-content-unavailable-submit]');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function () {
+            closeModal();
+            // В текущем шаблоне кнопка уже отображает "Заявка оставлена".
+            // Если в будущем состояние будет иным, здесь можно будет переключить UI.
+            var pageBtn = document.getElementById('content-unavailable-request-btn');
+            if (pageBtn) {
+                pageBtn.disabled = true;
+                pageBtn.textContent = 'Заявка оставлена';
+            }
+        });
+    }
+
+    modal.addEventListener('click', function (e) {
+        if (e.target && e.target.classList && e.target.classList.contains('auth-modal__backdrop')) {
+            closeModal();
+        }
+    });
+
+    if (modal2) {
+        var closeBtn2 = modal2.querySelector('.auth-modal__close');
+        if (closeBtn2) closeBtn2.addEventListener('click', function () {
+            modal2.classList.remove('is-open');
+            modal2.setAttribute('aria-hidden', 'true');
+        });
+
+        modal2.addEventListener('click', function (e) {
+            if (e.target && e.target.classList && e.target.classList.contains('auth-modal__backdrop')) {
+                modal2.classList.remove('is-open');
+                modal2.setAttribute('aria-hidden', 'true');
+            }
+        });
+    }
+})();
+
+(function () {
+    var trigger = document.getElementById('expand-subscription-trigger');
+    var modal = document.getElementById('expand-subscription-modal');
+    if (!trigger || !modal) return;
+
+    function open() {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function close() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    trigger.addEventListener('click', open);
+
+    var closeBtn = modal.querySelector('.auth-modal__close');
+    if (closeBtn) closeBtn.addEventListener('click', close);
+
+    modal.addEventListener('click', function (e) {
+        if (e.target && e.target.classList && e.target.classList.contains('auth-modal__backdrop')) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+    });
+})();
+
+(function () {
+    var trigger = document.getElementById('expand-subscription-trigger-premium');
+    var modal = document.getElementById('expand-subscription-modal2');
+    if (!trigger || !modal) return;
+
+    function open() {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function close() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    trigger.addEventListener('click', open);
+
+    var closeBtn = modal.querySelector('.auth-modal__close');
+    if (closeBtn) closeBtn.addEventListener('click', close);
+
+    modal.addEventListener('click', function (e) {
+        if (e.target && e.target.classList && e.target.classList.contains('auth-modal__backdrop')) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
     });
 })();
 </script>
