@@ -373,3 +373,120 @@
     right: -4px;
   }
 }
+
+
+/* ============================================
+   Search page carousels (index.html)
+   ============================================ */
+.worksheets-carousel,
+.tests-carousel,
+.interactives-carousel,
+.materials-carousel,
+.methodology-carousel {
+    position: relative;
+    padding-bottom: var(--space-sm);
+}
+
+.worksheets-carousel-shell,
+.tests-carousel-shell,
+.interactives-carousel-shell,
+.materials-carousel-shell,
+.methodology-carousel-shell {
+    position: relative;
+    overflow: visible;
+}
+
+.worksheets-carousel .swiper-wrapper,
+.tests-carousel .swiper-wrapper,
+.interactives-carousel .swiper-wrapper,
+.materials-carousel .swiper-wrapper,
+.methodology-carousel .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.worksheets-carousel .swiper-slide,
+.tests-carousel .swiper-slide,
+.interactives-carousel .swiper-slide,
+.materials-carousel .swiper-slide,
+.methodology-carousel .swiper-slide {
+    height: auto;
+    width: auto;
+}
+
+.worksheets-carousel-shell .swiper-button-prev,
+.worksheets-carousel-shell .swiper-button-next,
+.tests-carousel-shell .swiper-button-prev,
+.tests-carousel-shell .swiper-button-next,
+.interactives-carousel-shell .swiper-button-prev,
+.interactives-carousel-shell .swiper-button-next,
+.materials-carousel-shell .swiper-button-prev,
+.materials-carousel-shell .swiper-button-next,
+.methodology-carousel-shell .swiper-button-prev,
+.methodology-carousel-shell .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    box-shadow: var(--shadow-md);
+    color: var(--color-gray-700);
+    transition: all var(--transition-fast);
+    z-index: 5;
+}
+
+.worksheets-carousel-shell .swiper-button-prev::after,
+.worksheets-carousel-shell .swiper-button-next::after,
+.tests-carousel-shell .swiper-button-prev::after,
+.tests-carousel-shell .swiper-button-next::after,
+.interactives-carousel-shell .swiper-button-prev::after,
+.interactives-carousel-shell .swiper-button-next::after,
+.materials-carousel-shell .swiper-button-prev::after,
+.materials-carousel-shell .swiper-button-next::after,
+.methodology-carousel-shell .swiper-button-prev::after,
+.methodology-carousel-shell .swiper-button-next::after {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.worksheets-carousel-shell .swiper-button-prev:hover,
+.worksheets-carousel-shell .swiper-button-next:hover,
+.tests-carousel-shell .swiper-button-prev:hover,
+.tests-carousel-shell .swiper-button-next:hover,
+.interactives-carousel-shell .swiper-button-prev:hover,
+.interactives-carousel-shell .swiper-button-next:hover,
+.materials-carousel-shell .swiper-button-prev:hover,
+.materials-carousel-shell .swiper-button-next:hover,
+.methodology-carousel-shell .swiper-button-prev:hover,
+.methodology-carousel-shell .swiper-button-next:hover {
+    background: var(--color-gray-50);
+    border-color: var(--color-gray-400);
+}
+
+.worksheets-carousel-shell .swiper-button-prev,
+.tests-carousel-shell .swiper-button-prev,
+.interactives-carousel-shell .swiper-button-prev,
+.materials-carousel-shell .swiper-button-prev,
+.methodology-carousel-shell .swiper-button-prev {
+    left: -8px;
+}
+
+.worksheets-carousel-shell .swiper-button-next,
+.tests-carousel-shell .swiper-button-next,
+.interactives-carousel-shell .swiper-button-next,
+.materials-carousel-shell .swiper-button-next,
+.methodology-carousel-shell .swiper-button-next {
+    right: -8px;
+}
+
+.worksheets-carousel-shell .swiper-button-disabled,
+.tests-carousel-shell .swiper-button-disabled,
+.interactives-carousel-shell .swiper-button-disabled,
+.materials-carousel-shell .swiper-button-disabled,
+.methodology-carousel-shell .swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
