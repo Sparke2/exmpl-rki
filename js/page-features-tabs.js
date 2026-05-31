@@ -1,0 +1,41 @@
+/**
+ * Вертикальные табы — блок «Функциональные характеристики» на page.html
+ */
+(function () {
+    'use strict';
+
+    function init() {
+        var tablist = document.querySelector('.page-features__tabs[role="tablist"]');
+        var panels = document.querySelectorAll('.page-features-panel');
+        if (!tablist || !panels.length) {
+            return;
+        }
+
+        var tabs = tablist.querySelectorAll('.page-features-tab[role="tab"]');
+
+        function showPanel(tabId) {
+            tabs.forEach(function (tab) {
+                var selected = tab.getAttribute('data-tab') === tabId;
+                tab.classList.toggle('is-active', selected);
+                tab.setAttribute('aria-selected', selected ? 'true' : 'false');
+            });
+            panels.forEach(function (panel) {
+                var visible = panel.getAttribute('data-tab') === tabId;
+                panel.classList.toggle('is-active', visible);
+                panel.hidden = !visible;
+            });
+        }
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                showPanel(tab.getAttribute('data-tab'));
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
