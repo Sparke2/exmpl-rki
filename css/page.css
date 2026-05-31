@@ -15,6 +15,11 @@
 
 .page-main {
   min-height: calc(100vh - var(--header-height) - 120px);
+  --page-section-gap: 100px;
+}
+
+.page-main > section + section {
+  margin-top: var(--page-section-gap);
 }
 
 .page-title {
@@ -46,7 +51,7 @@
    Hero — первый блок
    ===================== */
 .page-hero {
-  padding: 0 0 var(--space-xl);
+  padding: 0;
 }
 
 .page-hero__breadcrumb {
@@ -168,10 +173,6 @@
     min-height: auto;
   }
 
-  .page-hero {
-    padding-bottom: var(--space-lg);
-  }
-
   .page-hero__breadcrumb {
     padding-top: var(--space-lg);
     padding-bottom: var(--space-base);
@@ -224,7 +225,7 @@
    Features — табы
    ===================== */
 .page-features {
-  padding: var(--space-3xl) 0 var(--space-xl);
+  padding: 0;
 }
 
 .page-features__header {
@@ -249,15 +250,17 @@
 
 .page-features__layout {
   display: grid;
-  grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.35fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-base);
-  align-items: start;
+  align-items: stretch;
 }
 
 .page-features__tabs {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-sm);
+  width: 100%;
+  min-width: 0;
 }
 
 .page-features-tab {
@@ -265,6 +268,7 @@
   align-items: center;
   gap: var(--space-base);
   width: 100%;
+  min-width: 0;
   min-height: 72px;
   padding: var(--space-base) var(--space-lg);
   border: 0;
@@ -325,34 +329,35 @@
 .page-features__panels {
   position: relative;
   min-height: 280px;
+  width: 100%;
+  min-width: 0;
 }
 
 .page-features-panel {
   display: none;
   position: relative;
+  width: 100%;
   min-height: 280px;
   padding: var(--space-xl);
-  background: var(--color-white);
+  background-color: var(--color-white);
+  background-image: url('../img/page/features-panel-bg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
   border-radius: var(--radius-header);
   overflow: hidden;
 }
 
 .page-features-panel.is-active {
   display: block;
+  min-height: 280px;
+  height: 100%;
 }
 
-.page-features-panel::after {
-  content: "";
-  position: absolute;
-  right: -20px;
-  bottom: -30px;
-  width: 180px;
-  height: 140px;
-  background:
-    linear-gradient(135deg, transparent 40%, rgba(180, 30, 35, 0.85) 40%, rgba(180, 30, 35, 0.85) 52%, transparent 52%),
-    linear-gradient(135deg, transparent 58%, rgba(249, 226, 226, 0.9) 58%, rgba(249, 226, 226, 0.9) 68%, transparent 68%),
-    linear-gradient(135deg, transparent 72%, rgba(180, 30, 35, 0.45) 72%, rgba(180, 30, 35, 0.45) 82%, transparent 82%);
-  pointer-events: none;
+.page-features-panel[data-tab="library"] {
+  background-image: url('../img/page/features-panel-bg-library.png');
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .page-features-list {
@@ -401,10 +406,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .page-features {
-    padding: var(--space-2xl) 0;
-  }
-
   .page-features__header {
     margin-bottom: var(--space-xl);
   }
@@ -433,11 +434,6 @@
   .page-features-list {
     gap: var(--space-base);
   }
-
-  .page-features-panel::after {
-    width: 120px;
-    height: 100px;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -454,7 +450,7 @@
    Tech stack — технологии
    ===================== */
 .page-tech {
-  padding: 0 0 var(--space-xl);
+  padding: 0;
 }
 
 .page-tech__grid {
@@ -579,10 +575,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .page-tech {
-    padding-bottom: var(--space-2xl);
-  }
-
   .page-tech__card {
     padding: var(--space-lg);
   }
@@ -617,7 +609,7 @@
    Rights — правообладатели
    ===================== */
 .page-rights {
-  padding: 0 0 var(--space-xl);
+  padding: 0;
 }
 
 .page-rights__header {
@@ -703,10 +695,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .page-rights {
-    padding-bottom: var(--space-2xl);
-  }
-
   .page-rights__card {
     padding: var(--space-xl) var(--space-lg) 0;
   }
@@ -741,7 +729,7 @@
    Plans — виды подписок
    ===================== */
 .page-plans {
-  padding: 0 0 var(--space-xl);
+  padding: 0;
 }
 
 .page-plans__header {
@@ -784,7 +772,15 @@
 }
 
 .page-plans-card--premium {
-  background: linear-gradient(135deg, #FFF5F3 0%, #F9E2E2 55%, #F5D4D4 100%);
+  background-color: #FCECEC;
+  background-image: url('../img/page/plans-card-premium-bg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+}
+
+.page-plans-card--premium .page-plans-card__desc {
+  max-width: 72%;
 }
 
 .page-plans-card__title {
@@ -864,17 +860,12 @@
     min-height: 240px;
   }
 
-  .page-plans-card--premium::after {
-    width: 40%;
-    height: 60%;
+  .page-plans-card--premium .page-plans-card__desc {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 767.98px) {
-  .page-plans {
-    padding-bottom: var(--space-2xl);
-  }
-
   .page-plans__header {
     margin-bottom: var(--space-xl);
   }
@@ -909,7 +900,7 @@
    CTA — форма Bitrix24
    ===================== */
 .page-cta {
-  padding: 0 0 var(--space-3xl);
+  padding: 0;
 }
 
 .page-cta__grid {
@@ -929,7 +920,7 @@
 
 .page-cta__desc {
   margin: 0;
-  max-width: 420px;
+  max-width: 515px;
   font-size: var(--font-size-md);
   line-height: 1.5;
   color: var(--color-gray-800);
@@ -947,7 +938,7 @@
   min-height: 50px !important;
   padding: 0 2rem !important;
   border: none !important;
-  border-radius: var(--radius-pill) !important;
+  border-radius: 100px !important;
   background: var(--color-primary) !important;
   font-family: var(--font-family) !important;
   font-size: var(--font-size-md) !important;
@@ -980,10 +971,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .page-cta {
-    padding-bottom: var(--space-2xl);
-  }
-
   .page-cta .b24-form-content > form > div:first-child {
     grid-template-columns: 1fr;
   }
